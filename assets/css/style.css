@@ -1,0 +1,351 @@
+:root {
+  --bg: #fffdf0; /* #fffdf0 #fff8d6; 6c9 */
+
+  --text: #162b2a;
+
+  --muted: #5f6f6a;
+
+  --accent: #005F93; /* #146c5c; */
+
+  --heading: #0d9488; /* 338fbd 3aa6da #2a6f8f; */
+    
+  --teal: #0f766e; 
+  --teal-text: #e6fffb /* #ffffff; */
+
+  /* slightly darker than page bg */
+  --light-block: #f3f0d9;
+
+  --max-width: 1536px;
+
+   --font-sans: ui-sans-serif, system-ui, -apple-system,
+               "Segoe UI", Roboto, Helvetica, Arial;
+}
+
+
+/* ===== GLOBAL BACKGROUND ===== */
+
+html, body {
+  background-color: var(--bg);
+  margin: 0;
+  min-height: 100%;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* ===== CONTAINER ===== */
+
+main {
+  max-width: var(--max-width);
+  margin: 5rem auto;
+  padding: 0 1.25rem;
+}
+
+
+/* ===== HEADINGS (FORCED CONSISTENCY) ===== */
+
+h1, h2, h3 {
+  color: var(--heading);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 650;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 650;
+}
+
+
+/* ===== PARAGRAPHS ===== */
+
+p {
+  margin: 1.2rem 0;
+}
+
+
+/* ===== LINKS ===== */
+
+a {
+  color: var(--accent);
+  /* WELLS REPLACED: text-decoration: none; */
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ff6f00;
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+  background: #0b5e57; /* darker teal */
+  color: white;
+  padding: 0.75rem 1rem;
+}
+
+/* Make sure all text inside is white */
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Optional: spacing/layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background: #0b5e57 !important;
+}
+
+header a {
+  color: white !important;
+}
+
+/* Logo image sizing */
+header .logo img {
+  height: 60px;   /* control size here */
+  width: auto;    /* keeps proportions */
+  display: block; /* removes inline spacing quirks */
+}
+
+/* ===== MUTED TEXT ===== */
+
+small {
+  color: var(--muted);
+}
+
+/* ===== LISTS ===== */
+
+ul {
+  padding-left: 1.25rem;
+}
+
+.button {
+  display: inline-block;
+  background: #ff6f00; /* deeper than accent */
+  color: #ffffff;
+  padding: 0.1rem 0.4rem; /* reduced padding */
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.button:hover {
+  background: #095a86;
+  transform: translateY(-1px);
+}
+
+.card {
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #e6e2c8;
+  background: #fffef5;
+  transition: all 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+header {
+  max-width: var(--max-width);
+  margin: 1.25rem auto 0;
+  padding: 0.75rem 1.25rem;
+    
+  font-weight: 600;
+  font-size: 1.6rem; 
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #e9f3f8; /* light blue tint, not heavy */
+  border-bottom: 1px solid #d6e4ec;
+
+  border-radius: 0; /* removes rounded corners */
+}
+
+header a {
+  color: #1f5f7a; /* lighter than your body text, still readable */
+  font-weight: 600;
+}
+
+header a:hover {
+  color: var(--accent);
+}
+
+nav a {
+  margin-left: 1.25rem;
+  font-weight: 600;
+  font-size: 1.6rem; 
+  color: var(--muted);
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+section {
+  margin: 3rem 0;
+}
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #e6e2c8;
+  margin: 2.5rem 0;
+}
+
+/* 2026-04-27 */
+
+<div class="two-block-row">
+  
+  <div class="block block--teal">
+    <h2>{{ left_title }}</h2>
+    <p>{{ left_text }}</p>
+  </div>
+
+  <div class="block block--light">
+    <h2>{{ right_title }}</h2>
+    <p>{{ right_text }}</p>
+  </div>
+
+</div>
+
+* ROW LAYOUT */
+.two-block-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Alternate rows */
+.two-block-row:nth-of-type(even) {
+  direction: rtl; /* flips column order */
+}
+
+/* Fix text direction inside blocks */
+.two-block-row:nth-of-type(even) .block {
+  direction: ltr;
+}
+
+/* BLOCK BASE */
+.block {
+  flex: 1;
+  padding: 1.25rem;
+  border-radius: 0; /* remove rounding if you want sharp edges */
+}
+
+/* LEFT BLOCK */
+.block--teal {
+  background: var(--teal);
+  color: white; /* var(--teal-text); */
+  --accent: #fcd34d; /* light orange for links */
+}
+
+.block--teal h1,
+.block--teal h2,
+.block--teal h3 {
+  color: #e6fffb; /* lighter teal */ 
+}
+
+/* RIGHT BLOCK */
+.block--light {
+  background: var(--light-block);
+}
+
+.block--light h1,
+.block--light h2,
+.block--light h3 {
+  color: var(--teal);
+}
+
+
+.two-block-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1rem;
+}
+
+/* RESPONSIVE: stack on small screens */
+@media (max-width: 800px) {
+  .two-block-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Scale images. Use  imgsmj Espanso <img src="/assets/img/example.png" class="imgsm" alt="Example"> */
+.imgsm { max-height: 150px; }  
+.imgmd { max-height: 300px; }  
+.imglg { max-height: 500px; }  
+  
+.imgsm,  
+.imgmd,  
+.imglg {  
+  width: auto;  
+  height: auto;  
+}
+
+/* Stretch image from right margin to left margin */
+.imgfullwide {
+  display: block;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  height: auto;
+}
+
+/* Align images Center Left or Right */
+.imgctr {  
+  display: block;  
+  margin: 0 auto;  
+}
+
+.imgleft {  
+  display: block;  
+  margin-right: auto;  
+}  
+  
+.imgright {  
+  display: block;  
+  margin-left: auto;  
+}
+
+/* Prevent overflow on phones */
+img {  
+  max-width: 100% !important;  
+} 
+

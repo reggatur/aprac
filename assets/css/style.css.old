@@ -1,0 +1,126 @@
+:root {
+    
+  --bg: #e6f1ee;        /* soft, slightly warm gray (not pure white) */
+
+  --text: #1e2f2e;      /* deep desaturated teal-gray */
+
+  --muted: #5f7a78;     /* balanced secondary text */
+
+  --accent: #1f9d92;    /* toned-down teal (less neon than dark mode) */
+
+  --heading: #162423;   /* slightly stronger than body text */
+    
+   
+  /* layout */
+  --max-width: 720px;
+
+  /* fonts */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  font-size: 18px;
+  background: var(--bg);
+  color: var(--text);   /* add this too */
+}
+
+/* Ensure all common text elements inherit the body color
+main, header, nav, section, article, p, li, a, h1, h2, h3, small {
+  color: inherit;
+}
+*/
+
+/* Layout */
+main {
+  max-width: var(--max-width);
+  margin: 5rem auto;
+  padding: 0 1.25rem;
+}
+
+/* Headings */
+
+h1, h2, h3 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  color: var(--heading);
+}
+h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  font-weight: 650;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-top: 3rem;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  font-weight: 650;
+}
+
+/* Paragraphs */
+p {
+  margin: 1.2rem 0;
+  color: var(--text);
+  font-weight: 400;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.2rem;
+}
+
+/* Subtle text */
+small {
+  color: var(--muted);
+}
+
+section + section {
+  margin-top: 3rem;
+}
+
+p + p {
+  margin-top: 1.2rem;
+}
+
+
+
