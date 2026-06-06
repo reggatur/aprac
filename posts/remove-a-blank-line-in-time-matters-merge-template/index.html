@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Remove a Blank Line in Time Matters Merge Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Remove a Blank Line in Time Matters Merge Template</h1>
+<p><strong>Date:</strong> Feb.  5, 2020
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-creation/">
+        document creation
+      </a>, 
+    
+      <a href="/categories/ms-office/">
+        MS Office
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/merge-blank-line-remover2.png" alt="merge-blank-line-remover2.png" class="img-blog">
+<img src="/assets/img/blog/merge-blank-line-remover.png" alt="merge-blank-line-remover.png" class="imgctr">
+<p>Merge Templates in Time Matters allow you to create fully formatted documents containing client addresses and other client and case information automatically. They are powerful tools in the Time Matters document assembly toolbox.</p>
+<p>Client addresses typically have either three or four lines. The added line, coming just below the Street Address, is often a Suite Number, for example:</p>
+<p>Robert S. Brown
+5240 Palm Ave.
+Suite 3500
+Ft. Lauderdale, FL  33309</p>
+<p>A problem arises when you insert the field for a Suite Number or other address line into your Time Matters Merge Template. If a firm does not have a suite, you end up with a blank line after the Street Address, like this:</p>
+<p>Microsoft Word provides a solution to this problem through the use of the \b code. (I remember “b” as standing for “blank line remover.”</p>
+<p>To put the blank line remover into practice:</p>
+<ol>
+<li>
+<p>Open your Merge Form File in MS Word.</p>
+</li>
+<li>
+<p>Put the additional address field immediately after the Street Address field on the same line. (Your field names may be different based on your Time Matters customizations.)</p>
+</li>
+<li>
+<p>Press: Alt-F9 (Hold down the Alt key and press the F9 key in the top row of the keyboard.)</p>
+</li>
+<li>
+<p>Just after the Main_Address2 field name, press these keys: <strong>[Space]\b[Space]”[Enter]”</strong><br>
+Do not type the square brackets. They identify a key to press. Do type the backslash and the quotation marks. Note that the second quotation mark should appear at the start of a new line.</p>
+</li>
+</ol>
+<p>Here is what your merge fields should now appear (the exact names may differ based on your customizations of Time Matters fields):</p>
+<p>When finished, press Alt-F9 again to return to the usual view in MS Word.</p>
+<p>When you merge new documents with this Merge Template, you will avoid having a blank line in addresses for people who have just three lines in their addresses.</p>
+<p>Questions? Call <strong>800-575-0007</strong> or <a href="/send-us-an-email">send me an email…</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

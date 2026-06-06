@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Converting from a Windows Domain to a Windows Workgroup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Converting from a Windows Domain to a Windows Workgroup</h1>
+<p><strong>Date:</strong> Sep. 22, 2012
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/windows/">
+        Windows
+      </a>, 
+    
+      <a href="/categories/setup/">
+        setup
+      </a>
+    
+  
+</p>
+<h3>Retain Settings when Converting a PC to a Windows Workgroup</h3>
+<p>If your old Windows server needs to be replaced, you may want to avoid the complexity and expense of a new Windows server. Using a Windows Workgroup, small offices have other options for file sharing, email, shared databases and backup.</p>
+<p>All of the PCs on a typical Windows Server network (whether Microsoft Small Business Server, Windows Server 2003 or 2007) are members of a Domain. A PC that will be leaving a Domain to be used stand-alone or in a Windows Workgroup needs to be converted.</p>
+<p>The user profile on the PC should be transferred from the domain user to a local user. Otherwise, most of its software will have to be reinstalled and most user settings will have to be reset. That is a long, time-consuming process.</p>
+<p>As an alternative, you may manually transfer the contents of an old domain User Profile to a new local user profile.</p>
+<p>Doing a manual profile transfer is more reliable than using the built-in profile copy (the one where you go into Profiles and right click copy). The Windows User State Migration Tool may miss items or just totally fail to create the new profile properly.</p>
+<p>To manually copy the profile, follow these steps:</p>
+<ol>
+<li>Know the name of the folder of the original domain profile (C:\Documents and Settings\domainusername). Document all of your logins and passwords for Outlook email, Windows Live Messenger, gTalk, and any other messaging or communications applications that have logins and passwords.</li>
+<li>Create your new local account with a new login name and make it a member of Administrators. WinXP: My Computer / right-click / Manage / Local Users and Groups / Users / right-click / New User...</li>
+<li>Create a second new local account with another new name and Administrator rights as a precaution.</li>
+<li>Reboot the computer (important as files could be left open from either account and not be able to be copied or copied over)</li>
+<li>Log on as a the second new user with local administrator rights.</li>
+<li>Go into the domain folder profile (it would be under C:\Documents and Settings\domainusername)</li>
+<li>Highlight the contents of this folder and and copy all (make sure everything is unhidden)</li>
+<li>Go into the folder of the your new local account and paste everything on top<br>
+(Note: Tthis will destroy everything in the current local account, so best to use your new local account to do this. The reason we paste the contents of the folder and not the folder itself or just rename the folder is that the local folder you are in now as a special SID associated with the local account.)</li>
+<li>Since you are logged in as the local admin now, check to make sure your new local account is a local admin as well.</li>
+<li>Reboot the computer and log in as your new local user. Make sure everything looks right. A good way to make sure everthing worked is to check that your desktop background is correct. Go into My Documents and see if all your documents are there. If not, then there is probably a rights issue which is easily fixed.</li>
+<li>If everything is not working now, assume it is a rights issue. Open up Windows Explorer, go to your folder (the one under Documents and Settings), right-click on your folder, go to the Permissions, take ownership of the entire folder and child contents, and then add your admin rights to the folder and all child contents. Reboot again and you should have your entire domain profile copied over to your local profile. An advantage of this method that it leaves your original domain profile intact just in case there are any issues.</li>
+<li>After the PC has been running for at least 10 minutes, go to: Control Panel / Date and Time / Internet Time. Check the box and set the domain to: time.windows.com</li>
+</ol>
+<p>A tip of the hat to Umbi for his original listing of steps on Experts-Exchange.com.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

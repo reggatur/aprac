@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speeding Up a Time Matters Upgrade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Speeding Up a Time Matters Upgrade</h1>
+<p><strong>Date:</strong> Apr. 24, 2014
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/administration/">
+        administration
+      </a>, 
+    
+      <a href="/categories/upgrading/">
+        upgrading
+      </a>
+    
+  
+</p>
+<p>Take these steps to speed up the upgrade process dramatically and to prevent the bloating of the database log file. Otherwise, the process might go very, very slowly.</p>
+<p>**Note: Some of these instructions apply only to Time Matters 13 and older.<br>
+** Consult with your Time Matters Consultant before considering these speed-up tips.</p>
+<p>Depending on the size of your old Time Matters database and the speed of your machine, conversion to a new version could take up to 18 hours or longer without these performance tweaks.</p>
+<ul>
+<li>
+<p>Disable Keyword Indexing in the previous version and run Database Maintenance.</p>
+</li>
+<li>
+<p>With approval from your IT specialist, use SQL Server Management Studio to change the <strong>Recovery Model</strong> of the Time Matters database to Simple.</p>
+</li>
+<li>
+<p>Increase the initial size of the TM database.</p>
+</li>
+</ul>
+<p><strong>Heads Up</strong> - You could do serious damage to your database with SQL Server Management Studio. If you are unsure about making changes, please consult with a LexisNexis Certified Independent Consultant or Technical Support. Don't hesitate to call us at 800.575.0007. <strong>Back up your database</strong> before making any changes.</p>
+<h3>Instructions for Disabling Keyword Indexing.</h3>
+<p>Versions of Time Matters running on MS SQL Server or MS SQL Server Express do not need Keyword Indexing. SQL Server builds indexes as needed on the fly for the efficient retrieval of records.</p>
+<p>The Keyword Index in Time Matters can dramatically increase the time needed to import data into a new version.</p>
+<p>To disable Keyword Indexing in your old version of Time Matters before importing into a new version:</p>
+<ol>
+<li>
+<p>Backup your old Time Matters database</p>
+</li>
+<li>
+<p>Open the old Time Matters database</p>
+</li>
+<li>
+<p>Go to: Main Menu | File | Setup | General | Program Level</p>
+</li>
+<li>
+<p>Click on Update</p>
+</li>
+<li>
+<p>Click on No Fields will be Keyword Indexed</p>
+</li>
+<li>
+<p>Click OK</p>
+</li>
+<li>
+<p>Backup Time Matters: Main Menu | File | Backup Time Matters Data</p>
+</li>
+<li>
+<p>Go to: Main Menu | File | Utilities | Database Maintenance</p>
+</li>
+<li>
+<p>Uncheck <strong>all</strong> the boxes except: Update Keyword Index</p>
+</li>
+<li>
+<p>Click OK - Note: This process may run through each of the data tables, but it will do so faster than a typical Database Maintenance process.</p>
+</li>
+</ol>
+<p>Technical Note: The Keyword table may still have records in it that are used in connection with Time Matters for MS Outlook.</p>
+<h3>Instructions for Changing the Time Matters Recovery Model</h3>
+<p>After installing Time Matters 13.1 on the server or your main computer and before starting the data import from the previous Time Matters version, follow these steps:</p>
+<ol>
+<li>
+<p>Open SQL Server Management Studio</p>
+</li>
+<li>
+<p>Click on [+] next to Databases</p>
+</li>
+<li>
+<p>Right-click on TimeMatters13</p>
+</li>
+<li>
+<p>Click Properties</p>
+</li>
+<li>
+<p>Click Options</p>
+</li>
+<li>
+<p>Click on Bulk-logged and switch it to Simple</p>
+</li>
+<li>
+<p>Click OK and close SQL Server Management Studio</p>
+</li>
+</ol>
+<h3>Instructions for Increasing the Initial Size of the TM 13.1 Database</h3>
+<ol>
+<li>
+<p>Open SQL Server Management Studio.</p>
+</li>
+<li>
+<p>Click on [+] next to Databases.</p>
+</li>
+<li>
+<p>Right-click on TimeMatters13.</p>
+</li>
+<li>
+<p>Click Properties.</p>
+</li>
+<li>
+<p>Click Files.</p>
+</li>
+<li>
+<p>In the Initial Size column, click on the number in the first row (not the Log row).</p>
+</li>
+<li>
+<p>Enter a number equal to the size of your old Time Matters database.<br>
+To determine the size of your old database, check the size of your recent SQL backup file (a .BAK file) or check the Files page of the Properties for your old database in SQL Server Management Studio.</p>
+</li>
+<li>
+<p>Make the Properties window wider by clicking and dragging the right border to the right.</p>
+</li>
+<li>
+<p>Click in the Autogrowth column on the button [...] in the first row (not the Log row)</p>
+</li>
+<li>
+<p>Click the In Percent option and leave it on 10%.</p>
+</li>
+<li>
+<p>Click OK, OK, and close SQL Server Management Studio</p>
+</li>
+</ol>
+<p>A tip of the hat to Ken Kennedy, CIC, of Circle Management Group for this tip on increasing the database size.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

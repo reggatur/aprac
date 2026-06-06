@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add LEDES Electronic Billing Codes to an Existing Matter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Add LEDES Electronic Billing Codes to an Existing Matter</h1>
+<p><strong>Date:</strong> Oct. 30, 2019
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/billing/">
+        billing
+      </a>, 
+    
+      <a href="/categories/billing-matters/">
+        Billing Matters
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/add-phase-codes-to-matter.png" alt="Add Phase code to a Matter" class="img-blog">
+<p>Have you ever had to add all LEDES “L” Codes to the Phase tab of Billing Preferences for an already billable Matter? What a tedious job!</p>
+<p>You can avoid the tedium.</p>
+<p>Adding Electronic Billing Preferences to a new Matter is easy. You are prompted to apply one of your Billing Preferences templates. It contains the dozens of Phase Codes (LEDES “L” codes).</p>
+<p>If a Matter <strong>already has Billing Preferences</strong> but no Phases, you have to add each of the Phases manually to the Phase tab:</p>
+<p>[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;705&quot;] Add Phase code to a Matter [/caption]</p>
+<p>A time-saving shortcut involves using MS SQL Server Studio to delete the existing Billing Preferences. Once they are deleted you may reapply an entire Billing Preferences template, including its list of Phase Codes of any length.</p>
+<p>Use the following query to check for the presence of Billing Preferences already linked to a particular Matter where 1234 is the Matter Number:</p>
+<p>-- Run a check on the presence of
+-- a Matter's Billing Preferences
+SELECT MAT.mat_no, BILO.sysid as 'billopt sysid'
+FROM lntmuid.matter MAT
+INNER JOIN lntmuid.billopt BILO
+ON MAT.sysid = BILO.owner_id
+where MAT.mat_no = '1234'</p>
+<p><strong>Warning:</strong> Don’t experiment with SQL queries on your real database. You can do serious damage if you don’t know what you’re doing. Also, if you do know or think you know! Especially hazardous are DELETE queries, such as the next one shown. That is why it is important to run a query like the one above to check that you have selected the single, correct record to delete.</p>
+<p>To delete the link to the existing Billing Preferences for a Matter, in this case, Matter Number 1234, run this query:</p>
+<p>-- Delete the Billing Preferences
+-- for a Matter.
+DELETE BILO
+FROM lntmuid.matter MAT
+INNER JOIN lntmuid.billopt BILO
+ON MAT.sysid = BILO.owner_id
+where MAT.mat_no = '1234'</p>
+<p>After running the query, open the Matter record. Uncheck the Billable box and then check it. Choose Billing Preferences from the Edit menu of the Matter record. You should be prompted to choose one of the Billing Preferences templates. Choosing one with Phases already entered will apply them to your Matter.</p>
+<p>Now you also need to tweak the Billing Preferences with any settings particular to this Matter and not found in the Billing Preferences Template.</p>
+<p>This tip works equally well for any set of Phases that need to be added to an existing Matter. Just keep in mind that all the Matter’s Billing Preferences will be removed and you’ll have to add them back with a Billing Preferences Template or manually.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

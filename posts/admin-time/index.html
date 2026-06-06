@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Admin Time</h1>
+<p><strong>Date:</strong> Jan. 13, 2004
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/timekeeping/">
+        timekeeping
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/admintimerec.gif" alt="Billing Record for Admin Time" class="img-blog">
+<img src="/assets/img/blog/adminexp.gif" alt="Fields to export from Admin Billing records" class="imgctr">
+<img src="/assets/img/blog/adminimp.gif" alt="Import Template Field Matching for Admin Time Records" class="imgctr">
+<img src="/assets/img/blog/admintime2.gif" alt="Time Matters Quick Item Entry Window" class="imgctr">
+<h2>Techniques for Tracking Admin (Nonbillable) Time in Time Matters</h2>
+<p>Everyone understands the importance of tracking time billed to clients. But tracking administrative time is also important to the productivity of your organization.</p>
+<p>Here we sketch out how to create recurring &quot;admin&quot; time entries and quickly fill them in.</p>
+<p>Our approach is to create a Client named &quot;Admin&quot; and then create several related Matters to track different kinds of admin time. This approach allows detailed reporting on nonbillable time.</p>
+<p>Get started by entering one Billing record for each Admin Matter for each timekeeper. Here is an example:</p>
+<p>After filling in the first record, you can use File | Save &amp; Copy to save time creating the other similar records.</p>
+<p>Tag and export these records to a file named &quot;admin.csv&quot;. To create the Export Template, here are the fields to select:</p>
+<p>Now you have data that can be imported to create a set of Admin billing records for all timekeepers each day. They will have all the needed information except for the time amount, which will be zero in each record.</p>
+<p>Create a Custom Import template to import the data. Here is template's the field matching window:</p>
+<p>When importing the Admin time records, modify the template by changing the Bill Date (highlighted above in blue) to today's date. If you like, you can run the import multiple times to create entries for a number of dates.</p>
+<p>To fill in the time amounts for your Admin time records, use the Quick Item Entry window in Time Matters. It works a bit like a spreadsheet. Double-click on the cell in the NonBill column to enter a time amount in a specific record. Press Enter to save the change.</p>
+<p>When you begin to track administrative time more accurately, you may be surprised at where your time is going. The numbers may motivate you to make changes in your routines or in the allocation of administrative work within your office.</p>
+<p>You certainly do not want to spend too much nonbillable time recording nonbillable time! The techniques described here can help.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

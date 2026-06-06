@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fix the TM Save Button in Word</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Fix the TM Save Button in Word</h1>
+<p><strong>Date:</strong> Aug. 16, 2016
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-management/">
+        document management
+      </a>, 
+    
+      <a href="/categories/links/">
+        links
+      </a>, 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/quick-access-toolbar.png" alt="quick-access-toolbar.png" class="img-blog">
+<h3>UPDATE - 8-17-2016 - MS Word 2016</h3>
+<p>The folder you need to add for MS Word 2016 to Trusted Locations in the Trust Center is:</p>
+<p><code>C:\Program Files (x86)\Microsoft Office\root\Office16\STARTUP</code></p>
+<p>For detailed instructions, <a href="/ms-word-security-settings/">Click here</a></p>
+<p>The instructions show how to disable the macro warning for the Time Matters add-in to MS Word.</p>
+<h3>UPDATE - Adding the TM Save Button to the Quick Access Bar</h3>
+<p>Having a TM Save button in the Word Quick Access toolbar saves you clicks. It is readily available without having to switch to the Time Matters Tab in MS Word.</p>
+<p>Follow these steps to add the TM Save button to the Word Quick Access toolbar:</p>
+<p>If you put the TM Save button on the Quick Access toolbar, its icon is always visible and takes just one click to bring up the Document form. And there is another time-saver for keyboard lovers.</p>
+<p>If you have the TM Save button on the Quick Access toolbar, you can TM Save a document without having to:</p>
+<ol>
+<li>Move your hand from the keyboard to the mouse.</li>
+<li>Move the mouse to the TM Save icon.</li>
+<li>Click the TM Save icon.</li>
+</ol>
+<p>Instead, you can press, for example, Alt-7, if the TM Save icon is the 7th button on the Quick Access toolbar. Presto! The Document form appears.</p>
+<p>You can determine the number for your TM Save icon by counting icons to the right of the W that appears at the left end of the Quick Access toolbar. (If you hold down the Alt key longer than usual, it may display all the keyboard shortcuts for you, including the number of your TM Save icon.)</p>
+<p>If you are a dedicated mouse person, you can even reduce the distance you need to move the mouse by displaying the Quick Access toolbar below the Ribbon. Click the little drop-down icon at the right end of the Quick Access toolbar and click: Show below the ribbon.</p>
+<h3>UPDATE - Error Fix for Time Matters Add Ins Stuck in MS Word after Upgrade</h3>
+<p>The Add Ins for MS Word for a previous version of Time Matters may remain in Word after upgrading to a new version of Time Matters. This leaves an extra Add Ins tab at the top of MS Word and interferes with creating MS Word Merge Templates.</p>
+<p>To remove the old Time Matters Add In, go to:</p>
+<p>C:\Program Files\Microsoft Office\Office12\STARTUP or<br>
+C:\Program Files (x86)\Microsoft Office\Office12\STARTUP or<br>
+C:\Program Files\Microsoft Office\Office14\STARTUP or<br>
+C:\Program Files (x86)\Microsoft Office\Office14\STARTUP</p>
+<p>Delete: TMWord.dot</p>
+<p>Then uninstall and reinstall the Word Processor links in Time Matters 12. See instructions, below.</p>
+<h3>UPDATE - Errox Fix for: &quot;Microsoft Word has stopped working&quot;</h3>
+<p>The error message, &quot;Microsoft Word has stopped working,&quot; on clicking the TM Save button or TM Open button in MS Word 2010 after installing Time Matters on a new computer.</p>
+<p>One potential fix for this issue is to install the Microsoft VTSO Runtime (Visual Studio 2010 Tools for Office Runtime):<br>
+<a href="http://www.microsoft.com/en-us/download/details.aspx?id=35594">http://www.microsoft.com/en-us/download/details.aspx?id=35594</a></p>
+<p>After downloading the installer file:</p>
+<ol>
+<li>Run the VTSO Runtime installer file.</li>
+<li>Uninstall the Time Matters program: Control Panel | Programs and Features | LexisNexis Time Matters.</li>
+<li>Reinstall Time Matters.</li>
+<li>Follow the steps below under: <strong>&quot;Add the TM Save Button to MS Word 2010&quot;</strong></li>
+</ol>
+<h3>Fixing a Disabled Word Add-In</h3>
+<p>You might go through all the steps, below, to get the TM Save button working in Word 2010, but still it could be disabled. A description of an additional fix has been added to our step-by-step <a href="/ms-word-security-settings/">Security Settings</a> page explaining how to enable a disabled Word Add-In.</p>
+<p><strong>Note:</strong> Time Matters does not support Starter, Student, Trial, or Academic versions of Microsoft Word and does not support Microsoft Office Basic. With these versions, Time Matters will attempt to load the links, but one of the Add-Ins will appear in Inactive Add-Ins and will not work.</p>
+<h2>Add the TM Save Button to MS Word 2010</h2>
+<p>Time Matters installs a &quot;Time Matters&quot; tab at the top of MS Word 2010. If the tab does not appear in MS Word, follow these steps:</p>
+<ol>
+<li>Close MS Word.</li>
+<li>In Time Matters, go to File | Setup | General | Workstation Level | Word Processor Setup</li>
+<li>Uncheck the MS Word 2010 box. Press OK.</li>
+<li>Click on: Word Processor Setup | OK.</li>
+<li>Open MS Word 2010.</li>
+<li>If the Enable Macros bar appears, click: Enable Macros.</li>
+</ol>
+<p>A Time Matters tab should appear at the top of MS Word 2010.</p>
+<h2>MS Word 2010 Security Settings for TM Save</h2>
+<p>You may stop the TM Save button from triggering the Macro warning in MS Word without disabling the warnings for other, unknown macros.</p>
+<p><a href="/ms-word-security-settings/">Click here</a> for an illustrated, step-by-step guide to setting the Security Settings in MS Word 2010 for the TM Save button. These steps disable the macro warning for the Time Matters add-in to MS Word 2010.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

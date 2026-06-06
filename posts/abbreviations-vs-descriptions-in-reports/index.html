@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abbreviations vs Descriptions in Reports</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Abbreviations vs Descriptions in Reports</h1>
+<p><strong>Date:</strong> Jun. 14, 2010
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/reports/">
+        reports
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/Code-or-Description.png" alt="Code-or-Description.png" class="img-blog">
+<h2>A Time Matters Secret</h2>
+<p>Hidden within the Report Designer of Time Matters is an undocumented feature for selecting whether to display an Abbreviation or a Description for some fields in Time Matters custom Reports. A tip of the hat to Neil Johnson and Jeff Krause for revealing this secret in their excellent Time Matters Bootcamps.</p>
+<p>You can choose to display:</p>
+<ul>
+<li>The <strong>Code</strong> of a Classification Code instead of its Description, or</li>
+<li>The <strong>Initials</strong> of a Staff instead of the Staff Name</li>
+</ul>
+<p>To do so, check the <strong>Wrap Text</strong> box in the Properties window for the field in Report Designer. You can only do this in Reports that you create, not the standard, pre-programmed reports.</p>
+<p>Codes are 1 to 4 characters long, as are Staff Initials, so they make for narrower columns in the custom reports you create. That can be important when trying to fit a number of fields into one line per record in a report.</p>
+<p>The Wrap Text checkbox works in the expected way on other kinds of fields, wrapping the text to two or more lines as needed to fit a long entry into a narrower column.</p>
+<p>When you think about it, it makes sense to check Wrap Text to make a Classification Code or Staff entry narrower. These entries are not really wide enough to wrap well, but shortening them to a Code or to Initials accomplishes the same goal: making them fit into narrower columns.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

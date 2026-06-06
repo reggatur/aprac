@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Document Paths</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Change Document Paths</h1>
+<p><strong>Date:</strong> Jul. 20, 2015
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-management/">
+        document management
+      </a>, 
+    
+      <a href="/categories/links/">
+        links
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/change-doc-paths.PNG" alt="change-doc-paths.PNG" class="img-blog">
+<p>If you need to move your document files to a drive that has a different drive letter or to a different folder, you can change the file paths in your Time Matters Document records all at once.</p>
+<p>To change the file paths in Document records, you can use a Change Template. It performs much faster than the File | Utilities | Document Management utility.</p>
+<p>It is important that the directions be followed precisely. You could make an error that changes the Document records in a way that they cannot be fixed other than manually, one at a time, or by restoring from a database backup.</p>
+<p>There are a lot of steps, but they are mostly just clicking to select options. It makes sense to run a backup before proceeding. Main Menu | Backup Time Matters Data | Check the first 2 boxes | OK.</p>
+<p>To change document paths:</p>
+<ol>
+<li>
+<p>Backup your Time Matters database as a precaution</p>
+</li>
+<li>
+<p>Go to Time Matters Main Menu | Database</p>
+</li>
+<li>
+<p>Choose: Documents</p>
+</li>
+<li>
+<p>Go to Time Matters Main Menu | Search</p>
+</li>
+<li>
+<p>Select Advanced Search</p>
+</li>
+<li>
+<p>Select: FileName</p>
+</li>
+<li>
+<p>Select: Starts With</p>
+</li>
+<li>
+<p>Fill in the old file path you want to change, for example, M:\Docs\</p>
+</li>
+<li>
+<p>Press OK</p>
+</li>
+<li>
+<p>Right-click anywhere on the list and choose: Tag Record | Tag All Records</p>
+</li>
+<li>
+<p>In the Time Matters Main Men, click: Process</p>
+</li>
+<li>
+<p>Click: Change Records | Create New Template | Change Contents of a Field</p>
+</li>
+<li>
+<p>In this example, the &amp; replaces M:\Docs\. Time Matters can use the &amp; (ampersand) as an alias for the Shared Files Directory. If you are not using the &amp; alias, you could type a different path, such as G:\Docs, in place of the &amp; above.</p>
+</li>
+<li>
+<p>Press Next, Next, Next. Uncheck: Backup Data Files.</p>
+</li>
+<li>
+<p>Click Finish.</p>
+</li>
+<li>
+<p>Your filtered Document list should now be empty because you have changed all the file paths.</p>
+</li>
+</ol>
+<p>If you run this process and nothing changes, it usually means that you have not entered the old file path correctly in step 6, above.</p>
+<p>For assistance with this process or any other aspect of Time Matters, you are welcome to call 800.575.0007 or &lt;a <a href="/send-us-an-e-mail">Click to send an e-mail...</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

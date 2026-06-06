@@ -347,5 +347,29 @@ hr {
 /* Prevent overflow on phones */
 img {  
   max-width: 100% !important;  
-} 
+}
 
+/* Image sizes for blogs */
+/* <img src="path/to/image.jpg" alt="Description" class="small-image"> */
+
+.img-blog {  
+  display: block;  
+  margin: 0 auto;
+  width: 450px;
+  height: auto;
+}
+
+.img-sm {
+  width: 150px;
+  height: auto;
+}
+
+.img-med {
+  width: 300px;
+  height: auto;
+}
+
+.img-lg {
+  width: 450px;
+  height: auto;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Billing Matters 14.1 Invoice emails</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Billing Matters 14.1 Invoice emails</h1>
+<p><strong>Date:</strong> Aug. 31, 2015
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/billing-matters/">
+        Billing Matters
+      </a>, 
+    
+      <a href="/categories/billing/">
+        billing
+      </a>, 
+    
+      <a href="/categories/email/">
+        email
+      </a>
+    
+  
+</p>
+<p>In Time Matters/Billing Matters 14 and 14.1, when you use the option to send a Billing Matters invoice via email using default text for the email message, the text loses all carriage returns. Also, only the first email in a batch of selected Matters is related to a Contacts and a Matter.</p>
+<p>My work-around is to avoid the option for a Default email Message and instead complete each billing email, one at a time, using a Formattable Clipboard. Billing Matters will generate all the billing emails with a Subject (set in Billing Preferences on the Accounts Receivable tab) and a blank body. Opening each email and applying a Formattable Clipboard does three things: (1) Fills in the body of the email with carriage returns, and (2) Lets you manually relates the email to the Contact and Matter; and (3) Allows the automatic use of the client's First Name via a linked field in the Formattable Clipboard.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

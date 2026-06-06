@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fixed Fee Billing Records</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Fixed Fee Billing Records</h1>
+<p><strong>Date:</strong> Dec. 17, 2009
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/billing-matters/">
+        Billing Matters
+      </a>, 
+    
+      <a href="/categories/billing/">
+        billing
+      </a>, 
+    
+      <a href="/categories/forms/">
+        forms
+      </a>, 
+    
+      <a href="/categories/timekeeping/">
+        timekeeping
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/billing-flat-fee.PNG" alt="billing-flat-fee.PNG" class="img-blog">
+<p>I have always wanted an automatic way to enter a fixed fee or flat fee Billing record in Billing Matters. For example, if you want to charge $295 for a Simple Will or $1500 for an LLC Operating Agreement, wouldn't it be great to press a few keys and have the Billing record Description and Flat fee filled in?</p>
+<p>It is straight-forward to set up Billing Preferences to charge a One-Time Fee that covers everything on a matter. But I have wanted an easy way to set up various fixed fee, a la carte services.</p>
+<p>I discovered a way, but there is <strong>a trick</strong>. You need to &quot;double-clutch&quot; in the middle of entering the record in order to fill in all the fields correctly and automatically.</p>
+<p>You can automate the creation of fixed fee Billing records using AutoEntry Forms. First, create an AutoEntry Form for each of your fixed fee services.</p>
+<p>To create an AutoEntry Form:</p>
+<ol>
+<li>Go to: Main Menu | File | Setup | Templates | AutoEntry Form</li>
+<li>Choose Billing and press the green plus button to Add an AutoEntry Form.</li>
+<li>Give the AutoEntry Form an name, such as &quot;Flat Fee - Simple Will&quot;.</li>
+<li>You do not need a Code in Time Code, but I like to use one.</li>
+<li>Clear the Time field at the top and clear the Staff field.</li>
+<li>In the Rates area, select: None, None, Flat.</li>
+<li>Put the Flat Fee amount in Rate.</li>
+</ol>
+<p><strong>Billing AutoEntry Form - Flat Fee</strong></p>
+<p>To enter a fixed fee Billing Record:</p>
+<ol>
+<li>Add a Billing Record.</li>
+<li>Click on the AutoEntry Form icon in the Form toolbar and select Flat Fee... (Or press Ctrl-A, select it, Enter)</li>
+<li><strong>Trick</strong> : Press Ctrl-S to save or click the Save icon.<br>
+Use the AutoEntry Form for Flat Fee again: Ctrl-A, (select), Enter.</li>
+<li>Fill in the Matter Name. Save and Close.</li>
+</ol>
+<p><strong>Note</strong> : In <strong>Step 2</strong> , if the Matter Name is already filled in, <strong>delete the Matter Name</strong> and tab or click out of the field. Then fill in the Matter Name in Step 4. Otherwise, the Matter will overwrite important Flat Fee fields.</p>
+<p>So the trick is to use the AutoEntry Form, save the Billing record without the Matter Name, then use the AutoEntry Form again and fill in the Matter. It is easier than it sounds, especially if you use Ctrl-A for applying the AutoEntry Form and Ctrl-S to save the record.</p>
+<p>With AutoEntry Forms for each of your fixed fee services, you can save time each time you work on and record one of them. Your technology makes you more profitable in two ways: once when performing the services and again by saving you time when billing for them.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

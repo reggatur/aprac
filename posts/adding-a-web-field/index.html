@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adding a Web Field</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Adding a Web Field</h1>
+<p><strong>Date:</strong> Jul. 31, 2005
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/forms/">
+        forms
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/webfieldprop.png" alt="Field Properties window for Web field" class="img-blog">
+<p>It makes sense that a Web field on a Time Matters record lets you jump to a Webpage, but did you know it can also let you instantly open a client document? Adding a Web field to a Contact Form or other Time Matters Form allows you store a Website address and jump directly to a Webpage by clicking the Web icon next to the field. You can use the Web field type for a field that opens a specific client document, such as a matter summary in MS Word, with one click.</p>
+<h2>Adding a Web Field</h2>
+<p>It makes sense that a Web field on a Time Matters record lets you jump to a Webpage, but did you know it can also let you instantly open a client document? Adding a Web field to a Contact Form or other Time Matters Form allows you store a Website address and jump directly to a Webpage by clicking the Web icon next to the field. You can use the Web field type for other fields that let you open a specific client document, such as a matter summary in MS Word, with one click.</p>
+<p>To create a Web field that stores a Webpage address:</p>
+<ol>
+<li>
+<p>Right-click the field you want to customize.</p>
+</li>
+<li>
+<p>Click <code>Customize Field</code>.</p>
+</li>
+<li>
+<p>Select <code>Web</code> from the <code>Customize Field...</code> list.</p>
+</li>
+<li>
+<p>Change the <code>Screen Label</code> and <code>Field Name</code> from, for example, <code>User4</code> to <code>Website</code>.</p>
+</li>
+<li>
+<p>In the <code>Prefix</code> field, type: <code>http://</code></p>
+</li>
+<li>
+<p>Click <code>OK</code>.</p>
+</li>
+</ol>
+<p>After creating a Web field, you can enter Website addresses in all the following ways:</p>
+<ul>
+<li>
+<p>www.timematters.com</p>
+</li>
+<li>
+<p>timematters.com</p>
+</li>
+<li>
+<p>maps.yahoo.com</p>
+</li>
+<li>
+<p>http://www.timematters.com</p>
+</li>
+</ul>
+<p>It is important to enter the prefix <code>http://</code> in the Field Properties window when defining a Web field. That allows Time Matters to correctly handle Web addresses that do not begin with <code>www</code>.</p>
+<p>To create a Web field that opens a document:</p>
+<ol>
+<li>
+<p>Follow Steps 1-4, above.</p>
+</li>
+<li>
+<p>In the <code>Prefix</code> field, type for example: <code>T:\Docs\</code> using the drive letter and folder name of the locations of your Files Directory for Time Matters.</p>
+</li>
+</ol>
+<h2>Creating a Web Field to Open a Document</h2>
+<p>To create a Web field that opens a document:</p>
+<ol>
+<li>
+<p>Follow Steps 1-4, above.</p>
+</li>
+<li>
+<p>In the <code>Prefix</code> field, type for example: <code>T:\Docs\</code> using the drive letter and folder name of your Files Directory for Time Matters.</p>
+</li>
+</ol>
+<p>To use the Web field for a document, fill in the document's folder and document name. For example:</p>
+<ul>
+<li>Able, Barry\Able v Florida\Able Matter Summar.doc</li>
+</ul>
+<p>When you click the Web button next to this field, MS Word will appear and the document will open. It makes sense to use the Docs tab on Contacts and Matters to access most document. But if there is a single document that you update frequently, creating a Web field for that kind of document can save you time and effort.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

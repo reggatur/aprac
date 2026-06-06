@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audit Log in Enterprise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Audit Log in Enterprise</h1>
+<p><strong>Date:</strong> Sep. 23, 2005
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/administration/">
+        administration
+      </a>, 
+    
+      <a href="/categories/utilities/">
+        utilities
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/audit0.png" alt="audit0.png" class="img-blog">
+<img src="/assets/img/blog/audit1.png" alt="audit1.png" class="imgctr">
+<img src="/assets/img/blog/audit2.png" alt="audit2.png" class="imgctr">
+<img src="/assets/img/blog/audit3.png" alt="audit3.png" class="imgctr">
+<p>The Audit Log can give you immediate relief from uncertainty. Did someone accidentally change an important date? What happened to the Event record for an important meeting? By examining the Master Audit Log, you can do some detective work. Here we show you how to search the Audit Log in the Enterprise Edition of Time Matters.</p>
+<h3>Printing the Master Audit Log</h3>
+<p>You can view the Master Audit Log on the screen by selecting: <code>File | Utilities | View Audit Log</code>. There you can set the date range you want to view but cannot search the log. To search for specific words or phrases, you need to work with the log outside of Time Matters. If you are not experienced in using SQL tools, the best way to search the log is to print it to an electronic format.</p>
+<p>Keeping an Audit Log is optional. To turn it on and set preferences, go to:</p>
+<p><code>File | Setup | General | Program Level Setup | Audit Log</code></p>
+<p>Two popular software programs for &quot;printing&quot; to electronic files are Adobe Acrobat and PaperPort. If you have either one of these programs, you can print to &quot;electronic paper,&quot; then search the contents of the Audit Log. If you do not have one of these programs, you can create a plain text file using the Windows Generic printer driver. For setup instructions, see the section below entitled, &quot;Setting Up the Generic Printer Driver.&quot;</p>
+<p>To print the Audit Log::</p>
+<p>Go to: <code>Report | File Reports | Master Audit Log</code></p>
+<p>Select the Date Range for your Audit Log report and click <code>OK</code>.</p>
+<p>In the Printer <code>Name</code> field, select Adobe PDF, PaperPort Black and White, or a similar choice if you have different third-party software. You need one of the full versions of Acrobat, not Acrobat Reader, to have an Adobe PDF choice.</p>
+<p>Some programs, such as PaperPort, need to be open in another window in order to accept the document.</p>
+<p>Click <code>OK</code>.</p>
+<p>If your log is many pages long, it will take a few moments to create the report.</p>
+<p>Go to the appropriate software program to view the printed report. With a program like Adobe Acrobat, you can select: <code>Edit | Find</code> to search for a particular word or phrase.</p>
+<p>Time Matters Professional also creates and Audit Log. It is saved in the Time Matters data directory as <code>AUDIT001.LOG</code>. You can open this file and search it using your word processor or a plain text editor.</p>
+<h3>Setting Up the Generic Printer Driver</h3>
+<p>If you do not have a program like Adobe Acrobat (full version) or PaperPort, you can use the Windows Generic printer driver to print the Audit Log to an electronic file for searching.</p>
+<p>To set up the Generic printer driver:</p>
+<ol>
+<li>
+<p>Click: <code>Start | Printers and Faxes | Add a Printer</code></p>
+</li>
+<li>
+<p>Click: <code>Next</code></p>
+</li>
+<li>
+<p>Uncheck: Automatically detect and install my Plug and Play printer</p>
+</li>
+<li>
+<p>Click: <code>Next</code></p>
+</li>
+<li>
+<p>In the drop-down menu select: <code>FILE: (Print to File)</code></p>
+</li>
+<li>
+<p>Click: <code>Next</code></p>
+</li>
+<li>
+<p>Under <code>Manufacturer</code>, select: <code>Generic</code></p>
+</li>
+<li>
+<p>Under <code>Printers</code>, select <code>Generic / Text Only</code></p>
+</li>
+<li>
+<p>Click: <code>Next | Next</code></p>
+</li>
+<li>
+<p>Select: <code>No</code> after: <code>Do you want to use this printer as the default printer?</code></p>
+</li>
+<li>
+<p>Click: <code>Next | Next</code></p>
+</li>
+<li>
+<p>Select: <code>No</code></p>
+</li>
+<li>
+<p>Click: <code>Next | Finish</code></p>
+</li>
+</ol>
+<p>To use the Generic printer driver, select <code>Generic / Text Only</code> as the printer name instead of your default printer or Adobe Acrobat in the example above. Press: <code>OK</code>. You will be prompted to enter an <code>Output File Name</code>.</p>
+<p>Enter a Drive, Folder and Filename, such as: <code>M:\tmw7e\data\files\audit.txt</code></p>
+<p>Click: <code>OK</code>. The Audit Log will print to that file. You can open it and search it with your word processor.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

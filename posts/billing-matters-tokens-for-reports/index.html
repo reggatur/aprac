@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Billing Matters Tokens for Reports</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Billing Matters Tokens for Reports</h1>
+<p><strong>Date:</strong> Feb. 29, 2012
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/billing-matters/">
+        Billing Matters
+      </a>, 
+    
+      <a href="/categories/reports/">
+        reports
+      </a>
+    
+  
+</p>
+<p>Tokens are variables that may be used in a number of places in Billing Matters and Time Matters. Some work in Reports and others in Bill Layouts. Tokens usable in Power Views are discussed briefly in the Time Matters Help file.</p>
+<p>This post lists tokens but does not cover the details of their use.</p>
+<h2>Billing Matters Tokens</h2>
+<p>{ADV_AMT}<br>
+{ADV_REMAIN}<br>
+{BREAK_VALUE}<br>
+{AMOUNT}<br>
+{ACCOUNT}<br>
+{REPL_AMT}<br>
+{DESC}</p>
+<ol>
+<li>
+<p>{ADV_AMT} - Used for the Bill In Advance feature to display the amount of the Bill In Advance. This amount comes from the Amount field under the Fee or Expense method on the Arrangement tab of the Billing Preferences.</p>
+</li>
+<li>
+<p>{ADV_REMAIN} - Used for the Bill In Advance feature to display the amount remaining of the Bill In Advance to include current bill.</p>
+</li>
+<li>
+<p>{BREAK_VALUE} - Use for Bills that will have Sub headers and Sub totals. The value used here is determined from settings on the Bill Profile:</p>
+<ul>
+<li>
+<p>Options tab - Summarize time or expenses, Paragraph time or expenses</p>
+</li>
+<li>
+<p>Itemize Options - Sort by and Show totals on Groups for Time and Expense entries.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>{AMOUNT} - Used under the Fee and Expense Label sections and is specific to showing itemized Adjustment amounts with each entry. This is used when Itemized is checked under the Totals &amp; Summaries tab of the Bill Profile.</p>
+</li>
+<li>
+<p>There are three label tokens used under the Fund Label section of the Bill Profile.</p>
+</li>
+</ol>
+<p>1. {ACCOUNT} -This field is used to display the Fund Account Name in the AR Items section of the Bill.</p>
+<p>2. {REPL_AMT} - Used when your Billing Preferences ? Funds tab has been setup with a Minimum and<br>
+Preferred Balance amount. The amount displayed on the bill will be the difference between the Preferred Balance and the balance of the Fund. The phrase will only print when the fund balance falls below the Minimum balance.</p>
+<p>3. {DESC} - Can be used for most fund labels, but most commonly used for Fund Withdrawals. Including this token will print the Memo information from the Fund Transaction on the Bill.</p>
+<h3>Billing Reports Tokens</h3>
+<p>The Firm variables are entered in Program Level Setup</p>
+<p>CLOCK<br>
+TODAY<br>
+LOGIN<br>
+PAGE_NO<br>
+FlVal: 1<br>
+FlVal: 2<br>
+FlVal: 3<br>
+FlVal: 4<br>
+FlVal: 5<br>
+FlVal: 6<br>
+Flfld: 1<br>
+Flfld: 2<br>
+Flfld: 3<br>
+Flfld: 4<br>
+Flfld: 5<br>
+Flfld: 6<br>
+Firm Address Block<br>
+Firm Name<br>
+Firm Street 1<br>
+Firm Street 2<br>
+Firm City<br>
+Firm State<br>
+Firm Zip/Postal Code<br>
+Firm Country<br>
+Firm Phone 1<br>
+Firm Phone 2<br>
+Firm Fax 1<br>
+Firm Fax 2<br>
+Firm User Defined 1 (label: Firm Tax ID)<br>
+Firm User Defined 2 (label: ?)<br>
+Firm User Defined 3 (label: ?)<br>
+Firm User Defined 4 (label: User Field 2)<br>
+Current<br>
+Period 2<br>
+Period 3<br>
+Period 4<br>
+Period 5<br>
+Period 6</p>
+<h2>Time Matters Tokens</h2>
+<p>{STAFF}<br>
+{TODAY}</p>
+<h3>Power View Tokens</h3>
+<p>See Time Matters Help documentation.</p>
+<p>Please submit your corrections and additions to:<br>
+Wells H. Anderson, J.D., CIC<br>
+Active Practice LLC<br>
+<a href="/send-us-an-email">click here to send us an email...</a><br>
+800.575.0007</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

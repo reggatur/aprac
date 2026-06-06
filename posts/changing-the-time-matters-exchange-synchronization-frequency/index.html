@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Changing the Time Matters - Exchange Synchronization Frequency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Changing the Time Matters - Exchange Synchronization Frequency</h1>
+<p><strong>Date:</strong> Sep. 12, 2013
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/mobile/">
+        mobile
+      </a>, 
+    
+      <a href="/categories/synchronization/">
+        synchronization
+      </a>
+    
+  
+</p>
+<p>Time Matters Exchange Synchronization can keep Contacts, Events and ToDo's automatically synchronized between Time Matters and Outlook/Exchange, which can automatically synchronize with smartphones like the Apple iPhones and Android smartphones.</p>
+<p>In Time Matters 12 and later, the Exchange Synchronization interval or frequency is set by default at 60 seconds. With such a short update interval, the synchronization can slow down the server that is running Microsoft Exchange.</p>
+<p>By setting the interval to 300 seconds (5 minutes) or 600 seconds (10 minutes), you can still get frequent updates and spare your server from working so hard.</p>
+<p>To set the frequency of Time Matters Exchange Synchronization:</p>
+<ol>
+<li>On the server running Time Matters, open Windows Explorer and go to this folder:</li>
+</ol>
+<p>C:\Program Files (x86)\LexisNexis\Exchange Synchronization
+2. Open this file in a text editor program such as Notepad:<br>
+LexisNexis.PM.Synchronization.Exchange.Service.exe.config
+3. Edit this line:</p>
+<p><add key="SyncIntervalinSeconds" value="60" /></p>
+<ol start="4">
+<li>Change the number 60 to a higher number of seconds, such as 300.</li>
+<li>Save the file.</li>
+</ol>
+<p>A tip of the hat to Greg Mitchell of Matters in Motion and to Rick Hahn of Lawtopia.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

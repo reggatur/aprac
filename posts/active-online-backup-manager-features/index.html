@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Active Online Backup Manager Features</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Active Online Backup Manager Features</h1>
+<p><strong>Date:</strong> Oct. 14, 2012
+  
+</p>
+<h2>Backup</h2>
+<table>
+<thead>
+<tr>
+<th>2-tier backup</th>
+<th>Ability to continue backup process when network is not available.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Online backup</td>
+<td>Backup securely across the Internet to Active Online Backup servers.</td>
+</tr>
+<tr>
+<td>Offline backup</td>
+<td>Ability to perform the first backup without sending the entire data to a remote server over the Perform backup to local disk → send backed up data to Active Online Backup → we apply it to the server → continue with backup).</td>
+</tr>
+<tr>
+<td>Delta backup</td>
+<td>Second and subsequent full backup operations in much less time than the first backup.</td>
+</tr>
+<tr>
+<td>Automatic backup</td>
+<td>Backup data automatically according to the specified schedule.</td>
+</tr>
+<tr>
+<td>Backup on shutdown</td>
+<td>Ability to backup data automatically on the system shutdown.</td>
+</tr>
+<tr>
+<td>System state</td>
+<td>Perform a system state backup.</td>
+</tr>
+<tr>
+<td>MS SQL backup</td>
+<td>Ability to backup MS SQL database.</td>
+</tr>
+<tr>
+<td>Exchange backup</td>
+<td>Ability to backup Exchange on database level.</td>
+</tr>
+<tr>
+<td>Network folders</td>
+<td>Ability to backup data shared over the network.</td>
+</tr>
+<tr>
+<td>Open files backup</td>
+<td>Opportunity to backup open files with VSS.</td>
+</tr>
+<tr>
+<td>Exclusion filters</td>
+<td>Select certain file types to exclude them from the backup.</td>
+</tr>
+<tr>
+<td>Backup user rights</td>
+<td>Restore data with the same security permissions that were used during the backup.</td>
+</tr>
+<tr>
+<td>Pre/post-backup actions</td>
+<td>Ability to add pre- and post-backup commands that will be executed before or after a backup, respectively.</td>
+</tr>
+<tr>
+<td>Encryption</td>
+<td>Immediate encryption of backed up data with options for 256bit or 448bit. Access to the private password is necessary to read an encrypted file.</td>
+</tr>
+<tr>
+<td>Simple scheduling</td>
+<td>Setting up a daily backup time and backup on system shutdown.</td>
+</tr>
+<tr>
+<td>Advanced scheduling</td>
+<td>Ability to plan backup of My Computer, Microsoft SQL or Exchange Server by choosing the type of backup to be performed and by selecting the interval, date, and time for the backup to run.</td>
+</tr>
+<tr>
+<td>Remote backup</td>
+<td>Ability to launch backup via the Management Console</td>
+</tr>
+</tbody>
+</table>
+<h2>Restore</h2>
+<table>
+<thead>
+<tr>
+<th>Simple restore interface</th>
+<th>Restore one or more files using a simple file tree and backup date selector.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VMware per files restore</td>
+<td>Restore selected files from VMware virtual machines.</td>
+</tr>
+<tr>
+<td>Restore on Desktop</td>
+<td>Restore files to original location or to the Desktop.</td>
+</tr>
+<tr>
+<td>Restore</td>
+<td>Ability to perform the restore of the backed up data stored on a remote server.</td>
+</tr>
+<tr>
+<td>Delta restore</td>
+<td>Perform the second and subsequent restores in much less time than the first restore.</td>
+</tr>
+<tr>
+<td>System state restore</td>
+<td>Ability to perform a system state restore.</td>
+</tr>
+<tr>
+<td>MS SQL restore</td>
+<td>Ability to restore MS SQL database.</td>
+</tr>
+<tr>
+<td>Exchange VSS restore</td>
+<td>Ability to restore Exchange database.</td>
+</tr>
+<tr>
+<td>Restore of selected files only</td>
+<td>Ability to restore not the whole backup session but only selected files.</td>
+</tr>
+<tr>
+<td>Restore to the original/alternative location</td>
+<td>Ability to restore data to the original or to another selected location.</td>
+</tr>
+<tr>
+<td>Selection of backup session for restore</td>
+<td>Ability to select any backup session for the restore operations.</td>
+</tr>
+</tbody>
+</table>
+<h2>Updates</h2>
+<table>
+<thead>
+<tr>
+<th>Manually update</th>
+<th>Ability to update the application manually very quickly.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autoupdate</td>
+<td>Ability to update the application automatically very quickly.</td>
+</tr>
+</tbody>
+</table>
+<h2>Technologies</h2>
+<table>
+<thead>
+<tr>
+<th>Deduplication</th>
+<th>Faster, smaller backups by eliminating duplication of redundant information.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delta slicing</td>
+<td>Scan all data files for any changes made to the files since the previous slice level backup and send to the backup server only changed slices.</td>
+</tr>
+<tr>
+<td>True Delta Discovery</td>
+<td>Much faster backups by using delta backup technique which skips unchanged directories without testing the contents.</td>
+</tr>
+<tr>
+<td>Cabinets</td>
+<td>Advanced technique of backed up data storage.</td>
+</tr>
+<tr>
+<td>FTP over SSL protocol usage</td>
+<td>Technology which allows to use FTP over secure SSL protocol.</td>
+</tr>
+</tbody>
+</table>
+<h2>Other</h2>
+<table>
+<thead>
+<tr>
+<th>Archiving</th>
+<th>Ability to keep specific backups actual, even if these backups are behind the retention point.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Common files</td>
+<td>Eliminate or dramatically decrease storage waste.</td>
+</tr>
+<tr>
+<td>Remote installation</td>
+<td>Easy installation of the Client software on a remote computer.</td>
+</tr>
+<tr>
+<td>GUI</td>
+<td>Ability to manage application via GUI.</td>
+</tr>
+<tr>
+<td>Management console</td>
+<td>Presence of console for management.</td>
+</tr>
+<tr>
+<td>Visualisation</td>
+<td>Window that displays the backup/restore progress.</td>
+</tr>
+<tr>
+<td>Runs as a service</td>
+<td>Application runs as a Windows Service.</td>
+</tr>
+<tr>
+<td>tree-structure</td>
+<td>Files arranged in a &quot;tree&quot; structure so files may be easily found.</td>
+</tr>
+<tr>
+<td>Backup Register</td>
+<td>Backup database is now client-side, so it makes backup operations faster (the copy of the backup database is stored on the server).</td>
+</tr>
+<tr>
+<td>Client driven cleaning</td>
+<td>Cleaning of non-actual data behind the retention period.</td>
+</tr>
+<tr>
+<td>Multi-lingual support</td>
+<td>Support of most common European languages.</td>
+</tr>
+<tr>
+<td>Remote management</td>
+<td>Ability to manage application via remote GUI.</td>
+</tr>
+<tr>
+<td>Status window</td>
+<td>The status window is displayed during the process of backup and restore. Now the total size of files in backup and restore queue, the total size of cabinets that are not synchronized with the server yet and current traffic usage are displayed in graphs with a summary.</td>
+</tr>
+<tr>
+<td>Tray icon notifications</td>
+<td>Monitor your backup and restore status via a pop-up tray icon.</td>
+</tr>
+<tr>
+<td>Dynamic slicing</td>
+<td>Smarter analog of delta slicing that uses knowledge about data structure of files being backed up for cutting them onto non-fixed size slices to achieve more efficiency in delta-backup.</td>
+</tr>
+<tr>
+<td>Local cabinet cache</td>
+<td>Feature is used for restore optimization and is extremely efficient for big files with lots of daily changes like MSSQL or Exchange databases (especially together with long history). During restore necessary data is downloaded from the server in relatively big portions (cabinets) and stored on the local disk. Only local data is used further, thus decreasing overall restore time due to small cabinet random access times.</td>
+</tr>
+</tbody>
+</table>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

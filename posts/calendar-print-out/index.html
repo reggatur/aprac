@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendar Print-Out</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Calendar Print-Out</h1>
+<p><strong>Date:</strong> Sep. 11, 2011
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/calendar/">
+        calendar
+      </a>, 
+    
+      <a href="/categories/reports/">
+        reports
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/cal9.png" alt="cal9.png" class="img-blog">
+<img src="/assets/img/blog/cal1.png" alt="cal1.png" class="imgctr">
+<img src="/assets/img/blog/cal2.png" alt="cal2.png" class="imgctr">
+<img src="/assets/img/blog/cal3.png" alt="cal3.png" class="imgctr">
+<img src="/assets/img/blog/cal4.png" alt="cal4.png" class="imgctr">
+<img src="/assets/img/blog/cal5.png" alt="cal5.png" class="imgctr">
+<img src="/assets/img/blog/cal6.png" alt="cal6.png" class="imgctr">
+<img src="/assets/img/blog/cal7.png" alt="cal7.png" class="imgctr">
+<img src="/assets/img/blog/cal8.png" alt="cal8.png" class="imgctr">
+<h2>Creating a Monthly Calendar Print-Out</h2>
+<p>Though using less paper is important, sometimes you are well-served by a month-at-a-glance calendar print-out. Here are the steps we suggest for setting up a saved report you can use to print your Time Matters calendar.</p>
+<p>We have selected a 5-days per week view to allow more text for each day. You can select the more typical 7-days per week view if you prefer it.</p>
+<p>The <strong>real secret</strong> to creating a good Calendar report is to select the <strong>right fields</strong>. Choose too many and a day's appointments won't fit in its box. They will carry over onto a second page that contains just these overflow entries.</p>
+<p>Other secrets are to be specific and concise in what you enter as the Description for each of the Events on your Calendar and to use Classification Codes for all Events.</p>
+<p>Once you have set up this report, you will be able to print it quickly by going to the Calendar, clicking the Printer button, selecting the report, and pressing Print.</p>
+<h2>Setting Up the Monthly Calendar Report</h2>
+<p>Start by going to the Calendar and selecting the Printer button just above the Calendar on the far right.</p>
+<p>Under Report, select:<br>
+Under Format, select: Monthly Calendar<br>
+Click the Add button (lower left)</p>
+<p>In the Name field, type a name for the report, like: Monthly Print-Out</p>
+<p>Under Format, click the Fields button</p>
+<p>Use the Remove button to clear the fields listed in the right panel.<br>
+Use the Add button to add:</p>
+<ul>
+<li>Start Time</li>
+<li>Duration</li>
+<li>Classification Code</li>
+<li>Description</li>
+</ul>
+<p>Or choose your own selections of fields to appear in each day's box.</p>
+<p>Click the Options button.</p>
+<p>Uncheck: Include ToDo's<br>
+Select: 5 Days (or 7 Days)</p>
+<p>Click the Filter tab.<br>
+Leave today's date in the date boxes.<br>
+Check the box: Dates are relative to Today.</p>
+<p>Click the Save button.</p>
+<p>Now click the Preview button to see the resulting report. If you need to tweak the report, click the Change button.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

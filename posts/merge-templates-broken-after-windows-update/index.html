@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Merge Templates Broken after Windows Update</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Merge Templates Broken after Windows Update</h1>
+<p><strong>Date:</strong> Dec. 14, 2009
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-creation/">
+        document creation
+      </a>, 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>
+    
+  
+</p>
+<h3>Merge Templates Broken after Windows Update</h3>
+<p>It is possible for a Windows Update to break the Mail Merge feature in MS Word.</p>
+<p><strong>Problem:</strong> After updating Windows XP, your Merge Templates do not work. You get these error messages:</p>
+<p>&quot;Word cannot start the converter mswrd632.wpc&quot;<br>
+and<br>
+&quot;Unable to open the Specified Merge Form File&quot;</p>
+<p><strong>Solution:</strong></p>
+<p>This issue is not a Time Matters issue, but a Microsoft Word issue. You would have this problem trying to use the Word Mail Merge feature all by itself.</p>
+<p>You may be able to fix it with a Registry patch file. Please contact us for the file.</p>
+<p>But first, back up your hard drive and backup your Windows Registry.</p>
+<p>Here is one way to backup the Registry, per Microsoft - &lt;http://support.microsoft.com/kb/322756 &gt;</p>
+<p>Manual steps to back up the registry in in Windows XP:</p>
+<ol>
+<li>Click Start, click Run, type %SystemRoot%\system32\restore\rstrui.exe, and then click OK.</li>
+<li>On the Welcome to System Restore page, click Create a restore point, and then click Next .</li>
+<li>On the Create a Restore Point page, type a name for the restore point and then click Create</li>
+<li>After the restore point has been created, click Close.</li>
+</ol>
+<p>Then just double-click on the attached file after downloading it to your desktop or a folder.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

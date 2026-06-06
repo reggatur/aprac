@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Easy Mailmerge for Multiple Letters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Easy Mailmerge for Multiple Letters</h1>
+<p><strong>Date:</strong> Aug. 29, 2018
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-creation/">
+        document creation
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/sample-letter-formattable-clipboard.png" alt="sample-letter-formattable-clipboard.png" class="img-blog">
+<p>You can produce multiple documents by tagging multiple Contacts. If you have pre-printed letterhead or just need to create one-page letters, that is easy. If you are producing multi-page letters without pre=printed letterhead, the Formattable Clipboard can either work with a letterhead on every page or on no pages.</p>
+<p>Below is an example of a one-page letter designed for blank stationery (not preprinted letterhead). In this example, the SALUTATION field is used for the Contact's nickname, like &quot;Joe,&quot; and it is used in place of FIRSTNAME if it exists.</p>
+<p>The trick is to use the {PAGE} code at the bottom of the Formattable Clipboard. You end up one blank page at the end of all the letters.</p>
+<p>The Formattable Clipboard is pasted into a Word template that has the letterhead in the page header.</p>
+<hr>
+<p>{PRI CON:FIRSTNAME} {PRI CON:LAST_NAME}
+{PRI CON:FIRM}
+{PRI CON:MAIN_ADDRESS1}
+{PRI CON:MAIN_ADDRESS2}
+{PRI CON:MAIN_CITY}, {PRI CON:MAIN_STATE}  {PRI CON:MAIN_ZIP}</p>
+<p>Re:{TAB}{INPUT~Enter the regarding line}</p>
+<p>Dear {IF {PRI CON:SALUTATION} ISNOTBLANK} {THEN}{PRI CON:SALUTATION}{ELSE}{PRI CON:FIRSTNAME}{END IF}:</p>
+<p>BodyOfLetter</p>
+<p>Sincerely,</p>
+<p>Robert S. Brown
+{PAGE}</p>
+<hr>
+<p><strong>Note:</strong> Your field codes will differ from some used in the above example, so you'll need to make adjustments if you copy this Formattable Clipboard code.</p>
+<p>Here is the result for two Contacts:</p>
+<p>For more tips on automating documents, see our blog posts on the topic, <strong>Document Creation.</strong></p>
+<p>A tip of the hat to <a href="https://ask4sam.net/attorneys/joseph-miklos/">Joseph Miklos</a> for inspiring this Formattable Clipboard tip with his recent question.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

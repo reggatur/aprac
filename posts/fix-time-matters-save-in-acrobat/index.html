@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fix Time Matters Save in Acrobat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Fix Time Matters Save in Acrobat</h1>
+<p><strong>Date:</strong> Oct.  3, 2018
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-management/">
+        document management
+      </a>, 
+    
+      <a href="/categories/links/">
+        links
+      </a>, 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/fix_acrobat.png" alt="fix_acrobat.png" class="img-blog">
+<p>Today a release of Adobe Acrobat broke the Time Matters Save button. Here is a fix. The code is courtesy of Tom Caffrey.</p>
+<p><strong>Heads Up:</strong> This fix changes the Windows Registry. It worked fine for me, but your results may vary. The most cautious approach is to perform an image backup of your computer. Second most cautious approach is to <a href="https://neosmart.net/wiki/backup-restore-registry/">back up the Windows Registry</a>.</p>
+<p>To fix the issue:</p>
+<p>Copy the following line by highlighting it (triple-click on any word) and pressing Ctrl-C:</p>
+<p>Reg Add &quot;HKEY_CURRENT_USER\Software\Adobe\Acrobat Reader\19.0\Privileged&quot; /v bProtectedMode /t Reg_Dword /d 0</p>
+<ol>
+<li>
+<p>Now type <strong>cmd</strong> in the Windows Search box (lower right corner of Desktop).</p>
+</li>
+<li>
+<p>Right-click on <strong>Command Prompt</strong></p>
+</li>
+<li>
+<p>Choose <strong>Run As Administrator</strong> and click <strong>OK</strong></p>
+</li>
+<li>
+<p>Right-click at the prompt and choose <strong>Paste</strong></p>
+</li>
+<li>
+<p>Press <strong>Enter</strong></p>
+</li>
+</ol>
+<p>Repeat these steps on each computer.</p>
+<p>Questions? Call us at <strong>800.575.0007</strong> or <a href="/send-us-an-email">click to send us and email</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

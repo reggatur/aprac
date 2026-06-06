@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fix for Missing Buttons - Workstation Level Setup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Fix for Missing Buttons - Workstation Level Setup</h1>
+<p><strong>Date:</strong> May. 21, 2015
+  
+</p>
+<p>If a Time Matters button is missing in MS Outlook, MS Word, or Acrobat, refreshing the Time Matters Add-Ins in Workstation Level Setup often brings it back.</p>
+<p>To refresh Time Matters buttons in other programs:</p>
+<ol>
+<li>Close all third-party programs, such as MS Outlook, MS Word, and Acrobat.</li>
+<li>Close Time Matters, right-click on the Time Matters icon on your Desktop or Start Menu (but not on the Task Bar)</li>
+<li>Click: Run As Administrator</li>
+<li>In Time Matters, go to File | Setup | General | Workstation Level | External Program Setup</li>
+<li>Uncheck all the boxes. Press OK.</li>
+<li>Click on: External Program Setup</li>
+<li>Check the boxes for all the programs you use with Time Matters, except:</li>
+<li>Do not check the 3 boxes: &quot;Perform a TM Save when...&quot;</li>
+<li>Press OK</li>
+</ol>
+<p>Now check to see if the buttons are back and working.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

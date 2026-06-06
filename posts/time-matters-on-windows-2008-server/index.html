@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Matters on Windows 2008 Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Time Matters on Windows 2008 Server</h1>
+<p><strong>Date:</strong> Jun. 17, 2010
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/windows/">
+        Windows
+      </a>, 
+    
+      <a href="/categories/setup/">
+        setup
+      </a>, 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/windows-firewall-sql-server.PNG" alt="windows-firewall-sql-server.PNG" class="img-blog">
+<p>Installing Time Matters on Microsoft Windows Server 2008 or Microsoft Small Business Server 2008 and as a MS SQL Server 2008 or MS SQL Server 2008 Express database is a more complicated process than installing on a Windows XP, Windows Server 2003 or Windows 7. The tighter security gives you more protection, but can interfere with the installation process and require various settings changes.</p>
+<p>Here are some installation tips.</p>
+<h2>Importing Time Matters Data</h2>
+<p>After installing Time Matters on the Windows Server 2008 machine and creating the fresh, empty Time Matters database, you may not encounter a data import issue. The work-around is to install the Time Matters software on a workstation PC running Windows XP or Windows 7 and import the old Time Matters database using that workstation PC.</p>
+<p>But the workstation PC needs to be able to connect to the new Time Matters database on the server first. If you are running Windows Firewall on the server, it can block that connection.</p>
+<h2>Changing Windows Firewall Settings on the Server</h2>
+<p>A best practice is to install a hardware firewall between you office network and the Internet. If you don't have a hardware firewall, a router may also serve as a protective barrier between the Internet and your network. But you still are wise to run a software firewall on your server to guard your most important data.</p>
+<p>The Windows Firewall is not the best software firewall around, but it is preinstalled on your server. If you have any doubts about the safety of your server, it is best to keep the Windows Firewall turned on. But then you have to configure it so that the PCs on your network can connect through to the Time Matters database.</p>
+<p>It is not necessarily enough that you open the SQL Server port 1433 to the PCs on your network. The Windows Firewall will still block their connection to MS SQL Server.</p>
+<p>Microsoft provides a Fix-It resource for configuring the Windows Firewall to allow connections to MS SQL Server:</p>
+<p><a href="http://go.microsoft.com/?linkid=9657433"></a></p>
+<p>When you try to download the the Fix-It file, Internet Explorer may block it because security settings a set high by default on Windows Server 2008. The link also explains how to perform a manual installation of the needed changes to the Windows Firewall.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

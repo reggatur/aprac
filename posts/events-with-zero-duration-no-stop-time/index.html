@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events with Zero Duration - No Stop Time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Events with Zero Duration - No Stop Time</h1>
+<p><strong>Date:</strong> Sep. 26, 2013
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/calendar/">
+        calendar
+      </a>, 
+    
+      <a href="/categories/timekeeping/">
+        timekeeping
+      </a>
+    
+  
+</p>
+<p><strong>Updated</strong> 2014-02-20</p>
+<p>Time Matters 13 now allows entry of an Event on the Calendar without having to enter a Stop Time. If no Stop Time is entered, the Stop Time defaults to the Start Time so the Event has a zero duration.</p>
+<hr>
+<p>In the current release of Time Matters - version 12 Service Pack 2, each Event on the Calendar needs a Start Time and a Stop Time. It used to be that an Event could have a single time, like 8:00 am, and no duration. If you try to save an Event with no duration, an error window appears reminding you to enter a Stop Time.</p>
+<p>If you use zero duration Events, like 8:00am - 8:00am, there are some shortcuts.</p>
+<h3>Shortcut #1: Type the time twice with a dash between the numbers</h3>
+<p>Tab into or double-click in the Time field. For a 10:00 am entry, type: 10-10<br>
+For 1:00, type: 1-1<br>
+For 2:30, type 230-230</p>
+<ul>
+<li><strong>Note:</strong> For any Event longer than zero hours, you can type the length (in hours or tenths of hours) in the Duration box and the End Time will fill in automatically, for example:<br>
+Entering: Time: 2 Duration: 1.5 will automatically set the Start Time as 2:00pm and the End Time as 3:30pm</li>
+</ul>
+<h3>Shortcut #2: Set the Timer to Start Automatically</h3>
+<p>You can change one setting in User Level Setup that will apply to all of your Events regardless of Classification Code.</p>
+<ol>
+<li>Go to: Main Menu | File | Setup | General | User Level | Forms | Event | Set Form Options | Time tab</li>
+<li>Check the first box: Automatically Start Timer When Form Opened in Add Mode</li>
+</ol>
+<p>Now, when you add an Event the Timer will start and automatically fill in the End time, for example, 8 :00am - 8:00am.<br>
+Press Ctrl-T to stop the Timer.</p>
+<p>Running the Timer can be a good thing, especially if you use the Calendar as a profit-enhancing tool. By tracking your time on the Calendar, you can catch billable time you might otherwise miss. See my article:<br>
+<a href="http://www.activepractice.com/s/storage/content/Time_Record_Entry_with_Time_Matters.pdf">Time Record Entery</a><br>
+(It was written first in 2003 and updated in 2009, but still remains valid.)</p>
+<p>Questions? Comments?<br>
+<a href="/send-us-an-e-mail">Click here to send an e-mail...</a> or call 800.575.0007</p>
+<p>-- Wells Anderson</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

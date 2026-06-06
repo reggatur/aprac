@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restoring Your Time Matters 11 Database</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Restoring Your Time Matters 11 Database</h1>
+<p><strong>Date:</strong> Oct. 26, 2011
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/tm-mobility/">
+        TM Mobility
+      </a>, 
+    
+      <a href="/categories/administration/">
+        administration
+      </a>, 
+    
+      <a href="/categories/backup/">
+        backup
+      </a>
+    
+  
+</p>
+<p>Time Matters 11 added the TM Mobility service that gives you access to limited information in your database from any Web browser. TM Mobility is especially useful on mobile phones.</p>
+<p>In order to restore a Time Matters 11 database from backup, you need to stop the services that power TM Mobility. They are:</p>
+<ul>
+<li>LexisNexis Practice Management Common API</li>
+<li>LexisNexis Practice Management Mobility Data Service</li>
+</ul>
+<p>If you have not stopped these services, you will get an error message like:<br>
+&quot;exclusive access could not be obtained&quot;</p>
+<p>To stop these services, go to:</p>
+<ol>
+<li>Start | Run (you may need to type Run in the search box) or hold down the Windows key (between Ctrl and Alt) and type R.</li>
+<li>Type: services.msc and press Enter</li>
+<li>Right-click on each of the above services and choose Stop</li>
+<li>Remember to restart them after completing the Restore. To restart a service, follow steps 1 and 2. Right-click it and choose Restart.</li>
+</ol>
+<p>For instructions on how to restore a Time Matters database, see:<br>
+<a href="http://support.lexisnexis.com/TimeMatters11/record.asp?ArticleID=10477">http://support.lexisnexis.com/TimeMatters11/record.asp?ArticleID=10477</a></p>
+<p>CAUTION: We recommend that you work with a consultant or LexisNexis Technical Support to perform a Restore. Make sure you have a good, current backup before proceeding.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

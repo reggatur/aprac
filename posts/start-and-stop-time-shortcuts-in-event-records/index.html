@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Start and Stop Time Shortcuts in Event Records</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Start and Stop Time Shortcuts in Event Records</h1>
+<p><strong>Date:</strong> Oct. 24, 2013
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/calendar/">
+        calendar
+      </a>
+    
+  
+</p>
+<h3>Updated 2014-02-20</h3>
+<p>Time Matters 13 now allows entry of an Event on the Calendar without having to enter a Stop Time. If no Stop Time is entered, the Stop Time defaults to the Start Time so the Event has a zero duration.</p>
+<p>The shortcuts described below remain useful for entering Events since most will have different Start and Stop times.</p>
+<hr>
+<h3>Shortcuts for Entering Start, Stop and Duration in Event Records</h3>
+<p>In Time Matters 12 SP2, a <strong>Duration</strong> greater than 0 is required in Event records.</p>
+<p>These shortcuts speed up the entry of Start and Stop Times or, alternatively, Start Times and Durations. If you enter Start and Stop Times,The Durations are filled automatically.</p>
+<p>If you enter a Start Time and a Duration, the Stop Time is filled automatically.</p>
+<p>Enter two numbers in the <strong>Time</strong> field. The time and duration are completed</p>
+<p>If you need to enter any time from 7:00 pm to 11:00 pm, you need to type a &quot;p&quot; after the time number since 7 - 11 are set to am by default.</p>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Enter in <strong>Time</strong> field</th>
+<th>Result in <strong>Time</strong> field</th>
+<th>Result in <strong>Duration</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9-10</td>
+<td>9:00am- 10:00am</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>930-10</td>
+<td>9:30am-10:00am</td>
+<td>0.50</td>
+</tr>
+<tr>
+<td>1-2</td>
+<td>1:00pm-2:00pm</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>5-7p</td>
+<td>5:00pm- 7:00pm</td>
+<td>2.00 Note: You need to use the “p” for pm. Numbers 7 to 11 default to am</td>
+</tr>
+</tbody>
+</table>
+<p>Or enter a <strong>Time</strong> and a <strong>Duration</strong>****</p>
+<table>
+<thead>
+<tr>
+<th>Enter in <strong>Time</strong> field</th>
+<th>Enter in <strong>Duration</strong></th>
+<th>Results in <strong>Time</strong></th>
+<th>Results in <strong>Duration</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>1</td>
+<td>9:00am- 10:00am</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>930</td>
+<td>.5</td>
+<td>9:30am-10:00am</td>
+<td>0.50</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1:00pm-2:00pm</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>7p</td>
+<td>2</td>
+<td>7:00pm- 9:00pm</td>
+<td>2.00</td>
+</tr>
+</tbody>
+</table>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

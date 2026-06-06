@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Open Any File Fast with Everything</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Open Any File Fast with Everything</h1>
+<p><strong>Date:</strong> May. 17, 2013
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-management/">
+        document management
+      </a>, 
+    
+      <a href="/categories/utilities/">
+        utilities
+      </a>
+    
+  
+</p>
+<h2>Best Free File Finding Utility - Everything</h2>
+<p>Everything, a free file finding utility from voidtools - <a href="http://www.voidtools.com">www.voidtools.com</a> - is one of the true gems in the world of freeware.</p>
+<p>If you know the filename, or part of the filename, of a document or other file on your computer or network, Everything finds and opens it really, really fast. And it doesn't bog down your computer.</p>
+<p>If you want to search the full text of your files, you need to use a different program. Time Matters has this feature built-in with its Document Indexer. But if you can remember even part of the name of the file you want, Everything will retrieve it for you.</p>
+<p>Everything is completely free of any adware or annoyances. It is supported by donations.</p>
+<h2>Local Drives and Network Drives</h2>
+<p>Everything instantly finds and optionally opens files on <strong>local drives</strong>. It is very, very easy to install Everything and get it to search local drives.</p>
+<p><strong>Network drives</strong> are another story. Everything can search them, but it takes some setup work. Everything must run on the computer(s) housing the network drives you want to search.</p>
+<h2>Setting up Everything for Network Drives</h2>
+<h3>Setup on the Server or Other Computer(s)</h3>
+<p>On the computer(s) housing the network drive(s):</p>
+<ol>
+<li>Install Everything</li>
+<li>Go to Everything menu / Tools / Options</li>
+<li>Go to ETP/FTP tab.</li>
+<li>If the User and Password are left blank, anyone on your network running Everything can search the drive.</li>
+<li>Check the box: Start ETP/FTP server on startup. Press OK.</li>
+<li>Check to see that Start ETP/FTP Server is checked on the Tools menu.</li>
+</ol>
+<p>If you want to <strong>open</strong> files on a network drive, the drive must be assigned a Network Share with a one-letter name equal to the drive letter.</p>
+<p>To create the Network Share for the M drive, for example, run this from the command prompt:</p>
+<p><code>net share M=M:\ /grant:everyone,FULL</code></p>
+<h3>Setup on Searching Computer</h3>
+<p>On the computer you want to search from:</p>
+<ol>
+<li>Go to Everything menu / Tools / Connect to ETP server</li>
+<li>Enter the IP address of the other computer, for example, 192.168.1.2 or 10.1.10.112<br>
+(You can determine the IP address by running typing: ipconfig at the command prompt.)</li>
+<li>Click OK.</li>
+</ol>
+<h2>Using Everything</h2>
+<p>Launch Everything and just type all or part of the filename you are looking for. Double-click on any file to open it in its associated program.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

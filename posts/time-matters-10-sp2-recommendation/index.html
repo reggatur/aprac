@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Matters 10 SP2 Recommendation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Time Matters 10 SP2 Recommendation</h1>
+<p><strong>Date:</strong> Mar. 16, 2010
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/backup/">
+        backup
+      </a>, 
+    
+      <a href="/categories/updates/">
+        updates
+      </a>
+    
+  
+</p>
+<h3>Conditional Recommendation: Time Matters 10 Service Pack 2</h3>
+<p><strong>Updated May 3, 2010</strong></p>
+<p>We recommend that all Time Matters 10 users install Service Pack 2, but with one condition.</p>
+<p>**Condition:**<strong>If your TM_Backup procedure has been customized</strong> , it is <strong>very important</strong> that it be customized again after installing Service Pack 2.</p>
+<p>If your TM_Backup procedure has not been customized, we recommend you go ahead with installing Service Pack 2.</p>
+<p>The backup procedure, TM_Backup, for your Time Matters 10 database can be customized, usually by a Certified Independent Consultant or database technician. That is normally done to locate the Time Matters backup files in a better location than the C drive. To determine if your TM_Backup has been modified, you need to work with a consultant or have some knowledge of MS SQL Server.</p>
+<p>If your TM_Backup procedure was customized and you install Service Pack 2, your backup plan will probably fail and you also risk bloating the C drive with backup files. Service Pack 2 overwrites TM_Backup with the default version. It does not affect any existing backup files. You can avoid this problem by having your TM_Backup procedure edited after installing Service Pack 2.</p>
+<p>If you have a customized TM_Backup Stored Procedure, it is best to make a copy of its text before applying Service Pack 2. After installing Service Pack 2, the default TM_Backup should be customized so that it is the same as it was before. Depending on your version of MS SQL Server, you may have SQL Server Management Studio Express installed and it may be used to customize TM_Backup.</p>
+<p>Service Pack 2 fixes over 100 issues, most very minor or interface tweaks, that improve the operation of the program. We highly recommend it, subject to the condition, above, that affects only a minority of offices.</p>
+<p>The most significant fix we are waiting for relates to <strong>Desktop Extensions on Windows 7</strong> computers. Some issues remain that prevent the proper operation of some important Desktop Extensions functions. Watch for updates here, because we are enthusiastic about the potential for Desktop Extensions to save you time and take advantage of today's double monitors and larger monitors.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

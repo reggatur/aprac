@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Updating a Remote Database</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Updating a Remote Database</h1>
+<p><strong>Date:</strong> Mar. 13, 2011
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/synchronization/">
+        synchronization
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/update-remote.PNG" alt="Update Remote Database" class="img-blog">
+<h2>Time Matters Remote or Laptop Database</h2>
+<p>Time Matters can create a copy of the main database and keep the two database synchronized. The copy is called a Remote database and is sometimes referred to as a Laptop database or a Clone database.</p>
+<p>The process for creating a Time Matters Remote database is explained in the online Help under Synchronization.</p>
+<p>Remote databases serve two main purposes:</p>
+<ol>
+<li>Allow you to use Time Matters away from the office</li>
+<li>Maintain a current, usable copy of Time Matters so you have access to your information if your Main database becomes unavailable</li>
+</ol>
+<h2>Synchronizing a Remote Database</h2>
+<p>Once you have created a Remote database, you keep it up-to-date by synchronizing it with the Main database. The fastest, simplest method is the Connected Synchronization. To perform a Connected synchronization, the computer with the Remote database needs to be connected to the same network as the computer with the Main database.</p>
+<p>You may also update a Remote database by creating Sync Transfer Files on the host and remote databases, sending the transfer files via e-mail or file transfer, and then importing the transfer files into the databases.</p>
+<h2>Updating the Setup of the Remote Database</h2>
+<p>Do not confuse <strong>synchronizing</strong> a Remote database with <strong>updating</strong> a Remote database.</p>
+<ul>
+<li><strong>Synchronizing</strong> a Remote database only affects <strong>records</strong> , not settings and customizations.</li>
+<li><strong>Updating</strong> a Remote database involves creating a <strong>new clone file</strong> and completely replacing all the settings, customizations and records in the Remote database.</li>
+</ul>
+<p>When you first create a Remote database, you do so by selecting which records to synchronize. Time Matters creates a Clone file containing those settings and all the Time Matters current records.</p>
+<p>If later you want to change those settings, you need to recreate the Clone file and import it into the Remote database.</p>
+<p>To change the Remote database settings:</p>
+<ol>
+<li>Synchronize the Main and Remote databases so that you will not lose any changes you may have made to the records in the Remote database.</li>
+<li>Open the Main database.</li>
+<li>Go to: Main Menu | Synchronize | Time Matters</li>
+<li>Select: Create or Update Clone Database</li>
+<li>Press Change</li>
+<li>Make the changes to the settings, for example, check Lexis Records</li>
+<li>Press OK</li>
+<li>Close the Main database</li>
+<li>Open the Remote database</li>
+<li>Go to: Main Menu | Synchronize | Time Matters</li>
+<li>Select: Install Database Clone</li>
+</ol>
+<p><strong>Heads Up:</strong> Installing a Clone file completely replaces all information in the Remote database with the current information from the Main database.</p>
+<h2>Every Day Sync for Time Matters</h2>
+<p>Our utility, <strong>Every Day Sync for Time Matters</strong> , simplifies the process of <em>synchronizing</em> the Main and Remote databases using a Connected Sync. That process usually takes 5 minutes or more and involves pressing a number of buttons.</p>
+<p>Every Day Sync pushes the buttons for you, saving you time and avoiding the frustrations of performing the same sequence of steps every time you need to synchronize. <a href="http://www.activeonlinebackup.com/ProductDetails.asp?ProductCode=29EGW463">Click here for more...</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

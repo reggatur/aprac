@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Matters Hotfix 16.2.0.155 Released</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Time Matters Hotfix 16.2.0.155 Released</h1>
+<p><strong>Date:</strong> Jul. 31, 2017
+  
+</p>
+<img src="/assets/img/blog/image-asset.jpeg" alt="image-asset.jpeg" class="img-blog">
+<p>Today LexisNexis published a hotfix for Time Matters 16.2. The hotfix 16.2.0.155 eliminates two major billing issues in Time Matters 16.2: 1) The broken link to QuickBooks is fixed; 2) A bug in BillFlow Manager (part of Billing Matters) that lost the billing status of matters if BillFlow Manager was closed.</p>
+<p>For firms using the QuickBooks link or BillFlow Manager, these fixes are critically important.</p>
+<p>Note that the timekeeping feature of Time Matters 16.2 still has an issue when sending supporting records, like Events, Documents and emails, to Billing. If the records are sent without choosing the option to <strong>Confirm Each Record Before Taking Any Billing Action</strong> , then their time amounts are not rounded up. For example, 0.15 hours would not be rounded to 0.2 hours with a rounding rule of one-tenth hour (6 minutes).****</p>
+<p>See our <a href="/updates-to-time-matters">Updates to Time Matters</a> for details on features and issues.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

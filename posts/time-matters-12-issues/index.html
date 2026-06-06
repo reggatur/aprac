@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Matters 12 Issues</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Time Matters 12 Issues</h1>
+<p><strong>Date:</strong> Oct. 24, 2013
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>
+    
+  
+</p>
+<h2>Duration Field Required in Events.</h2>
+<p>Before Time Matters 12 Service Pack 2, a value of 0 (zero) could be used in the Duration field of an Event record (a Calendar record). In Service Pack 2, a value greater than zero needs to be entered.</p>
+<p>See this post for shortcuts for filling in Times and Durations in Event records:</p>
+<p><a href="/1234tips/start-and-stop-time-shortcuts-in-event-records.html">Start and Stop Time Shortcuts in Event Records</a></p>
+<h2>Do Not Paste into email Form after Connect as email from Outlook</h2>
+<p>Connect as email is a great feature that allows you to save an email, and optionally its attachments, into Time Matters from MS Outlook.</p>
+<p>An issue in Time Matters 12 Service Pack 2 interferes with the use of the Paste function in the Description field of the TM email form that appears after you click the Connect as email button. So avoid pasting anything into the Description field after pressing the Connect as email button.</p>
+<h3>Outlook Button: Connect as Document - Do Not Use</h3>
+<p>Time Matters 12 allows you to save an Outlook email as a document using the new <strong>Connect as Document</strong> button. Unfortunately, as released the feature saves documents to the Time Matters Shared File Directory rather than to the appropriate client and matter folders.</p>
+<p>Time Matters 12 continues to support Connect as email, a button that lets you save one or more Outlook emails onto the email tabs of Client and Matter records.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

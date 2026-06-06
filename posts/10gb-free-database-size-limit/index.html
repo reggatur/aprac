@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10GB Free Database Size Limit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>10GB Free Database Size Limit</h1>
+<p><strong>Date:</strong> Nov.  8, 2010
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/administration/">
+        administration
+      </a>, 
+    
+      <a href="/categories/updates/">
+        updates
+      </a>, 
+    
+      <a href="/categories/utilities/">
+        utilities
+      </a>
+    
+  
+</p>
+<h2>MS SQL Server Express 2008 R2 Has 10GB Size Limit</h2>
+<p><strong>UPDATE - 11/23/2010</strong> -- LexisNexis <strong>does not support</strong> MS SQL Server 2008 R2 (paid or Express). It may be that Time Matters has no problems working on R2 and that LexisNexis has just not yet tested it. But there is some risk in moving to MS SQL Server 2008 R2 since at this writing it is not yet supported.</p>
+<p>It is very important to take steps to avoid hitting 4GB database size limit if you are using MS SQL Server 2005 Express or an older release of MS SQL Server 2008 Express. If your Time Matters database hits that limit, you will not be able to add new records to Time Matters.</p>
+<p>Time Matters 10 uses MS SQL Server as its underlying database software. The limit on the size of your Time Matters database when using Microsoft's free editions (2005 Express and 2008 Express) was 4GB.</p>
+<p>MS SQL Server 2008 Express R2, released in April 2010, increases the database size limit to 10GB.</p>
+<p>If your Time Matters database is approaching the 4GB limit of your existing MS SQL Server Express software, you have two options:</p>
+<ol>
+<li>Reduce the size of your Time Matters database by eliminating <a href="/1234tips/attachment-bloat.html">Attachment Bloat</a></li>
+<li>Upgrade to MS SQL Server 2008 Express R2 <strong>(not supported by LexisNexis yet)</strong> or to one of the paid versions of MS SQL Server 2005 or 2008 (2008 R2 not supported)</li>
+</ol>
+<p>Installing MS SQL Server 2008 Express R2 is significantly more complicated than installing MS SQL Server 2005 Express. We recommend that you work with a LexisNexis Certified Independent Consultant or an experienced database technician to install 2008 Express and move your Time Matters database into this new software.</p>
+<p>You can determine the size of your Time Matters database by looking at the size of a backup file, e.g., TimeMatters10AutomatedBackupTuesday.bak</p>
+<p>For most small firms that are approaching the 4GB limit of MS SQL Server Express, Attachment Bloat accounts for more than 75% of the database size. Time Matters 9 SR3B and Time Matters 10 have a feature for moving Attachments out of the database and into the file system. In several cases of serious Attachment Bloat, we have assisted law firms in eliminating the problem.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

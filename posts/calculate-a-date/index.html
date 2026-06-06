@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculate a Date</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Calculate a Date</h1>
+<p><strong>Date:</strong> May. 22, 2016
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/forms/">
+        forms
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/65th.PNG" alt="65th Birthday Calculation" class="img-blog">
+<p>This post shows how to display the date of a client's 65th birthday (within one-day) and also a date 60 days before that birthday.</p>
+<p>Customize a Time Matters fields to be a Calculated field. In the formula, add a number to the Birthdate field. You can convert 65 years (or some other number of years) into days with a calculator or the Time Matters Date Calculator before customizing the field. For example 65 years in days is:</p>
+<p>65 × 365 + (65/4)</p>
+<p>Round to the nearest day.</p>
+<p>A limitation is that if the person was born less than 365 days before February 29 (Leap Year), the dates will be one day early. Century Leap Year (the year 2000) also has a one-day effect on the result.</p>
+<p>This screenshot shows the 65th birthday and a date 60 days earlier. To go 30 months earlier, configure the second field to be Birthdate Plus 22829. That's using 30 months = 913 days, which won't be exact but will be within a few days.</p>
+<p>If you want to be exact, you could use the Time Matters Date Calculator and set up two Timetables, one for 65 years using 780 months and another for 750 months (which is 65 years minus 30 months). With this method, customize the two fields as Date fields.</p>
+<p>Or you could create a Chain Template. It all depends on how the dates are to be used.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

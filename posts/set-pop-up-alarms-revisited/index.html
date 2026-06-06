@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Set Pop-Up Alarms - Revisited</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Set Pop-Up Alarms - Revisited</h1>
+<p><strong>Date:</strong> Nov. 14, 2022
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/calendar/">
+        calendar
+      </a>, 
+    
+      <a href="/categories/organizing/">
+        organizing
+      </a>
+    
+  
+</p>
+<h3>What tool could be more important to organizing your work than your calendar? Time Matters helps you with advanced Calendar features.</h3>
+<h3>Time Matters can automatically set pop-up Alarms to remind you of important Events. You can set an <strong>Alarm</strong> manually, but using the automatic approach is <strong>more reliable and efficient</strong>. The method described here uses Classification Codes. Each Event with a particular Code will automatically have an alarm that reminds you a number of minutes ahead of time.</h3>
+<h2>How to Set Pop-Up Alarms Automatically</h2>
+<p>Once an automatic Alarm is set up, you do not have to do anything to make it work. You enter an Event with the right Code and it will have an Alarm.</p>
+<p>To set up an automatic Alarm:</p>
+<ol>
+<li>
+<p>Pick a Classification Code for a type of Event that needs an automatic Alarm, such as CONF for Conference.</p>
+</li>
+<li>
+<p>Create a Trigger that will turn on an Alarm for each of these Events. In the Main Menu, go to: File | Setup | Templates | Triggers | Event</p>
+</li>
+<li>
+<p>Add a new Trigger, filling in these areas:</p>
+</li>
+</ol>
+<p>1. Description: CONF Alarm</p>
+<p>2. Trigger... Fires when Record Added</p>
+<p>3. Scope... ALL Selected - Code CONF|Conference - Staff RSB (your Staff name, usually your initials)</p>
+<p>4. Active... Always</p>
+<p>5. Add an Action to the Trigger by pressing the Add button.</p>
+<p>* Action to Take - Change Field</p>
+<p>* Change Field - Alarm to New Value of Y</p>
+<p>* Show Labels - Default</p>
+<p>6. Click: OK OK</p>
+<p>Now when you enter an Event with the Code, CONF, an Alarm will appear on your screen a number of minutes ahead of time so long as Time Matters is running.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

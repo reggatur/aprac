@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attachment Bloat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Attachment Bloat</h1>
+<p><strong>Date:</strong> Dec. 11, 2008
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-management/">
+        document management
+      </a>, 
+    
+      <a href="/categories/email/">
+        email
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/atta01.png" alt="Manage email Attachments" class="img-blog">
+<img src="/assets/img/blog/atta04.png" alt="Manage email Attachments" class="imgctr">
+<img src="/assets/img/blog/atta05.png" alt="Change Record Icon" class="imgctr">
+<img src="/assets/img/blog/atta06.png" alt="email Attachment Button" class="imgctr">
+<img src="/assets/img/blog/atta07.png" alt="TM Save Button and TM Delete Button" class="imgctr">
+<p>To avoid slow performance, database size bloating and the risk of losing all attachments to emails in Time Matters, follow these best practices for managing email attachments.</p>
+<p><strong>UPDATE:</strong> Time Matters 9.0 Service Release 3A adds new features for moving old attachments outside of the database while keeping them linked to their e-mails. It also allows you to select an option to store new attachments outside of the database when their e-mails are saved as Time Matters email records. (Automatically or manually checking the Save on List box of an email form converts it to a Time Matters email.) The updated feature for managing attachments be used as before to inspect and delete attachments or, now, to store them outside database.</p>
+<p>Attachment Bloat can cause your database to swell dramatically if yousend and receive email with attachments in Time Matters. Attachments often account for more than 80% of the all the disk space used byTime Matters. As the volume of attachments grows over time, so does the risk of losing every one of them to data corruption. An effective nightly backup can minimize your loss of attachments, but not the down time and expense required to go through the restoration and recovery process.</p>
+<p>Attachment Bloat slows down the operation of Time Matters Professional. It can push the database size of Time Matters Enterprise to the size limit imposed by Microsoft's free versions of MS SQL Server and prevent the entry of all new records.</p>
+<p>To avoid the risks and problems caused by Attachment Bloat, users of Time Matters email must either process attachments manually or, for firms with Enterprise, use a third-party tool - <a href="http://www.tmtools.net/">TM Tools</a> - to process them automatically. Processing attachments saves them as normal files, such as MS Word or PDF files, in the folders you maintain for Clients and Matters. For this process to work efficiently, you need to have Time Matters set up for Document Management so that attachments are linked to Clients and Matters via Document records and stored in the proper folders on your server or main computer.</p>
+<p>It is important to understand several points about attachments:</p>
+<ol>
+<li>Attachments to both incoming and outgoing emails are contained in the emails and contribute to &quot;Attachment Bloat.&quot; Attachments to emails in the Sent Items folder in the Personal Inbox or on the email Listare not pointers.They are part of the Sent emails they are attached to.</li>
+<li>Attachments are removed from emails only if they are deleted from the emails.</li>
+<li>To preserve the link between an attachment and its email, and between the email and a Matter (or Contact):
+1. Fill in the Regarding fields and <em>save</em> the email.
+2. In the Attachment pane of the email, use TM Save to save the Attachment.
+3. Delete the Attachment from the email.<br>
+You need to follow these three steps for both sent emails that have attachments and received emails that have attachments.</li>
+<li>The link from an Attachment that has been TM Saved and deleted is a Specified Relationship between the Attachment's Document record and the email record. View an email's linked attachments by clicking its Documents tab, pressing Specified, and unpressing Automatic.</li>
+</ol>
+<p>The utility program TMTools, found at <a href="http://www.tmtools.net/">www.tmtools.net</a>, automates the process of TM Saving and deleting attachments for Time Matters Enterprise (no version for Pro). It works on emails that have been saved with Show on email List checked. It is important to link each of your emails to a Matter or Contact or both for organizational purposes and for management of attachments. This linking process can be automated.</p>
+<p>To link emails automatically when sending, create them from within Matter forms or by highlighing a Matter and using the Add email icon on the Main Toolbar or by using the Ctrl-Shift-E hotkey. You may also fill in a Matter or Contact in the Regarding fields of an email record to link it manually.</p>
+<p>To link incoming emails automatically, use the options for matching email addresses with Matters or Contacts. This process is not perfect because one person may send you emails on a number of different Matters. If this is common for you, then do not use the option and get used to typing Matter Names in the Matter Ref field of incoming emails <em>at the same time</em> you read them.</p>
+<p>The TMTools utility is your best protection against Attachment Bloat. If you don't have Time Matters Enterprise and handle a lot of email, it would be an excellent idea to upgrade.</p>
+<h3>Cleaning Up Attachments in Time Matters</h3>
+<p>You can reduce Attachment Bloat in either Time Matters Professional or Time Matters Enterprise using the Manage email Attachments feature. It is a painstaking process compared to using TM Tools, but can be very effective.</p>
+<p>To clean up just the biggest attachments, here are the steps: Go to File | Utilities | Manage email Attachments. You can filter the list by a size threshhold, then click on the Size column to see your biggest offenders. There is no Print option, so take a screenshot if you want to TM Save and Delete these attachments one by one in the Inbox or email list. You can tag multiple attachments and delete them outright using the mouse, or shift-T, and then the Delete button, which deletes all the tagged records (not just a record as its balloon help suggests).</p>
+<p>Here are illustrated manual steps for saving attachments one at a time using the Manage email Attachments feature.</p>
+<ol>
+<li>
+<p>Go to: Main Menu | File | Utilities | Manage email Attachments.</p>
+</li>
+<li>
+<p>Change the attachment size to 10.</p>
+</li>
+<li>
+<p>Click on one of the listed attachments.</p>
+</li>
+<li>
+<p>Click on the Change Record icon.</p>
+</li>
+<li>
+<p>Press the Attachments button in the email record.</p>
+</li>
+<li>
+<p>Press the TM Save button and completea Document record for the attachment. Return to the email record and press the Delete button to remove the attachment from the email.</p>
+</li>
+</ol>
+<p>Alternatively, if a particular attachment is not worth saving, delete it from the Attachment list in Step 3, above. You may also tag multiple attachments and delete them all at once with the Delete button (red X) above the list.</p>
+<p>Either using TMTools or deleting attachments manuallyis essential to avoid Attachment Bloat and its attendant slow performance, database size bloating, and the risk of losing all the attachments to data corruption.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

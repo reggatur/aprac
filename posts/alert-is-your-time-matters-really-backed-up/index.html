@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ALERT - Is Your Time Matters Really Backed Up?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>ALERT - Is Your Time Matters Really Backed Up?</h1>
+<p><strong>Date:</strong> Oct. 26, 2011
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/administration/">
+        administration
+      </a>, 
+    
+      <a href="/categories/backup/">
+        backup
+      </a>
+    
+  
+</p>
+<p>You may not be backing up your Time Matters database when you run regular backups of files on your server or computer.</p>
+<p>It is very important to run Time Matters backups regularly. There should be up to 7 Time Matters database backup files on the drive, named:</p>
+<ul>
+<li>TimeMatters11AutomatedBackupMonday.bak,</li>
+<li>TimeMatters10AutomatedBackupTuesday.bak</li>
+<li>...</li>
+</ul>
+<p>These files are buried deep within the Program Files folders on the C drive unless your consultant has directed them elsewhere. If you backup all the files on your C drive regularly to a separate drive and to two offsite locations, you should be well protected.</p>
+<p>But if you pick and choose the files to backup on the C drive, you won't backup the vital Time Matters backup files unless you know <a href="http://support.lexisnexis.com/TimeMatters11/record.asp?articleid=10411">the folder</a> where they are located.</p>
+<p>LexisNexis has recognized the importance of these backups by posting an Alert! on the main, publicly available Support Center page for Time Matters and other practice management software:</p>
+<p><a href="http://support.lexisnexis.com/pm">http://support.lexisnexis.com/pm</a> - Product Alert!</p>
+<p>Because backups are crucial to the safety of your database in the face of hardware failure or natural disaster, we strongly recommend making frequent backups and storing them off-site and with online backup service.</p>
+<p>The following articles provide information on backing up your database:</p>
+<ul>
+<li><a href="http://support.lexisnexis.com/juris/record.asp?ArticleID=10436">Juris</a></li>
+<li><a href="http://support.lexisnexis.com/TimeMatters11/record.asp?ArticleID=10476">Time Matters 11</a></li>
+<li><a href="http://support.lexisnexis.com/PCLaw11/record.asp?ArticleID=6319">PCLaw 11</a></li>
+<li><a href="http://support.lexisnexis.com/TimeMatters11/record.asp?ArticleID=10476">LexisNexis Total Practice Advantage 11</a><br>
+- - - -</li>
+</ul>
+<p>When you go to the Time Matters 11 page, you see the following:</p>
+<h3>Alert:</h3>
+<p>The Time Matters backup creates three backup files, a SQL .bak file and two .zip files that store the shared files folder and email attachments. The SQL .bak file is stored in the <a href="http://support.lexisnexis.com/TimeMatters11/record.asp?articleid=10411">SQL Backup</a> folder. The .zip files are stored in the path selected during the backup process.<br>
+- - - -</p>
+<p>You can click on &quot;SQL Backup&quot; in that paragraph to get a listing of the folders where MS SQL Server stores backups by default. The link is:<br>
+<a href="http://support.lexisnexis.com/TimeMatters11/record.asp?articleid=10411">http://support.lexisnexis.com/TimeMatters11/record.asp?articleid=10411</a></p>
+<p>Be sure that your MS SQL Server database backup folder is included in all regular backups to onsite and offsite locations.</p>
+<p>At Active Practice LLC, we are backup <em>zealots</em>. In 2008 we started an online backup company to address the specific needs of small firms. Active Online Backup delivers ultra-strong security and low or no impact on computer performance and Internet connection. We stress backup best practices:</p>
+<ul>
+<li>At least two, independent offsite backups of all your crucial files</li>
+<li>Perform test restores</li>
+<li>Use full drive image backup software</li>
+</ul>
+<p>Early on one of our customers experienced an unrecoverable MS Windows Server 2003 crash. In one hour and ten minutes, the server hard drive was completely restored and back to where it was 15 minutes before the crash.</p>
+<p>Are you protected? Please let us know if you would like some assistance in protecting your vital files. Call <strong>800.575.0007</strong> or to e-mail us, <a href="/send-us-an-e-mail">click here</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

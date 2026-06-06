@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Billing Record Rounding Issues in Time Matters 16.0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Billing Record Rounding Issues in Time Matters 16.0</h1>
+<p><strong>Date:</strong> Feb. 27, 2017
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/billing-matters/">
+        Billing Matters
+      </a>, 
+    
+      <a href="/categories/billing/">
+        billing
+      </a>
+    
+  
+</p>
+<p>An excellent efficiency feature in Time Matters / Billing Matters is the ability to send Events, Notes, ToDo's and other records to Billing. You are spared from having to enter time amounts and descriptions twice.</p>
+<p>Unfortunately, Time Matters / Billing Matters 16.0 has two issues with this feature that can cost you <strong>real money</strong> if you don't catch the errors and adjust them. Time Matters 15.1 and 15.1.1 versions also have these issues.</p>
+<h3>Changing the Duration to Zero</h3>
+<p>If you send a single record (an Event, Note, etc.) to Billing or use the Preview Each Record feature when sending multiple records to Billing, the program changes the Duration to Zero! So you will charge your client Zero Dollars unless you manually adjust the Billing record.</p>
+<p>Fortunately, the actual Duration is preserved in the Record Information bar at the top of the Billing record. You may need to use the View menu option on the Billing Form to display that bar.</p>
+<p>I have written a program to use as a workaround until LexisNexis fixes this bug. Running the program fixes existing Billing records. You need to run it before creating Invoices.</p>
+<h3>Failing to Apply the Rounding Rule</h3>
+<p>If you send multiple records (such as Events) to Billing, Time Matters / Billing Matters fails to apply the Rounding Rule for the corresponding matter. For example, when you send an Event with a Duration of 0.15 hours to Billing, it will not be rounded up to 0.2 hours even though you have your Rounding Rule set to 6 minutes (1/10 hour). That will cost you money if you don't catch it before invoicing the Billing records.</p>
+<p>You can fix your unrounded Billing records simply by opening and saving them. The Rounding Rule is applied immediately on opening a record.</p>
+<p>You can fix multiple, unrounded Billing records by opening one of them and then pressing the blue down arrow icon on the Billing form repeatedly. That takes you to the Next Record and saves the current record. Repeat pressing the blue down arrow until you have cruised through all the affected records.</p>
+<p>The workaround program I've written also can fix these non-rounded Billing records.</p>
+<h3>Will Time Matters 16.1 Fix the Issues?</h3>
+<p>I have reported both of these issues to LexisNexis Technical Support. Hopefully, they will be fixed in Time Matters 16.1, expected late in Q1 2017.</p>
+<p>Questions? Contact me at 800.575.0007 or <a href="/send-us-an-email">Send me an email...</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

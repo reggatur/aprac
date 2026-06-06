@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backup Error - Executing SQL directly; no cursor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Backup Error - Executing SQL directly; no cursor</h1>
+<p><strong>Date:</strong> Sep. 25, 2013
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/backup/">
+        backup
+      </a>, 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>
+    
+  
+</p>
+<p>When backing up Time Matters or another MS SQL Server database, you may get the following error message:</p>
+<p>&quot;Error backing up data. Error reported as: Executing SQL directly; no cursor.&quot;</p>
+<p>I am aware of three possible causes of this error.</p>
+<h3>1. Error in the Backup Stored Procecure</h3>
+<p>The first potential problem is an error in the backup stored procedure. For Time Matters, the stored procedure is TM_Backup. It is included in the Time Matters database cannot really have a technical problem since it uses the default settings and default backup destination assigned by the MS SQL Server software. But the default backup destination has a practical problem (one that LexisNexis Time Matters documentation covers).</p>
+<p>The Microsoft default backup destination is on the same drive as the database files. That makes sense because Microsoft cannot know what other drive the user might want to use for backups. A backup on the C drive (the default location) is better than no backup at all if you have a database problem. Also, ordinary backup and sync programs that cannot copy the open Time Matters SQL database files can copy the SQL backup (.bak) files to another drive or to the cloud. The practical problem is that if you don't backup the backup (.bak) files and don't backup the C drive, you can lose everything if the C drive crashes, burns, is stolen, etc.</p>
+<p>The user or the user's consultant can modify TM_Backup to direct the backup files to another drive. If that is not done properly, the &quot;Executing SQL directly; no cursor&quot; error message will appear when the backup is run.</p>
+<h3>2. Backup Drive Disconnected or Not Available</h3>
+<p>The second potential problem is related to the first. If backup stored procedure (TM_Backup) is modified to save backup files to, say, the X: drive, but the X: drive is not available for some reason (disconnected, different drive letter assigned after disconnection and reconnection, USB connection problem, etc.), the &quot;Executing SQL directly; no cursor&quot; error message will appear when the backup is run.</p>
+<h3>3. Bad Hard Drive Sectors</h3>
+<p>The third possible cause is bad hard drive sectors or hard drive surface problems. Here is what I encountered on a the server of a law firm client.</p>
+<p>A scheduled SQL Server backup failed with the message: “Error backing up data. Error reported as: Executing SQL directly; no cursor.” I ran CheckDB in SQL Studio and identified problems in one of the tables. I detached the .MDF file and attempted to copy it. Windows Copy failed to copy it.</p>
+<p>Clearly if Windows cannot read a file, MS SQL Server and Time Matters can't handle it properly either. Corrupted sectors on the hard drive were the culprits. So I created a new data folder for the Time Matters SQL data files and restored the previous day's backup to that folder. Now Time Matters is running just fine. Of course, the firm was at risk until the hard drive was either fixed (with SpinRite - <a href="http://www.grc.com">www.grc.com</a> - highly recommended but very time-consuming with today's large drives) or replaced.</p>
+<p>Questions? Comments?</p>
+<p><a href="/send-us-an-e-mail">Click here to send an e-mail...</a></p>
+<p>-- Wells Anderson</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

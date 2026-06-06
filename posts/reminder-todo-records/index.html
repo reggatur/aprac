@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reminder ToDo Records</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Reminder ToDo Records</h1>
+<p><strong>Date:</strong> Oct.  4, 2005
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/todos/">
+        todos
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/rem0.png" alt="rem0.png" class="img-blog">
+<img src="/assets/img/blog/rem1.png" alt="rem1.png" class="imgctr">
+<p>Some tasks, such as filing before the expiration of a Statute of Limitations, require special attention. Time Matters can remind you well in advance of a deadline if you use the Reminders field and Alerts, Reminders and Watches feature. For simple reminders, that may be enough. But for critical dates, you can use a special type of ToDo record to remind you to take action ahead of time. Here we describe how to create and use Reminder ToDo's.</p>
+<h3>Create a Reminder Code for ToDo's</h3>
+<p>Creating a Reminder Code for ToDo's allows you to add Reminder records to your ToDo list. These reminders will be visible in your ToDo list both before and after the date of the Reminders. That is important so that you will not easily lose track of them. If you customize your ToDo list so that Done records are no longer displayed, you will be able to focus just on the ToDo's that need attention.</p>
+<p>To add a Reminder Code for ToDo's:</p>
+<ol>
+<li>
+<p>Go to: <code>File | Setup | Codes | Classification Codes | ToDo</code></p>
+</li>
+<li>
+<p>Click the Add a Record icon (the green plus)</p>
+</li>
+<li>
+<p>Fill in the <code>ToDo Classification Code Form</code></p>
+</li>
+<li>
+<p>Press <code>OK</code></p>
+</li>
+</ol>
+<p>To use the Reminder Code:</p>
+<ol>
+<li>
+<p>Create a ToDo record</p>
+</li>
+<li>
+<p>Set the <code>Date</code> to 60 days before a deadline date</p>
+</li>
+<li>
+<p>Choose <code>REM|Reminder</code> as the <code>Code</code></p>
+</li>
+<li>
+<p>Begin the <code>Description</code> with 60-Day Reminder and end it with a description of the deadline.</p>
+</li>
+</ol>
+<p>The Reminder record will appear on you ToDo list well before your important deadline. It will stay there until you mark it Done. The other kind of Reminders that appear in Alerts, Reminders screen are not so persistent. They are visible only the day they are set to appear. Reminder ToDo's show up on your ToDo list and in other displays that show ToDo's.</p>
+<p>More can be done to automate the creation of Reminders. For example, you could create a Trigger to create a Reminder using an AutoEntry Form whenever you create an Event or a ToDo that has a particular Code or whenever you mark a particular kind of record Done. Or you could include reminders in Schedule Chains. However you create them, they give you more protection against getting uncomfortably close to deadlines.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

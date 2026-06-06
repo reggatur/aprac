@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adobe Acrobat Reader DC Fix for Time Matters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Adobe Acrobat Reader DC Fix for Time Matters</h1>
+<p><strong>Date:</strong> Sep. 25, 2017
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/links/">
+        links
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/adobe-acrobat-reader-dc-error.PNG" alt="Clear the option: Enable Protected Mode at startup" class="img-blog">
+<p><strong>Update:</strong> Another more recent update of Acrobat DC has broken the Time Matters link. See <a href="/1234tips/2017/11/30/acrobat-dc-fix-for-time-matters-button">this post</a> for a fix. <a href="/1234tips/2017/11/30/acrobat-dc-fix-for-time-matters-button">More... </a>- Dec. 6, 2017.</p>
+<p>A known issue with Time Matters 16.1 and earlier can cause an error message in Adobe Acrobat Reader DC:</p>
+<p>[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;441&quot;] Clear the option: Enable Protected Mode at startup [/caption]</p>
+<p>The error message may appear when you attempt to use the TMSave button in Acrobat Reader DC.</p>
+<p>Here are two fixes for this Protected Mode issue:</p>
+<ol>
+<li>Upgrade to Time Matters 16.2, or</li>
+<li>Change a Windows Registry entry.</li>
+</ol>
+<p>To change the Registry entry:</p>
+<ol>
+<li>
+<p>Back up your computer or at least back up the Registry:</p>
+</li>
+<li>
+<p>Click Start, type regedit.exe in the search box, and then press Enter.</p>
+</li>
+<li>
+<p>In Registry Editor, click on the top item, Computer.</p>
+</li>
+<li>
+<p>Click File &gt; Export.</p>
+</li>
+<li>
+<p>Give the file a name and press Save.</p>
+</li>
+<li>
+<p>Close the Registry Editor.</p>
+</li>
+<li>
+<p>In the Search Box, type: cmd</p>
+</li>
+<li>
+<p>Copy and paste the following into the Command Prompt window:</p>
+</li>
+</ol>
+<p>Reg Add &quot;HKEY_CURRENT_USER\Software\Adobe\Acrobat Reader\17.0\Privileged&quot; /v bProtectedMode /t Reg_Dword /d</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

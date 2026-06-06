@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Run the Data Indexer Automatically</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Run the Data Indexer Automatically</h1>
+<p><strong>Date:</strong> Apr.  6, 2010
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/searching/">
+        searching
+      </a>, 
+    
+      <a href="/categories/setup/">
+        setup
+      </a>, 
+    
+      <a href="/categories/utilities/">
+        utilities
+      </a>
+    
+  
+</p>
+<p>Run the Data Indexer Automatically</p>
+<p>The Time Matters Data Indexer is the engine behind the Search Box, Conflicts Search and Global Search. These features allow you to search for any word or phrase in your entire Time Matters database.</p>
+<p>The Search Box (or Search Entry choice in the Toolbar button list) is like having Google for your Time Matters records. For example, you can enter &quot;Jan Howard&quot; in the Search Entry box on the main toolbar and find every Contact record, Event record, Note record, Billing record and any other record that has &quot;Jan Howard&quot; in it.</p>
+<p>But the Data Indexer will run on the first PC that opens Time Matters and can slow down that PC. You can set up the Data Indexer to run automatically on a computer of your choice. It does not use up a Time Matters user license to run the Data Indexer automatically on your server or on any PC you choose.</p>
+<p>A good practice is to run the Data Indexer on the server. If you installed the Time Matters 10 software i the usual place, then the Data Indexer program is in:<br>
+C:\Program Files\LexisNexis\Time Matters<br>
+If you changed the Program Folder to a different drive or location, use that location in the .BAT file shown below.</p>
+<p>To run the Data Indexer on your server or another PC without necessarily having Time Matters open, create a .BAT file. You can do that by opening Windows Notepad and pasting in this text:</p>
+<p>@echo off<br>
+REM TMDataIndex.bat - Start the Time Matters Data Indexer on this computer.<br>
+REM Prevents the Indexer from running on another PC and slowing it down.<br>
+START &quot;Start Data Indexer&quot; &quot;C:\Program Files\LexisNexis\Time Matters\Tmdatndxe.exe&quot; /cfg=Main</p>
+<p>Save the file onto your Desktop with the filename: TMDataIndex.bat</p>
+<p>Now by double-clicking on this Desktop icon, you can start the Data Indexer. You know it is running if you see the little rectangular icon in the System Tray in the lower right corner of your screen.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

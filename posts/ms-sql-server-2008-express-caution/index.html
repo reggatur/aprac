@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MS SQL Server 2008 Express - Caution!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>MS SQL Server 2008 Express - Caution!</h1>
+<p><strong>Date:</strong> Mar. 25, 2010
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/products/">
+        products
+      </a>, 
+    
+      <a href="/categories/setup/">
+        setup
+      </a>, 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/btn-webpi.png" alt="none" class="img-blog">
+<p>The standard installation of Time Matters 10 gives you the option to install MS SQL Server 2005 Express. The process has been trouble-free for the large majority of customers. But you may want to put a more recent version, 2008, on your computer. See our guide, <a href="/conversion-to-version-10/">Conversion to Version 10</a>, for more information about your options when moving to Time Matters 10.</p>
+<p>At this writing, you can install MS SQL Server 2008 Express with SP1, but then <strong>you cannot install SQL Server 2008 Management Studio Express</strong> , a program that is important for configuring Time Matters 10. Trying to do so generates a compatibility error message and the installation fails. To avoid this problem, you have two options:</p>
+<ol>
+<li>Install SQL Server 2008 Management Studio Express first and then install MS SQL Server 2008 Express. It seems backwards, but it works.</li>
+<li>Use the Microsoft Web Platform Installer to install both programs together, one after the other. It may still generate an error message, but has been successful.</li>
+</ol>
+<p>To install MS SQL Server 2008 Express and SQL Server 2008 Management Studio Express:</p>
+<p>Open Microsoft Internet Explorer (not FireFox)<br>
+Go to:<a href="http://www.asp.net/downloads"><br>
+http://www.asp.net/downloads</a><br>
+Click on Web Platform Installer<br>
+<a href="http://go.microsoft.com/?linkid=9722553"></a><br>
+Click: Get the Web Platform<br>
+Press: Run, Run<br>
+Click the yellow bar that appears at the top of the window<br>
+Press Run<br>
+Press Allow<br>
+The Web Platform Installer window appears<br>
+Uncheck: Install ASP.NET<br>
+Click the Web Platform item to the left<br>
+In Web Platform,<br>
+Starting with &quot;Web Server,&quot; click every link that says: Click to remove ...<br>
+For Database, click Customize<br>
+Select only SQL Server 2008 Express<br>
+and SQL Server 2008 Management Studio Express<br>
+Click Install<br>
+Press: I Accept<br>
+Select: Mixed Mode<br>
+Enter a password (for sa - the system admin for SQL Server)<br>
+Press Continue<br>
+If a Compatibility warning appears, select Run Program<br>
+Press Finish</p>
+<p>Open SQL Server 2008 Management Studio Express from the Start Menu.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

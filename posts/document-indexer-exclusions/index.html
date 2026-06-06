@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Indexer Exclusions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Document Indexer Exclusions</h1>
+<p><strong>Date:</strong> Nov. 18, 2014
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-management/">
+        document management
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/document-index-window.png" alt="document-index-window.png" class="img-blog">
+<p><strong>Extensively Updated - November 19, 2014</strong></p>
+<p>To minimize clutter in your search results and reduce the processing time of the Document Indexer for Time Matters, here are some file extensions to add to the exclusions list.</p>
+<p>The Document Indexer gives you lighting fast searches through the full text of all your documents. If you do not yet have it running, you are missing out on the benefits of an excellent tool. For instructions on how to set it up, go to: Time Matters Main Menu | File | Utilities | Document Management | Document Index Manager. Click on the Help icon (?) in the upper right corner.</p>
+<p>When you upgrade Time Matters, be sure create or recreate one or more Document Indexes. Also, remove the Scheduled Task for the old version.</p>
+<p>The Document Index Manager window is used to set up the Document Index feature in Time Matters. When you add a Document Index, the Update Document Index window opens. Area 3 of the window contains a list of file extensions of files that the Indexer will ignore. These are files that you do not want to search since they contain no useful text.</p>
+<p>Here is our recommended list of excluded file extensions to add to the default list that ships with Time Matters. Each entry starts with the characters: semicolon asterisk period</p>
+<p>;<em>.;.7z;</em>.AVI;<em>.BAK;</em>.LDF;<em>.MDF;</em>.MP4;<em>.PNG;</em>.SV*;<em>.TPS;</em>.TFX;*.ZIP</p>
+<p>In order to make room to insert these extensions, <strong>delete</strong> the following from the existing list: ;DRVSPACE.*<br>
+That is a MS Windows file that you are very unlikely to have in your document folders.</p>
+<p>We suggest that you select the above line of extensions with the mouse, then use Ctrl-C to copy it to the Windows Clipboard. Switch to the New Document Index window (or Update Document Index window for an existing Document Indexer) in Time Matters and paste this line of file extensions into Area 3, Exclude These File Types.</p>
+<p>Here is what the New Document Index window looks like. You can see ;DRVSPACE.* at the end of the first line, wrapping to the second line. Delete it from the list. When adding an additional line of file extensions, be sure to select the semicolon that begins the line. Copy the line using Ctrl-C, then click the mouse pointer just after the last file extension that appears in the Update Document Index window. Paste the line using Ctrl-V.</p>
+<p>You may want to use fewer or more file extensions depending on your searching needs. The .CSV is a data format (comma-separated values) often used for imports and exports that MS Excel handles easily.</p>
+<p>If you make <strong>any change</strong> in the Update Document Index window, <strong>you need to reindex</strong> your complete collection of documents. The Indexer will prompt you to reindex the collection after you press OK. Since the Indexer ties up Time Matters on your computer, you may want to press No and then set up the Scheduler. Press the Schedule button on the Document Index Manager window.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

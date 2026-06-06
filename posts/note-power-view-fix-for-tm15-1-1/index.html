@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Note Power View Fix for TM15.1.1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Note Power View Fix for TM15.1.1</h1>
+<p><strong>Date:</strong> May. 31, 2016
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/lists/">
+        lists
+      </a>, 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/note-power-view.PNG" alt="note-power-view.PNG" class="img-blog">
+<img src="/assets/img/blog/note-power-view-fix.PNG" alt="note-power-view-fix.PNG" class="imgctr">
+<p><strong>Update</strong> - Oct. 9, 2016 - See this <a href="/1234tips/time-matters-power-view-fix.html">added step</a> for fixing Power Views. <a href="/1234tips/time-matters-power-view-fix.html">More...</a></p>
+<p>Time Matters has handy Power Views that display Note Records for a Matter or Contact.</p>
+<p>By selecting the Note Power View from the drop-down above the Contact or Matter List or the Summary View on the Note List, you can see the text of the Notes:</p>
+<p>In Time Matters 15.1.1, a bug causes the <strong>display of extraneous code</strong> and Note text at the end of each Note in the Power View.</p>
+<p>The bug also <strong>garbles the view of a Note in TM Messenger</strong> when you send a link to a Note to another Time Matters user.</p>
+<p>To fix these issues, edit these Power View files as described below.</p>
+<p>To edit the Matter List Power View:</p>
+<ol>
+<li>In Notepad, open the file:<br>
+<code>\\TimeMattersShare\template\powerview\Matter\Note View(M).htm</code></li>
+<li>Near the end of the file insert Javascript code just before the <code>/body</code> tag.</li>
+</ol>
+<p><script type="text/javascript"/>
+var find = /{\rtf.+\par.+}/gi;
+document.body.innerHTML = document.body.innerHTML.replace(find, '');
+</script></p>
+<p>To edit the Contact List Power View:</p>
+<ol>
+<li>In Notepad, open the file:<br>
+<code>\\TimeMattersShare\template\powerview\Contact\Note View(C).htm</code></li>
+<li>Make the same change as above.</li>
+</ol>
+<p>To edit the Note List Power View:</p>
+<ol>
+<li>In Notepad, open the file:<br>
+<code>\\TimeMattersShare\template\powerview\Note\Summary View(N).htm</code></li>
+<li>Make the same change as above.</li>
+</ol>
+<p>To edit the Message Note Power View:</p>
+<ol>
+<li>In Notepad, open the file:<br>
+<code>\\TimeMattersShare\template\powerview\Messenger\Message_N.HTM</code></li>
+<li>Make the same change as above.</li>
+</ol>
+<p>Note: In the above examples, \\TimeMattersShare is the Shared Files Directory found in the Time Matters Main Menu / File / Utilities / File Locations</p>
+<p>The Javascript code suppresses the unwanted code and text that would otherwise appear after the Note text in the Power Views.</p>
+<p>A tip of the hat to Adam Bass (adam at mcwhirterlaw com) in South Carolina for creating this fix!</p>
+<p>We expect that the next release of Time Matters will correct the issue. This modification should be compatible with any update.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

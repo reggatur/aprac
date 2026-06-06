@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger a Date Change</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Trigger a Date Change</h1>
+<p><strong>Date:</strong> Apr. 30, 2007
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/calendar/">
+        calendar
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/triggerdatechange.gif" alt="Trigger Options" class="img-blog">
+<p>You can create a Trigger to change a date field, such as Due Date, to a specific date when a status field is changed, such as when a Tax Return Status field is changed to Extended. The fields must be in the same record.</p>
+<p>To set up the trigger, go to:<br>
+File | Setup | Templates | Trigger<br>
+Click on a tab for a form (e.g. Matter)<br>
+Add a Trigger.<br>
+Fill out the options as they are in this diagram:</p>
+<p>The entry in the Actions area is filled in by clicking Add and choosing options.</p>
+<h2>Announcement - Web Conferences for All</h2>
+<p>Attend our one-hour, no fee Web Conferences covering Time Matters and Billing Matters. Tips and Q&amp;A are presented on the second Friday of each month at 12:30 ET. For more information, please click the <a href="http://activeo.squarespace.com/">Home</a> tab, above.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

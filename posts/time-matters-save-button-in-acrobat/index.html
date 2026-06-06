@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Matters Save Button in Acrobat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Time Matters Save Button in Acrobat</h1>
+<p><strong>Date:</strong> Feb. 27, 2018
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-management/">
+        document management
+      </a>, 
+    
+      <a href="/categories/links/">
+        links
+      </a>, 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>
+    
+  
+</p>
+<p><strong>Updated 2-28-2018</strong></p>
+<h3>For Adobe Acrobat 2017</h3>
+<p>Copy TMPlugin.api from:<br>
+C:\Program Files (x86)\LexisNexis\Time Matters<br>
+To:<br>
+C:\Program Files (x86)\Adobe\Acrobat 2017\Acrobat\plug_ins</p>
+<p>To find the TM Save button after applying the fix:</p>
+<ul>
+<li>Click on Tools.</li>
+<li>Scroll to the bottom.</li>
+<li>Click on File.</li>
+</ul>
+<p><strong>Updated 6-17-2013:</strong></p>
+<p><strong>Adding TM Save button to an unsupported version of Time Matters</strong></p>
+<p>After a new version of Adobe Acrobat and Acrobat Reader is released, you probably can add the TM Save button before the new version of Acrobat is officially supported by LexisNexis Time Matters.</p>
+<p>To add the TM Save button when the usual method of opening <strong>Additional Program Setup</strong> (described below) does not work, try this:</p>
+<p>Open Windows Explorer.</p>
+<p>Copy the file TMPlugin.api from:</p>
+<p>C:\Program Files (x86)\LexisNexis\Time Matters 99</p>
+<p>to</p>
+<p>C:\Program Files (x86)\Adobe\Acrobat 99\Acrobat\plug_ins</p>
+<p>(In place of &quot;<strong>99</strong> &quot; use the version number for Time Matters and for Acrobat.)</p>
+<p>In older versions of Windows and on 32-bit versions of Windows, look in the folder:</p>
+<p>C:\Program Files\Adobe\Acrobat 99\Acrobat\plug_ins</p>
+<p><strong>Finding the TM Save button in Acrobat</strong></p>
+<p>If you do not see the Time Matters Save button in Acrobat X or XI, you may need to look here:</p>
+<ul>
+<li>In Acrobat X or XI Reader (the free version), go to Main Menu | View | Tools | Extended | File</li>
+<li>In Acrobat X or XI (not Reader), go to: Acrobat Main Menu | View | Tools | File. Right-click on the TM Save icon and select &quot;Add to Quick Menu.&quot; It should then appear at the top of Acrobat whenever you have a PDF file open in Acrobat.</li>
+</ul>
+<p>Updated 6-22-2012:</p>
+<h3>How to add the TM Save button to the Acrobat X menu</h3>
+<p>It may be as easy as:</p>
+<ol>
+<li>In Acrobat X, go to: View | Tools | File</li>
+<li>Right-click on TM Save icon and select &quot;Add to Quick Menu&quot;</li>
+</ol>
+<p>If you don't see the TM Save icon:</p>
+<ol>
+<li>Close Acrobat X.</li>
+<li>Note: You may also need to end the AcroTray.exe process. To do that:</li>
+<li>a. Right-click the Windows task bar.</li>
+<li>b. Select: Start Task Manager and click Processes tab.</li>
+<li>c. Right-click AcroTray.exe (if it is there). End Process. Click End Process button.</li>
+<li>Close FireFox, MS Word, Microsoft Internet Explorer, and MS Outlook.</li>
+<li>In Time Matters, go to Main Menu | File | Setup | General | Workstation Level | <strong>Additional Program Setup</strong>.</li>
+<li>Uncheck Adobe Acrobat 10.0. Press: OK.</li>
+<li>Click <strong>Additional Program Setup</strong> again. Press OK again.</li>
+<li>Open a PDF file in Acrobat X.</li>
+<li>Go to: <strong>View | Tools | File</strong></li>
+<li>The TM Save icon appears in the right panel. <strong>Right-click on TM Save</strong> and</li>
+<li>Select <strong>Add to Quick Menu</strong></li>
+</ol>
+<p>Note: TM Save button for Acrobat X is available only in Time Matters 11 and up.</p>
+<p>A tip of the hat to Richard Marx, CIC, for this tip.</p>
+<p><strong>Updated 6-10-2010</strong></p>
+<p>With Windows 7, you may need to manually copy the Adobe Acrobat plugin from the Time Matters program folder to the Acrobat plugins folder. The Time Matters folder may be:</p>
+<p>C:\Program Files (x86)\LexisNexis\Time Matters</p>
+<p>or</p>
+<p>C:\Program Files\LexisNexis\Time Matters</p>
+<p>The plugin file is: tmplugin.api</p>
+<p>See the instructions at the end of the article for more information.</p>
+<p><strong>Updated 10-02-2009</strong></p>
+<p>The TM Save button in Adobe Acrobat can simplify the process of saving PDF files into the Time Matters Document Management System. Find out how to add this button to your Acrobat software and how to make it appear if you run into trouble getting it installed.</p>
+<p>Beginning with version 6, Time Matters has included a TM Save button that works in Adobe Acrobat with PDF files. You need one of the paid versions of Acrobat to use this handy button. <strong>[Note: Time Matters Version 8 and later added the TM Save button to the free Acrobat Reader.]</strong> When a document is displayed in Acrobat, you can press the TM Save button to open a Document Form and save a copy of the PDF file into the Time Matters Document Management System.</p>
+<p>Now that a number of great document scanners can scan directly to PDF files, you can scan and save documents linked to Matters very efficiently.</p>
+<h3><a href=""></a>Installing the TM Save Button</h3>
+<p>If a paid <strong>[or, with Time Matters 8, a free]</strong> version of Acrobat is on your computer before Time Matters is installed, then the TM Open and TM Save buttons are installed by default. When installing Time Matters, either a new version or a new Service Release, a check box for Acrobat is checked. You can uncheck it if you do not want to install the buttons, but why leave themn out? It does not hurt to leave the box checked even if you already have the buttons in your Acrobat software.</p>
+<p>When first installed, only the TM Open button, a yellow folder with a clock, appears in the Acrobat toolbars. Click on the drop-down arrow just to the right of it and select Expand This Button. Now both the TM Open and TM Save buttons appear in the toolbars.</p>
+<p>The paid version of Adobe Acrobat and the buttons need to be installed on each computer where they will be used.</p>
+<h3><a href=""></a>Troubleshooting the TM Save Button</h3>
+<p>What if the TM Save button does not appear in your Acrobat toolbars?</p>
+<p><strong>Fix #1</strong></p>
+<p>First, make sure you have not just overlooked the small TM Open button in the Acrobat toolbars. It starts out as a yellow folder with a clock. To display the both the TM Open and TM Save buttons on the toolbar:</p>
+<ol>
+<li>Click on the drop-down arrow just to the right of the TM Open button.</li>
+<li>Select Expand This Button.</li>
+</ol>
+<p>Both the TM Open and TM Save buttons will appear in the toolbars.</p>
+<p><strong>Fix #2 -<em>New!</em></strong></p>
+<p>Another possible solution is to reset your Acrobat toolbars. Go to:</p>
+<p>Acrobat Main Menu | View | Toolbars | Reset Toolbars</p>
+<p>This step can bring back the Time Matters buttons, but it may also display other toolbars you had hidden earlier. To hide them again, right-click anywhere on the toolbars. Click on any checked toolbar to hide it. Repeat for each toolbar you want to hide.</p>
+<p><strong>Fix #3</strong></p>
+<p>If the TM Open button is nowhere in the toolbars, it may be suppressed by an Acrobat setting. The Acrobat update to 7.0.8 is known to change the setting for certified plug-ins.</p>
+<p>To change the Acrobat certified plug-in setting:</p>
+<ol>
+<li>Open Adobe Acrobat.</li>
+<li>Go to: Main Menu | Edit | Preferences | Startup.</li>
+<li>Toward the bottom, uncheck: Use only certified plug-ins.</li>
+</ol>
+<p><strong>Fix #4</strong></p>
+<p>If the TM Open button does not appear in the toolbars, try reinstalling it using Time Matters.</p>
+<p>To reinstall:</p>
+<ol>
+<li>Close Adobe Acrobat.</li>
+<li>In Time Matters go to: Main Menu | File | Setup | General | Workstation Level.</li>
+<li>Press Additional Program Setup.</li>
+<li>Uncheck the Adobe Acrobat check box.</li>
+<li>Press OK. (Note that this step may also install links to any new Microsoft programs, too.)</li>
+<li>Press Additional Program Setup again.</li>
+<li>Check the Adobe Acrobat check box.</li>
+<li>Press OKOK.</li>
+</ol>
+<p>Open Adobe Acrobat and see if the TM Open button has appeared.</p>
+<p><strong>Fix #5</strong></p>
+<p>If the TM Open button still does not appear, you need to copy a file into the Adobe Plug-Ins folder.</p>
+<p>To copy the Adobe Plug-In for Time Matters:</p>
+<ol>
+<li>Close Adobe Acrobat.</li>
+<li>Open the Windows Explorer. (In MS Windows, press: Start | All Programs | Accessories | Windows Explorer.)</li>
+<li>Navigate to the Time Matters program folder, usually C:\tmw9 or C:\tmw9e.</li>
+<li>Find the file named tmplugin.api, right-click it and choose Copy.</li>
+<li>Navigate to the Adobe Acrobat Plug-Ins folder, usually C:\Programs Files\Adobe\Acrobat 9.0\Acrobat\plug_ins.</li>
+<li>Click on the folder, then right-click anywhere in the white space and press Paste.</li>
+</ol>
+<p>If the TM Open button still does not appear, contact a Time Matters Certified Independent Consultant or call LexisNexis Tech Support.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

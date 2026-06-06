@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Merge Fixes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Word Merge Fixes</h1>
+<p><strong>Date:</strong> Feb. 14, 2013
+  
+</p>
+<h2>MS Word Merge Fails - How to Fix It</h2>
+<p>Time Matters Merge Templates are great for automatically creating documents containing, names, addresses and other information that is saved in Time Matters Contact and Matter records.</p>
+<p>If Time Matters or MS Word locks up or freezes when you try to merge a document, here are some fixes that should solve the problem.</p>
+<h3>1 - Check for a problem in the Merge Form File or Merge Data File</h3>
+<p>If you have multiple computers running Time Matters, go to a different computer and try the document merge. If it succeeds, there is nothing wrong with your Merge Template file or your Merge Data file. (These files are specified on the File tab of the Merge Template.)</p>
+<p>If the merge fails on the other computer, try:</p>
+<ul>
+<li>Delete the Merge Data file and try the document merge again.</li>
+<li>Open the Merge Form File, edit it and resave it. Try the merge again.</li>
+</ul>
+<h3>2 - Repair Microsoft Office</h3>
+<p>After applying Office Updates or Windows Updates, MS Word may stop working properly with Time Matters. Running a MS Office Repair fixed the issue on one of our computers and may work for you, too.</p>
+<ol>
+<li>Open the Windows Control Panel (Start | Contrlo Panel|</li>
+<li>Click on (Programs) | Programs and Features</li>
+<li>Right-click on Microsoft Office...</li>
+<li>Click on: Change</li>
+<li>Click: Repair | Continue</li>
+<li>Restart your computer when finished</li>
+</ol>
+<h3>3 - Uninstall some Windows Updates</h3>
+<p>As a last resort, try uninstalling one or more of the most recent Office Updates, especially if the problem with Merge Template started right after some updates were installed.</p>
+<ol>
+<li>Go to: Start | Control Panel | (System and Security) | Windows Update</li>
+<li>Click on Installed Updates (lower left)</li>
+<li>Right-click on the most recent Office update. Click Uninstall.</li>
+</ol>
+<p>You may need to uninstall several Office updates.</p>
+<p>Questions? Call us at: 800.575.0007</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

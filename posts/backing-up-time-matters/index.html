@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backing Up Time Matters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Backing Up Time Matters</h1>
+<p><strong>Date:</strong> Jun. 22, 2005
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/backup/">
+        backup
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/butm1.png" alt="Time Matters Backup settings" class="img-blog">
+<img src="/assets/img/blog/butm2.png" alt="butm2.png" class="imgctr">
+<p>You already use some method to backup your hard drive, so why should you bother with the Time Matters Backup feature? Too many regular backups fail for one reason or another. If your main Time Matters database is damaged or lost and you do not have a good backup, you may have serious problems. It can take a surprising amount of time to recover. You may never retrieve or recreate all the lost information. If you use the Time Matters Backup regularly, you will have an extra level of protection.</p>
+<h3>How to Backup Your Time Matters Database</h3>
+<p>These instructions apply only to the Professional Edition of Time Matters, not to the Enterprise Edition.</p>
+<p>To backup your Time Matters database:</p>
+<ol>
+<li>Close all lists and windows in Time Matters using the Save &amp; Close buttons or the red X icons.</li>
+<li>Go to: <code>Main Menu | File | Backup Time Matters Data</code></li>
+</ol>
+<p>The Time Matters Backup window appears with a filepath and filename highlighted:</p>
+<ol start="3">
+<li>Change the <code>Destination (Backup File)</code> to something like:<br>
+<code>C:\tmw8\data\BACKUP\TMWED.ZIP</code></li>
+</ol>
+<p>We recommend that most Time Matters users change the <code>Destination</code> when running a Time Matters backup. By changing the <code>Destination</code> to the C: drive of your notebook or desktop PC, you create copy of your database on that PC.</p>
+<p>If the backup folder you enter does not exist yet, Time Matters will create that folder when you run the backup.</p>
+<ol start="4">
+<li>Check the box: <code>Skip files in the Document and Document Index Directories</code>.</li>
+</ol>
+<p>If you use the Document Management features of Time Matters, you may have many files in the Document directories. We recommend that you use commercial backup software or good freeware backup software to backup your documents. You can use Time Matters to do so by keeping this box unchecked, but be aware that the size of the backup file may increase dramatically.</p>
+<p>We also recommend that you do not backup the Document Index directories if you use the Document Index and Search features of Time Matters. The files created by the Document Indexing function are easily recreated if necessary. They can add substantially to the size of a Time Matters backup file.</p>
+<ol start="5">
+<li>
+<p>Click OK</p>
+</li>
+<li>
+<p>In the <code>Begin Backup Now?</code> window, click <code>Yes</code>. The message tells you the drive letter of the disk drive where the backup file will be created.</p>
+</li>
+<li>
+<p>When you see <code>Backup Complete</code>, click <code>OK</code></p>
+</li>
+</ol>
+<h3>Run the Time Matters Backup Regularly</h3>
+<p>If you lose your main database and have to restore it from a backup file, it is hard to remember what was added or changed since the last good backup. The more recent the backup file, the less you have to rely on memory to get back information and changes that were lost. We recommend that you or someone in your office be responsible for backing up Time Matters every day. It is even better if you assign someone else the responsibility to check on whether the backup has run each day.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

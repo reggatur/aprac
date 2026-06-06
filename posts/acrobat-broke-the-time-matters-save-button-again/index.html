@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Acrobat Broke the Time Matters Save Button Again</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Acrobat Broke the Time Matters Save Button Again</h1>
+<p><strong>Date:</strong> Feb. 12, 2020
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/links/">
+        links
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/AcrobatProtectedModeFix.png" alt="AcrobatProtectedModeFix.png" class="img-blog">
+<img src="/assets/img/blog/AcrobatProtectedModeFix2.png" alt="AcrobatProtectedModeFix2.png" class="imgctr">
+<p><strong>Updated Feb. 15, 2021</strong><br>
+A current update of Adobe Acrobat Reader broke the Time Matters Save button again, just as it did in 2018.</p>
+<p>Here are the steps to fix the button. Note that future similar breaks can likely be fixed by replacing 21.0 in the code, below, with 22.0 or 23.0, etc., with each new breakage.</p>
+<p><strong>Heads Up:</strong> This fix changes the Windows Registry. It worked fine for me, but your results may vary. The most cautious approach is to perform an image backup of your computer. Second most cautious approach is to <a href="https://neosmart.net/wiki/backup-restore-registry/">back up the Windows Registry</a>.</p>
+<p>To fix the issue, follow these instructions. They are shown in screenshots, below.</p>
+<p><strong>For Acrobat Reader DC,</strong>(free version) copy the following line by highlighting it (triple-click on any word) and pressing Ctrl-C:</p>
+<p>Reg Add &quot;HKEY_CURRENT_USER\Software\Adobe\Acrobat Reader\21.0\Privileged&quot; /v bProtectedMode /t Reg_Dword /d 0</p>
+<p><strong>For Adobe Acrobat DC,</strong>(paid version) copy the following line by highlighting it (triple-click on any word) and pressing Ctrl-C:</p>
+<p>Reg Add &quot;HKEY_CURRENT_USER\Software\Adobe\Acrobat Acrobat\21.0\Privileged&quot; /v bProtectedMode /t Reg_Dword /d 0</p>
+<p>For either Acrobat Reader or Adobe Acrobat, after copying the corresponding line, above:</p>
+<ol>
+<li>
+<p>Type <strong>cmd</strong> in the Windows Search box (lower left corner of Desktop) or click the Start button and just type <strong>cmd</strong>.</p>
+</li>
+<li>
+<p>Right-click on <strong>Command Prompt</strong></p>
+</li>
+<li>
+<p>Choose <strong>Run As Administrator</strong> and click <strong>OK</strong></p>
+</li>
+<li>
+<p>Right-click at the prompt and choose <strong>Paste</strong></p>
+</li>
+<li>
+<p>Press <strong>Enter</strong></p>
+</li>
+<li>
+<p>Close all PDF files and then reopen a PDF file. You should be able to use TM Save.</p>
+</li>
+<li>
+<p>If it still does not work, close and reopen Acrobat again.</p>
+</li>
+</ol>
+<p>Repeat these steps on each computer.</p>
+<p>Paste the line into the Command Prompt window and press <strong>Enter</strong>.</p>
+<hr>
+<p>Questions? Call Wells Anderson at 952-922-1727 or <a href="/send-us-an-email">send me an email…</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

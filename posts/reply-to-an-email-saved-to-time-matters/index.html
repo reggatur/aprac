@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reply to an email Saved to Time Matters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Reply to an email Saved to Time Matters</h1>
+<p><strong>Date:</strong> Feb. 14, 2019
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/email/">
+        email
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/outlook-email-options.PNG" alt="outlook-email-options.PNG" class="img-blog">
+<p>Question: How can I reply to an email that was saved into Time Matters from Outlook?</p>
+<p>You find the email in Outlook reply to it from within Outlook. That assumes you have set an option to save TM-Connected emails to a folder in Outlook. To set that option in Outlook:</p>
+<p>File / Options / Add-ins</p>
+<p>Click: LexisNexis Practice Management Integration / Add-ins Options</p>
+<p>After saving email, move to: (optionally create a folder, such as TM, and select a folder)</p>
+<p>That makes it easy to find the TM-connected emails and reply to them.</p>
+<p>Alternatively, you might be able to set up your TM Inbox as a “Send Only” tool by creating a profile that connects to your SMTP (Simplified Mail Transport Protocol) server. Then you can reply to emails from within Time Matters and easily link them to the relevant Matters.</p>
+<p>Another option is to find the email in Time Matters and use a Formattable Clipboard to copy it and then paste it into a new Outlook email. Here is my Formattable Clipboard:</p>
+<p>________________________________________________________</p>
+<p>{PRI EMA:DATE}  {PRI EMA:TIME}</p>
+<p>To:{TAB}{PRI EMA:TO}{IF {PRI EMA:CC TO} ISNOTBLANK} {THEN}</p>
+<p>CC: {PRI EMA:CC TO}{END IF}</p>
+<p>From:{TAB}{PRI EMA:FROM}</p>
+<p>{IF {PRI EMA:CLIENT} ISNOTBLANK} {THEN}Client:{TAB}{PRI EMA:CLIENT} // {PRI EMA:MATREF}</p>
+<p>{END IF}Subject:{TAB}{PRI EMA:SUBJECT}{IF {PRI EMA:ATTACH} ISGREATER 0} {THEN}</p>
+<p>{TAB}Attachment{END IF}</p>
+<p>{PRI EMA:MEMO}</p>
+<p>You should be able to paste the above text directly into a new, empty email Formattable Clipboard and use it with any version of Time Matters.</p>
+<p>Questions? <a href="/send-us-an-email">Send us an email…</a> or call 800.575.0007</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

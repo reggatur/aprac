@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Updating Contacts in Smartphones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Updating Contacts in Smartphones</h1>
+<p><strong>Date:</strong> Jan. 24, 2010
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/mobile/">
+        mobile
+      </a>, 
+    
+      <a href="/categories/synchronization/">
+        synchronization
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/exchange-update.PNG" alt="exchange-update.PNG" class="img-blog">
+<p>Contacts and Calendars synchronize automatically and over-the-air between Time Matters and smartphones when you use the free Time Matters feature for Exchange Synchronization. You also need MS Exchange running either on your server or on a hosted Exchange server that you can subscribe to for about $12 per month per user.</p>
+<h3>Changing Field Matching between Time Matters and your Smartphone</h3>
+<p>You can modify the basic field matching between Time Matters and your smartphone for phone numbers, e-mail addresses and other information. After you first synchronize your smartphone, you may want to change the field matching by adding more fields or by changing around the ones you matched the first time.</p>
+<p>It is not difficult to add or change matched fields. The Time Matters Help explains how to do this under Contents | Import/Export and Synchronization | Synchronizing Data | MS Exchange Synchronization. But the changes won't affect the existing Contacts in your smartphone until you update them using a query or procedure like the one described here.</p>
+<h3>SQL Query to Update Contacts in Smartphones</h3>
+<p>The following SQL query can be used to update all the Contacts in your smartphone so that they will have the changes you have made to the field matching.</p>
+<p>The query is designed to run in batches every 6 minutes to avoid losing updates. It is important to have the Time Matters Exchange Synchronization process running in the background when you run this query. That allows the updates to occur in batches of about 1000 records in a database with fewer than 10,000 Contacts. (If you have more than 10,000 Contacts, you shouldn't try to sync them all to your smartphone. Performance can be slow with 5,000 to 10,000 Contacts on today's smartphones. Beyond that number, you may find it unacceptable. You can apply filters in your Exchange Synchronization setup to limit the number of Contacts you sync to your smartphone.)</p>
+<p>Because this query makes a change to each Contact record you should:</p>
+<ol>
+<li>Backup Time Matters first.</li>
+<li>Have some experience working with Microsoft SQL Server Management Studio.</li>
+</ol>
+<p>The query puts the number 1 into a field that normally is hidden behind the Memo field of the Contact record, User 18 or Custom 18 (CON1_06_08). That change causes the Contact records to be updated in MS Exchange and then copied to your smartphone.</p>
+<p><strong>Heads Up:</strong> If your Time Matters database makes some other use of this field, <em>do not run this query</em> , but rather modify it to update an unused field.</p>
+<p>The query, below, is for Time Matters 9 Enterprise. For Version 10, replace &quot;tm9user&quot; with &quot;lntmuser&quot; and replace &quot;TimeMatters9&quot; with &quot;TimeMatters10&quot;.</p>
+<p>Download as text file: <a href="http://www.activepractice.com/s/storage/downloads/TM9_UpdateContacts.sql">TM9_UpdateContacts.sql</a></p>
+<h3>SQL Query: TM_UpdateContacts.sql</h3>
+<hr>
+<p>-- =============================================<br>
+-- Author: Wells H. Anderson - info@activepractice.com<br>
+-- Create date: 2010-01-25<br>
+-- Description: Update Contact records to update synced records in MS Exchange.<br>
+-- Delays are needed to allow complete updating.<br>
+-- =============================================</p>
+<p>UPDATE tm9user.contact<br>
+SET CON1_06_08 = '1'<br>
+WHERE (last_name &gt; 'A') AND (last_name &lt; 'C')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters9.tm9user.contact<br>
+SET CON1_06_08 = '1'<br>
+WHERE (last_name &gt; 'C') AND (last_name &lt; 'G')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters9.tm9user.contact<br>
+SET CON1_06_08 = '1'<br>
+WHERE (last_name &gt; 'G') AND (last_name &lt; 'J')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters9.tm9user.contact<br>
+SET CON1_06_08 = '1'<br>
+WHERE (last_name &gt; 'J') AND (last_name &lt; 'M')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters9.tm9user.contact<br>
+SET CON1_06_08 = '1'<br>
+WHERE (last_name &gt; 'M') AND (last_name &lt; 'R')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters9.tm9user.contact<br>
+SET CON1_06_08 = '1'<br>
+WHERE (last_name &gt; 'R') AND (last_name &lt; 'T')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters9.tm9user.contact<br>
+SET CON1_06_08 = '1'<br>
+WHERE (last_name &gt; 'T')</p>
+<hr>
+<p>You can copy and paste the above code into a New Query window in SQL Server Management Studio. Be sure to backup and to check the code using the Check icon before running this query.</p>
+<p>If you have any questions or suggestions, please let us know:<br>
+<a href="/send-us-an-e-mail">Click here to send us an e-mail...</a></p>
+<p><strong>Update</strong> on 2010-04-23 07:42 by Wells Anderson</p>
+<p>For Time Matters 10, use the following Stored Procedure to update all Contacts:</p>
+<p>UPDATE TimeMatters10.lntmuser.contact<br>
+SET CON1_06_08 = '0'<br>
+WHERE (last_name &gt; 'A') AND (last_name &lt; 'C')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters10.lntmuser.contact<br>
+SET CON1_06_08 = '0'<br>
+WHERE (last_name &gt; 'C') AND (last_name &lt; 'G')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters10.lntmuser.contact<br>
+SET CON1_06_08 = '0'<br>
+WHERE (last_name &gt; 'G') AND (last_name &lt; 'J')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters10.lntmuser.contact<br>
+SET CON1_06_08 = '0'<br>
+WHERE (last_name &gt; 'J') AND (last_name &lt; 'M')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters10.lntmuser.contact<br>
+SET CON1_06_08 = '0'<br>
+WHERE (last_name &gt; 'M') AND (last_name &lt; 'R')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters10.lntmuser.contact<br>
+SET CON1_06_08 = '0'<br>
+WHERE (last_name &gt; 'R') AND (last_name &lt; 'T')<br>
+WAITFOR DELAY '000:06:00'</p>
+<p>UPDATE TimeMatters10.lntmuser.contact<br>
+SET CON1_06_08 = '0'<br>
+WHERE (last_name &gt; 'T')</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Acrobat DC Fix for Time Matters button</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Acrobat DC Fix for Time Matters button</h1>
+<p><strong>Date:</strong> Nov. 21, 2017
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>, 
+    
+      <a href="/categories/updates/">
+        updates
+      </a>
+    
+  
+</p>
+<p>A recent update to Adobe Acrobat DC (2017.009.20044) broke the TM Save button in Acrobat DC and Acrobat Reader DC (free version). Acrobat typically updates itself automatically, so your computers probably have the update if you have the DC version.</p>
+<p>The very latest version of Time Matters (16.3) has a fix for the issue, but as of this writing, I have not fully tested this new Time Matters release. I will report the results of my testing later in this blog.</p>
+<p>I have created a .BAT file that you can run on each computer to fix the TM button in Acrobat DC. <em><strong>After running acrofix.bat,</strong></em> you also need to <strong>uncheck Enable Protected Mode at Startup</strong> by following these steps:</p>
+<ol>
+<li>Open Acrobat DC or Acrobat Reader DC</li>
+<li>Top menu: Edit \ Preferences...</li>
+<li>Security (Enhanced)</li>
+<li>Uncheck: Enable Protected Mode at Startup</li>
+<li>Close Acrobat</li>
+</ol>
+<p>Acrofix.bat is available below in a Zip file. Download the file and then double-click on it. Copy acrofix.bat to a folder, such as your Documents folder. Then double-click acrofix.bat to run it.</p>
+<p>WARNING: Acrofix.bat makes a change to the Windows Registry. Changing the Registry can cause problems. Acrofix.bat is provided as is with no warranty.</p>
+<p>Acrofix.bat contains this command to update the Windows Registry:</p>
+<p>Reg Add &quot;HKEY_CURRENT_USER\Software\Adobe\Acrobat Reader\18.0\Privileged&quot; /v bProtectedMode /t Reg_Dword /d 0</p>
+<p>Questions? Please contact me at 800-575-0007 or send me an email: <a href="/send-us-an-email">Click Here</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

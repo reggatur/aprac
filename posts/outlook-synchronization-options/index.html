@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Outlook Synchronization Options</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Outlook Synchronization Options</h1>
+<p><strong>Date:</strong> Jul. 31, 2010
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/links/">
+        links
+      </a>, 
+    
+      <a href="/categories/synchronization/">
+        synchronization
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/Outlook-sync-options.png" alt="Outlook-sync-options.png" class="img-blog">
+<p>In a recent post on the CIC Solutions Forum (<a href="http://pmforums.lexisnexis.com">http://pmforums.lexisnexis.com</a>), Caren Schwartz answered a question about selecting Contacts to synchronize based on entries in the Staff field of the Contact. Here is my elaboration on this topic.</p>
+<p>The options for synchronizing Time Matters with <strong>MS Exchange/Outlook</strong> are:</p>
+<ol>
+<li>Synchronize only Time Matters Contacts to your Outlook if they have you as the <em>first</em> Staff in Time Matters; or</li>
+<li>Synchronize Contacts with your Staff plus all Contacts with blank Staff fields.</li>
+</ol>
+<p>Option 2 is something that you select in the Time Matters Exchange Synchronization Configuration utility and it applies to every user who synchronizes Time Matters with MS Exchange/Outlook.</p>
+<h3>Manual Outlook Synchronization</h3>
+<p>Outlook Sync OptionsAlternatively, you can manually synchronize your Outlook with Time Matters using the Time Matters menu option: Main Menu | Synchronize | Outlook. This is a different approach to synchronization that lacks the advantages of synchronization with MS Exchange/Outlook: Automatic operation and over-the-air synchronization between MS Exchange and mobile phones, including BlackBerrys.</p>
+<p>But the manual synchronization with Outlook actually lets you synchronize Contacts that have you as a second or higher Staff in the Staff field of a Contact. You have the option on a user by user basis to decide whether to synchronize <strong>all Staff</strong> in the Contact list. This added flexibility comes at a price, however.</p>
+<p>With manual synchronization between Time Matters and Outlook:</p>
+<ol>
+<li>You have to manually click through the menu options each time you want to update Outlook with Time Matters Contacts that have been added or changed.</li>
+<li>You cannot synchronize your mobile phone automatically with Outlook over the air, unless you use Google Apps (<a href="https://tools.google.com/dlpage/gappssync">https://tools.google.com/dlpage/gappssync</a>) or possibly some other third party services. While I trust Google's current management, I don't trust sensitive information to Google because of the long-term risk of housing such information in Google's environment.</li>
+</ol>
+<p>An attractive option for small firms and solos are hosted MS Exchange services that allow you to have automatic, over the air synchronization between Time Matters and mobile phones without maintaining your own in-house MS Exchange server. But then, with hosted MS Exchange, you are back to the limitation of synchronizing just Contacts where you are the first Staff or where, optionally, Staff is blank.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Merge an Optional Initial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Merge an Optional Initial</h1>
+<p><strong>Date:</strong> Sep. 26, 2005
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/document-creation/">
+        document creation
+      </a>, 
+    
+      <a href="/categories/templates/">
+        templates
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/mergemiddleinitial.png" alt="Middle Initial merge field editing" class="img-blog">
+<p>When automatically creating documents using Time Matters Merge Templates, you can handle names with Middle Initials and names without them.</p>
+<p>Microsoft Word 2003 has a feature that lets you tack on text to a merge field. This feature is important for handling middle initials. Tack on a period and a space to a merge field for Middle Initial. Then, if a name has a middle initial, the period and space will be inserted right after it. If a name does not have a middle initial, nothing will be inserted. Using this technique, it is important to put a space between the First Name merge field and the Middle Initial, but no space between the Middle Initial merge field and the Last Name merge field.</p>
+<p>To insert merge fields for a name:<br>
+1. Add the First Name field<br>
+2. Put a space after it<br>
+3. Add the Middle Initial field<br>
+4. Add the Last Name field immediately after the Middle Initial field<br>
+5. Right-click on the Middle Initial field<br>
+6. Click: Edit Field...<br>
+7. Check the box: Text to be inserted after:<br>
+8. Type a period and a normal space in field<br>
+9. Click OK</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

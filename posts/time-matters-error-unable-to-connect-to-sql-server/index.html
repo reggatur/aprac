@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Matters Error - Unable to Connect to SQL Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Time Matters Error - Unable to Connect to SQL Server</h1>
+<p><strong>Date:</strong> Feb. 27, 2020
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/troubleshooting/">
+        troubleshooting
+      </a>, 
+    
+      <a href="/categories/links/">
+        links
+      </a>, 
+    
+      <a href="/categories/ms-office/">
+        MS Office
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/tmwe-process-running.png" alt="tmwe-process-running.png" class="img-blog">
+<img src="/assets/img/blog/tmwe-end-task.png" alt="tmwe-end-task.png" class="imgctr">
+<p>Various issues can prevent Time Matters from connecting to SQL Server. Let’s look at one common cause.</p>
+<p>Time Matters may occasionally stop working and freeze, especially older versions of Time Matters. When that happens, you will typically just reopen Time Matters and continue working, ignoring the message saying you are already logged in.</p>
+<p>In that scenario, an invisible Time Matters process from your earlier Time Matters session may continue running. If that happens, the process named <strong>tmwe.exe</strong> is duplicated in Windows Task Manager. After multiple Time Matters freezes, you can end up with many copies of <strong>tmwe.exe</strong> running in Task Manager.</p>
+<p>Now, if you try to use the TM Save button in MS Word or in another Office program, you may get this error message:</p>
+<p>The text of the message is:</p>
+<p>Time Matters has encountered an error. Please take the action indicated below. For additional assistance, contact Time Matters Technical Support.</p>
+<p>Error Message Unable to Connect to SQL Server….</p>
+<p>8 - Communication link failure</p>
+<p>Recommended Action - Review Support Center article ID 61034 for instructions on diagnosing and resolving the problem.</p>
+<h3>Fix the Issue</h3>
+<ol>
+<li>
+<p>Close Time Matters</p>
+</li>
+<li>
+<p>Right-click on the Windows Toolbar.</p>
+</li>
+<li>
+<p>Click Task Manager</p>
+</li>
+<li>
+<p>Click Details</p>
+</li>
+<li>
+<p>Scroll down to <strong>tmwe.exe</strong></p>
+</li>
+<li>
+<p>Click on <strong>tmwe.exe</strong> and press the <strong>End Task</strong> button (lower right).</p>
+</li>
+<li>
+<p>Repeat step 6 for each <strong>tmwe.exe</strong> that appears in Task Manager.</p>
+</li>
+</ol>
+<p>Questions? Please call me at 800.575.0007 or send me an email…</p>
+<ol>
+<li></li>
+</ol>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

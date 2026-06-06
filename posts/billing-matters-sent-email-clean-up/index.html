@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Billing Matters Sent email Clean-Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Billing Matters Sent email Clean-Up</h1>
+<p><strong>Date:</strong> Apr.  9, 2015
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/billing-matters/">
+        Billing Matters
+      </a>, 
+    
+      <a href="/categories/email/">
+        email
+      </a>
+    
+  
+</p>
+<h3>Why Bother?</h3>
+<p>Billing Matters has an option to sent out invoices via e-mail. These e-mails can build up in your Time Matters Personal Inbox in the Sent folder. This build-up of e-mails slows down your Personal Inbox, making you wait for it to open. So you need to minimize the number of e-mails saved in your Personal Inbox.</p>
+<h3>How It Works</h3>
+<p>This advanced tip gives you a way to rapidly remove Sent e-mails from your Personal Inbox while preserving them in the Time Matters email List (Main Menu | Mail | email List) and on the email tab of Matters. Because there is no built-in process for removing e-mails from the Personal Inbox, a MS SQL Server Query for performing that task is included, below.</p>
+<h3>Not Limited to Billing Matters</h3>
+<p>While this tip focuses on cleaning up e-mails sent using the Invoices via email feature in Billing Matters, you can also use this tip to clean up other e-mails in your Time Matters Personal Inbox. The more e-mails you have there, the slower the Personal Inbox gets. You can reduce &quot;Personal Inbox Bloat&quot; by linking any e-mails to Matters and following this tip to remove them from the Personal Inbox and save them on the email List and email tabs of Matters.</p>
+<h3>What To Do First</h3>
+<p>You can periodically clear e-mails out of the Sent folder in your Personal Inbox so long as those e-mails are linked to Matters. For your Personal Inbox to work optimally, you should have two options set for the Time Matters Inbox:</p>
+<ul>
+<li>Clear 'Show on Inbox' when Reading email and Regarding Field is Completed</li>
+<li>Check 'Show on List' when Regarding Field is Completed</li>
+</ul>
+<p>Set these options here: Main Menu | File | Setup | General | User Level | Communications | Advanced Options | Send tab | Set email Form Options</p>
+<p>Unfortunately, in Time Matters 14, the Matter Ref field is not automatically completed for e-mails you send out with invoices. Hopefully that will be fixed in Time Matters 14.1.</p>
+<p>To get e-mails out of the Sent folder, you should first link them to their respective Matters or, to save time, to a single Matter. Within the Sent folder, you can tag a process e-mails using the Set Regarding option to link many e-mails to one Matter. (Tag the e-mails and use Main Menu | Process | Set Regarding.) For this purpose, you might create an administrative Matter simply named Billing as a place to store e-mails and their attached invoices for future reference.</p>
+<h3>Two Ways to Clear E-mails from the Personal Inbox</h3>
+<p>If you link the e-mails one-by-one to Matters and if you have the 'Show on' settings set as explained above, the e-mails will be cleared from your Sent folder and will be preserved in the email List and the email tabs of your Matters.</p>
+<p>If you use the Set Regarding process, which saves a good deal of time, the e-mails will still be in the Sent folder. To clear them from the Sent folder, you can use a MS SQL Server Query. I recommend adding a Classification Code for email named &quot;SENT&quot; so that you can easily sort Sent e-mails from others.</p>
+<p>Here is the Query:</p>
+<p>-- Remove SENT TM E-mails from Inbox
+-- that are already on email List
+UPDATE lntmuid.email
+-- UPDATE lntmu13.email -- for Time Matters 13
+SET showinbox = 'N'
+-- Optional: if you have a Classification Code, SENT
+, CCODE = 'SENT'
+WHERE parent_id = '*SENT' AND
+showinbox = 'Y' AND showlist = 'Y'
+AND mat_ref &lt;&gt; ''</p>
+<p>If you are unfamiliar with using MS SQL Server Queries, I would be happy to assist you.</p>
+<p>Questions?<br>
+<a href="/send-us-an-e-mail">Send an e-mail...</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

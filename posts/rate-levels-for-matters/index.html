@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rate Levels for Matters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Rate Levels for Matters</h1>
+<p><strong>Date:</strong> Sep. 25, 2006
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/billing-matters/">
+        Billing Matters
+      </a>, 
+    
+      <a href="/categories/billing/">
+        billing
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/rlfm1.gif" alt="rlfm1.gif" class="img-blog">
+<img src="/assets/img/blog/rlfm2.gif" alt="none" class="imgctr">
+<p>With Billing Matters, you can automatically apply different hourly rates to the client matters your firm handles. These rates may vary based on who does the work and on the different types of matters.</p>
+<h2>Announcement - Web Conferences for All</h2>
+<p>Attend our one-hour, no fee Webinars covering Time Matters and Billing Matters. Tips and Q&amp;A are presented on the second Friday of each month at 12:30 ET. For more information, please click the <a href="http://www.activeo.squarespace.com/">Home</a> tab, above.</p>
+<h2>Rate Levels Example - Billing Matters</h2>
+<p>Here is an example of rates for three practice areas and three staff groups:</p>
+<p>Notice that we use three separate Billing Matters Rate Tables, one for each staff group. Partner rates are $200, $250, or $275, depending on the practice area. For a new practice area or client needing a different set of rates, another Rate Level could be added to each Rate Table.</p>
+<p>Using this approach, all billing for a particular matter uses the same Rate Level. For example, a Family Law matter is billed out at Level 2.</p>
+<h2>Step-by-Step Instructions</h2>
+<p>Set up Billing Matters to apply different rates based on the type of matter and the person working on it by following these steps:</p>
+<p><strong>Set Up Rate Tables</strong></p>
+<p>Press Ctrl-N for Navigator<br>
+Click: Billing Setup | Program Level | Billing | Rates | Rate Tables | Add Record (the green plus icon)<br>
+Fill in a Code and Description, then enter each of the Rate Levels.<br>
+In this screenshot, the user is about to add the last rate for Estate Planning by entering the dollar amount and clicking Quick Add.</p>
+<p><strong>Set Up Staff Rate Options</strong></p>
+<p>Click: Database | Staff | Change Record (blue triangle icon) | Options<br>
+For Rate Type, select Use Rate Table<br>
+For Rate Table, select PARTNER or the appropriate table</p>
+<p><strong>Set the Matter's Billing Preferences</strong></p>
+<p>Go to a matter's Billing Preferences<br>
+Click the Rates tab<br>
+For Rate Source, choose Staff<br>
+Select: Use Rate Level; select 1 for Ins. Defense, or 2 for Family Law, or 3 for Estate Planning</p>
+<p>Note: It makes sense to set up a Billing Preferences template for each type of matter the firms handles. Then you will not have to go through setting each new matter's Billing Preferences field-by-field.</p>
+<p>On a Family Law matter, the client will be charged $250 for partner work, $200 for associate work, and $125 for paralegal work. Note that each of these rates comes from a separate Rate Table created for each staff group, but Level 2 is always applied.</p>
+<h2>Rate Tables for Each Staff Member</h2>
+<p>You may want to set up a Rate Table for each attorney and legal assistant rather than group them into Partner, Associate and Paralegal groups. This approach makes sense when attorneys have multiple rates particular to their own clientele and do not tend to work much on other attorney's matters.</p>
+<p>In this situation, the firm may still want to agree on several standard rates, such as: Level 7 - $200; Level 8 - $225; and Level 9 - $250. Then if two attorneys collaborate on a matter, for example, they can assign Rate Level 7 to the matter and the client will be charged the same hourly rate for attorney work. New Rate Levels may be added to each attorney's Rate Table to accomodate particular clients.</p>
+<h2>Effective Dates for Rates</h2>
+<p>Without the Effectives Dates feature, the billing process could get very messy around the date of a rate change. Time records entered after the rate change date for work performed before would all need to be manually adjusted.</p>
+<p>By using Effective Dates, we can easily apply new rates on a effective date. Billing Matters will apply our old rates for work performed before the effective date even if the billing records and invoices are created afterwards.</p>
+<p>To turn on Effective Rates, go to:<br>
+File | Setup | General | Program Level | Billing | Rates<br>
+Check the box: Use Effective Dates</p>
+<p>To implement a new set of rates, go into each Rate Table and enter the Effective Date. As soon as you tab or click out of the date field, you will be prompted to enter the new rates. Each table will then store both the old rates and the new ones. Use the drop-down button for Effective Date to view each set of rates.</p>
+<p>Each Effective Date can have the same Rate Levels as before, each with the same or different Rates. You can add new Rate Levels for an Effective Date.</p>
+<p>Heads Up: Whenever you open a Rate Table after implementing Effective Dates, you will see the oldest set of rates. You need to click the drop-down and select the most current Effective Date to see the rates currently in effective for that Rate Table.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

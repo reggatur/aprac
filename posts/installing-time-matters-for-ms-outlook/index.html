@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Installing Time Matters for MS Outlook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Installing Time Matters for MS Outlook</h1>
+<p><strong>Date:</strong> May.  8, 2012
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/email/">
+        email
+      </a>, 
+    
+      <a href="/categories/links/">
+        links
+      </a>, 
+    
+      <a href="/categories/related-records/">
+        related records
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/savethislogin.png" alt="savethislogin.png" class="img-blog">
+<h3>Installation of Time Matters for MS Outlook</h3>
+<p>You need version 11.1 or later to use Time Matters for MS Outlook (TMO). Currently TMO is available as a Preview Release. We have found it to be stable. LexisNexis appreciates any suggestions about improvements and added features and capabilities during the Preview period (no published end date at this writing).</p>
+<p>First you need to have Time Matters Mobility installed, typically (but not necessarily) on the computer where the Time Matters database is located. You <strong>do not</strong> need to be using TM Mobility, which requires a strong password, but you do need to have it running.</p>
+<p>Download the instructions for Time Matters for MS Outlook:</p>
+<p><a href="http://support.lexisnexis.com/lndownload/software/TMO_Release_Notes.pdf">http://support.lexisnexis.com/lndownload/software/TMO_Release_Notes.pdf</a></p>
+<p>Download the installer, TMOSetup.exe:</p>
+<p><a href="http://support.lexisnexis.com/TimeMatters11/record.asp?ArticleID=10991">http://support.lexisnexis.com/TimeMatters11/record.asp?ArticleID=10991</a></p>
+<p>Get the name of the computer where TM Mobility is running:</p>
+<p>On the computer go to: Start | right-click Computer (or My Computer) | Computer name:</p>
+<p>On a PC: Right-click on Start | Open Windows Explorer | find the server name in parens by one of the network drive letters.</p>
+<p>For example:</p>
+<p>Time Matters (\\LawServer) (T:)</p>
+<p>In this example, LawServer is the Computer name of the server.</p>
+<p>Close MS Outlook.</p>
+<p>Run the installer on a PC where you use MS Outlook. (You may install it on as many PCs as you have user licenses.)</p>
+<p>(If the installer doesn't detect the Common API Service on the server, you will be prompted. Type the port number, normally 60000 or 60001)</p>
+<p><strong>Don’t skip this step:</strong></p>
+<p>After installation, you need to save the login to Time Matters. That tells Time Matters for MS Outlook which user to connect to. [For more on the Save This Login option and TMO security, see: <a href="/1234tips/time-matters-for-ms-outlook-security.html" title="TMO Security">TMO Security</a>]<br>
+<a href="/1234tips/"></a></p>
+<p>To save the login to Time Matters, either</p>
+<p>Open Time Matters, enter User name and password, press the Options button, and check Save this login.</p>
+<p>or</p>
+<p>Within Time Matters, choose Relogin. Enter User name and password, press the Options button, and check Save this login.</p>
+<p>Open MS Outlook. Enjoy the new sidebar! See the Time Matters for MS Outlook documentation for more details on how to use it.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

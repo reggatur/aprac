@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fixing the Time Matters Sync to Phones with MFA or 2FA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Fixing the Time Matters Sync to Phones with MFA or 2FA</h1>
+<p><strong>Date:</strong> Jul.  7, 2020
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/calendar/">
+        calendar
+      </a>, 
+    
+      <a href="/categories/synchronization/">
+        synchronization
+      </a>, 
+    
+      <a href="/categories/security/">
+        security
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/synchronization-ISS_19205_187615.png" alt="Synchronize Time Matters and your phone." class="img-blog">
+<p>Adding Multi-Factor Authentication (MFA), aka Two-Factor Authentication (2FA), to your Office 365 / Microsoft 365 account is a smart move.</p>
+<p>MFA delivers much better protection against hackers who might take over your email account and spam your clients and friends, or worse.</p>
+<p>But MFA can block the Time Matters Exchange Synchronization that can automagically update your Contacts, Calendar and ToDo’s in your phone from your Time Matters records. That sync can run every two minutes, keeping you right up-to-date.</p>
+<p>[caption id=&quot;&quot; align=&quot;alignnone&quot; width=&quot;373&quot;] Synchronize Time Matters and your phone. [/caption]</p>
+<p>There are two methods for allowing the Time Matters Exchange Synchronization to continue to work once MFA is implemented.</p>
+<h2>Method 1 - IP address bypass</h2>
+<p>The technicians who preside over your Office 365 / Microsoft 365 account can configure an IP address bypass that will allow the Time Matters synchronization application to connect directly to your Exchange mailboxes without being blocked by MFA.</p>
+<p>The technician will need to know the public IP address of the computer where the Time Matters Exchange Synchronization application is running. From a web browser on that computer (often your database server or file server), you can go to <a href="https://www.ipchicken.com">www.ipchicken.com</a> to identify the IP address used by that machine. (I have used other IP address identification websites, but IP Chicken is the least intrusive and, as a bonus, has a cartoon chicken!)</p>
+<p>A big advantage of this method is that the change only needs to be made once (unless your server’s IP address changes). It will apply to all of your users who want to synchronize Time Matters records with their phones.</p>
+<h2>Method 2 - Application Password</h2>
+<p>Your Office 365 / Microsoft 365 technician may need to use a different method to adjust for MFA. An app password can be generated for each user of Time Matters Exchange Synchronization. This password is entered into the Time Matters Exchange Synchronization Configuration application on your server that is running Time Matters Exchange Synchronization.</p>
+<p>Each user will also need to confirm the first use of the link between your Time Matters server and MS Exchange using their MFA feature.</p>
+<p>Questions? Call us at 800.575.0007 or <a href="/send-us-an-email">send us an email…</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

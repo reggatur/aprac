@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fees by Practice Area</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Fees by Practice Area</h1>
+<p><strong>Date:</strong> May. 25, 2007
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/billing/">
+        billing
+      </a>, 
+    
+      <a href="/categories/reports/">
+        reports
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/deptincome.png" alt="deptincome.png" class="img-blog">
+<p>With Billing Matters you can produce reports showing how much money you are earning from each of your practice areas. The reports can show your profitability by practice area and by timekeeper.</p>
+<p>Billing Matters does not have a standard report that totals fees billed by Matter Classification Code, but many firms are interested in this information. With the addition of Departments to Billing Matters, you can set up this report with some effort. You only have to go through the setup work once. As long as you assign Departments to new Matters as you add them, you can run the report showing billed fees and billed hours any time.</p>
+<p>Departments are available only if you check the box to Activate Accounting on the Billing tab of Program Level Setup. You can choose not to use the Billing Matters accounting features even though you check this option, but you cannot link to another accounting program such as QuickBooks with it checked.</p>
+<p>First, decide on the Departments or practice areas you want for your reports. Group your Matter Classification Codes into Departments. For example, you might group PINJ-Pers Injury and PIA-PersInj Auto together in a PI-Personal Injury department. EST-Est Planning and PROB-Probate might go into another Department, EP-Estate Planning &amp; Probate.</p>
+<p>Create a Department for each practice area: Main Menu | Setup | Accounting Options | Departments</p>
+<p>Create a Billing Preferences Template for each Department. If you already have templates for some or all of your classifications of Matters, it is a good idea to modify them instead of adding new Templates.</p>
+<p>Create a new Billing Preferences Template for EP-Estate Planning &amp; Probate (or modify each existing Billing Preferences Template that you use for these Matters). Go to: Main Menu | File | Setup | Templates | Billing Preferences On the Accounts Receivable tab, select the corresponding Department. Repeat these steps for each Department.</p>
+<p>Next, assign Departments to your existing Matters. Go to the Matter List and filter it to show all the Matters in your first Department, EP. To filter the Matter List: Go to Main Menu | Search | Classification Codes Press the lookup button and select each of the codes for your first Department. Tag all these Matters.</p>
+<p>To set the correct Department for these Matters: Main Menu | Process | Change Billing Preferences Select the proper Billing Preferences Template in the first field. Scroll down to the bottom of the Available Preferences and select Dept, the fifth from the bottom. Press OK.</p>
+<p>Repeat this process for each other Department by filtering, tagging and processing the Matters. Once your Matter are assigned to Departments, you can run reports by Department.</p>
+<p>To run a Standard Report that shows billed hours and billed fees by Department: Go to: Main Menu | Reports | Standard Reports | Staff | Profitability On the Filter tab, select the time period you want in Date Range. Press Preview.</p>
+<p>The Profitability Report by Department by Staff shows statistics on Fees and Hours, with subtotals for Departments and for Staff. The numbers included are: Fees Worked Billed Value Profitability % Hours Worked Hours Billed Eff. Bill Rate</p>
+<p>To show amounts paid by your clients in each Department as opposed to amounts billed is another matter. Hopefully the two numbers are equal and you won't need another report!</p>
+<p>If you do need the numbers for amounts received by Department , you can run another Standard Report once for each Department: Go to: Main Menu | Reports | Standard Reports | Transactions | Receipt Allocation Report On the Filter tab, select the time period you want in Date Range. Also on the Filter tab, select a Department. On the Options tab, select Staff. Press Preview. Repeat for each Department.</p>
+<p>You can save the report settings so that you do not need to set them each month or quarter when you want to run the reports.</p>
+<p>The Receipt Allocation Report shows statistics for fees and expenses that were billed and those that were paid.</p>
+<p>As you add new Matters, be sure that each one is assigned to the correct Department. Selecting a Classification Code will not do that automatically. You need to apply a Billing Preferences Template that assigns the Department or select the Department manually on the Accounts Receivable tab of a new Matter's Billing Preferences.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Billing Matters Zero Balance Invoices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Billing Matters Zero Balance Invoices</h1>
+<p><strong>Date:</strong> Sep.  6, 2013
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/billing-matters/">
+        Billing Matters
+      </a>, 
+    
+      <a href="/categories/billing/">
+        billing
+      </a>
+    
+  
+</p>
+<p>This post explains how to deal with zero balance invoices. The idea is to avoid printing or emailing invoices that simply show a payment in full of the last invoice and a balance of $0.00.</p>
+<p>If you like to send out these zero balance invoices, ignore this post! But if you don't feel that your clients need to receive an invoice showing that they owe you nothing, read on.</p>
+<p>The BillFlow feature in Billing Matters can make your billing process highly automated. These steps explain how to create a group of zero balance invoices that you don't send out to clients. Then you can produce invoices with real balances and send them out to your clients.</p>
+<p>In order to get Matters with zero balances out of your BillFlow collection (a list of Matters to be billed), you need to do two things:</p>
+<p>1. When resetting your BillFlow Collection (which you do every month for your Monthly billing clients), check the box:<br>
+[ ] Do not create collection components for Matters with no activity.</p>
+<p>2. Create and post &quot;internal invoices&quot; for any Matters on which you have received a payment equal to the amount due.</p>
+<p>&quot;Internal invoice&quot; is a term I use for invoices that we do not send out to clients.</p>
+<p>Typically your bills with new balances of $0.00 are for Matters that have been paid in full but do not yet have invoices that show the application of the payments to the amounts due. Billing Matters will keep including these Matters in your BillFlow Manager list until their last payments and their zero balances are shown on invoices. Performing (2), above, for these Matters will keep them from appearing in your future batches of bills.</p>
+<p>How do you create &quot;internal invoices&quot;?</p>
+<p>1. Right-click on your list of Matters in the BillFlow Manager. Choose: Tags / Tag All<br>
+2. Go to: Main Menu | Process | Calculate Bills<br>
+3. Click on the Total column heading to sort so that all the 0.00 Matters are at the top.<br>
+4. Right-click on your list of Matters in the BillFlow Manager. Choose: Tags / Untag All<br>
+5. Tag each of the Matters with a true 0.00 New Balance. To do this, use the Down Arrow to scroll down the list, keeping an eye on the New Balance shown in the lower right corner as you highlight each Matter. Press Ctrl-T to tag each Matter that has a 0.00 New Balance. Ctrl-T tags a Matter and conveniently moves the highlight to the next Matter. (Don't tag Matters that show a dollar amount for New Balance. These Matters have no Time or Expenses, but have a previous balance and are typically overdue, so you want to send out real Invoices for them.)<br>
+6. Now that you have all the 0.00 New Balance Matters tagged, press the Preview button. An option at this point is to click the Save button and choose Save to PDF if you want to retain a PDF file of all these Internal Invoices. Note that these Invoices will also be saved automatically as individual PDF files in the Bills folder.<br>
+7. Click the Close button and choose: Post Bills Now.<br>
+8. If you have used the setting to send bills via email, uncheck the Send checkbox for each Matter that appears in the Send Bills via email window. Typically you don't want to send out these 0.00 Balance invoices.<br>
+9. Back in BillFlow Manager, you can now click the Ready to Bill tab and preview and print invoices that you want to send out. All Matters with 0.00 balances are complete and appear on the Posted tab.</p>
+<p>This process may look daunting at first but, after you have done it a few times, it goes very quickly. It prevents cluttering up your monthly billing process with a bunch of 0.00 balance invoices that you would end up throwing in the trash or emailing out to clients for no good reason.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Out of Sync?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Out of Sync?</h1>
+<p><strong>Date:</strong> Jul.  3, 2006
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/synchronization/">
+        synchronization
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/outofsync.png" alt="Database Maintenance" class="img-blog">
+<p>Is your Time Matters Remote database out of sync with your Main database? If so, these steps can get you back in sync. The benefits are worth the time it takes. A Remote database lets you take Time Matters with you on a laptop and can be a real lifesaver if your main computer goes out of service.</p>
+<p>Normally the synchronization between a Main Time Matters database and a Remote database goes smoothly. But it is possible for the two databases to get out of sync. You know that has happened, for example, if one day your Remote database is missing records.</p>
+<p>Follow these steps only if you are willing to erase the contents of your Remote database, replacing them with a the records from the Main database.</p>
+<p>Here are the steps for getting a Time Matters Professional database back in sync with a Remote database:</p>
+<ol>
+<li>
+<p>Backup the Main database.</p>
+</li>
+<li>
+<p>In Host and Remote, delete syncchk.tps, dbscope.tps, DBCHK.tps, and dbclone.tps (One or more of these files may not be present. No problem.)</p>
+</li>
+<li>
+<p>Reindex both databases: Main Menu | Utilties | Database Maintenance | Press OK.</p>
+</li>
+<li>
+<p>Create a new clone file.</p>
+</li>
+<li>
+<p>Install the clone into the Remote database, replacing all data.</p>
+</li>
+<li>
+<p>Synchronize the databases.</p>
+</li>
+</ol>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

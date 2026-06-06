@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reduce Backup Bloat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Reduce Backup Bloat</h1>
+<p><strong>Date:</strong> Oct. 13, 2006
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/backup/">
+        backup
+      </a>, 
+    
+      <a href="/categories/utilities/">
+        utilities
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/skipdocumentfiles.png" alt="skipdocumentfiles.png" class="img-blog">
+<p>f your Time Matters backup files become unnecessarily large, their size may interfere with performing regular backups. They can waste your time and disk space. Here are steps you can take to reduce backup bloat. Use another program to backup your document files and skip the Document Files when running a Time Matters backup. If you use Time Matters Professional, watch out for and delete any &quot;Z_&quot; files that may be left over from unsuccessful backups.</p>
+<h3>Use a Separate Backup Program to Back Up Document Files</h3>
+<p>Including document files in your Time Matters backups can bloat the backup files. Bloated Time Matters backups take longer to create, use up more space and are harder to transfer offsite.</p>
+<p>You should regularly backup your Time Matters database. One way to do this is to use the backup feature in Time Matters. Go to: <code>Main Menu | File | Backup Time Matters Data</code>. If you do not change anything in the Time Matters Backup window, it will back up not only your Time Matters data, but also all the files in the Time Matters document or files directory. The Files Directory is specified in the Files Location window: <code>Main Menu | File | Utilities | File Locations.</code></p>
+<p>If you have a large volume of files in your Files Directory, your backup files will take up much more space than they need to. We recommend that you use a separate backup program to back up the documents and other files in the Time Matters Files Directory.</p>
+<p>The best freeware program we have found is <a href="http://www.2brightsparks.com/syncback/sbse-features.html">SyncBack</a>. The freeware version isavailable<a href="http://www.2brightsparks.com/downloads.html">here</a>. SyncBack has not nag screens, timeouts, registration or copy protection and has all the key features of the paid version (US $25), SyncBack SE.</p>
+<p>You do not need to back up all your document files every day. Rather, you need to backup all new and changed document files regularly. By separating your document backups from your Time Matters backups, you keep the Time Matters backup files much smaller. You do not want anything to get in the way of regular backups. Keeping the backup files smaller avoids running out of disk space andonline storage space. It speeds up the backup and file transfer processes. Now that USB flash drives or thumbdrives that store a Gigabyte of data have become inexpensive, you can rotate several of them offsite to keep your Time Matters data secure against disasters.</p>
+<h3>Skip Document Files in the Time Matters Backup</h3>
+<p>Once you have set up a separate backup program and have verified that it is backing up your documents, leave out the document files when you do manual Time Matters backups.</p>
+<p>To skip the document files:</p>
+<ol>
+<li>Open theTime Matters backup window: <code>Main Menu | File | Backup Time Matters Data</code>.</li>
+<li>Check the box: Skip files in the Document and Document Index Directories.</li>
+<li>Press OK.</li>
+</ol>
+<h3>Delete any &quot;Z_&quot; Files (Time Matters Professional)</h3>
+<p>Using Time Matters Professional Edition, it is possible for a Time Matters backup to fail to finish. That can happen ifthe backup runs into a corrupt fileor if another program or process causes Time Matters to stop before the backup can finish. If the backup is interrupted, it can leave a useless, large temporary file in the destination location. Such a file has &quot;Z_&quot; at the beginning of its filename. If a backup does not succeed, it is important to check for and delete any of these temporary files. Otherwise, it is possible for the next backup to include the useles temporary file and nearly double the size of the backup.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

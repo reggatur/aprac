@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stop Windows Update from Rebooting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Stop Windows Update from Rebooting</h1>
+<p><strong>Date:</strong> Jun. 11, 2010
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/windows/">
+        Windows
+      </a>, 
+    
+      <a href="/categories/administration/">
+        administration
+      </a>
+    
+  
+</p>
+<p>Have you ever left your PC with various documents and programs open and then, the next morning, faced the Windows login screen? All your programs are closed. You don't remember what documents you were working with or what webpages you had open. MS Word might have saved you latest changes, but it is still a hassle.</p>
+<p>Microsoft Windows Update will, by default, download critical updates overnight, install them, and reboot your computer. It is nice to have Microsoft do that maintenance work for you, but you may want control of the timing of rebooting your computer.</p>
+<p>You can stop Microsoft Windows from automatically restarting after it has download and installed updates. It is very important that you allow Windows Update to regularly update your Windows operating system, but you may want to control when it reboots or restarts your computer.</p>
+<p>To disable automatic rebooting:</p>
+<ol>
+<li>Go to Start | Run or press the Windows Key (between Ctrl and Alt) and R</li>
+<li>Type: gpedit.msc and press Enter.</li>
+<li>Go to Local Computer Policy (skip this step on Windows 7)</li>
+<li>Go to Administrative Templates | Windows Components | Windows Update</li>
+<li>Right-click on: No auto-restart for scheduled Automatic Updates installations</li>
+<li>Select Enabled. Press OK. Close Local Group Policy Editor.</li>
+</ol>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Automatically Backup Word's AutoRecover Files</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Automatically Backup Word's AutoRecover Files</h1>
+<p><strong>Date:</strong> Sep. 14, 2025
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/backup/">
+        backup
+      </a>, 
+    
+      <a href="/categories/document-management/">
+        document management
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/ms-word-autorecover-setting.png" alt="ms-word-autorecover-setting.png" class="img-blog">
+<h2>Automatically Backup Word's AutoRecover Files</h2>
+<p>Computers should help to protect you from technical failures and your own errors. That’s what backup systems do for you, sparing you from the grief of losing work you’ve labored over. I am passionate about backup systems! I’ve heard from too many attorneys and assistants who have suffered from errors and failures.</p>
+<p>Setting up the <strong>incremental</strong> backup of Word documents can protect you from your own errors and computer failures. Depending on your software and retention settings, you will be able to go back to a document as it was at an earlier point in time. That's important if you delete or overwrite a section, save the document, and then later need the previous version.</p>
+<p>To protect your documents, make sure that AutoRecover is enabled in MS Word. I recommend setting it to 5 minutes. Go to: Options | Save | Save AutoRecover information every [5] minutes.</p>
+<h2>Location of AutoRecover Files</h2>
+<p>Now you need to configure your backup system to backup the folder where Word stores AutoRecover (.ASD) files: C:\Users\OWNER\AppData\Roaming\Microsoft\Word\ or: C:\Documents and Settings\OWNER\Application Data\Microsoft\Word\ 
+Including that folder allows your backup system to save earlier versions of your documents.</p>
+<p>Let's say that your computer crashes after you’ve done a lot of work on a Word document, but the you haven’t yet pressed the Save button. When Word is opened after the crash, normally it should prompt you to open the recovered document. You won't need to do anything special.</p>
+<h2>Recovering from an Accidental Deletion</h2>
+<p>In the scenario where you delete text and then save the document. the AutoRecover copy is automatically deleted, as it should be. But the earlier version is not completely gone if you have set your backup software to save files in the AutoRecovery folder. The AutoRecovery document will be named: AutoRecovery save of FILENAME.asd where FILENAME is the name of the original document.</p>
+<p>To recover an earlier version, you can open the .ASD file from the AutoRecovery folder and <strong>rename the file</strong> with a .DOCX extension. Then you can open that version normally in MS Word.</p>
+<p>If you are writing a new document and have <strong>never saved</strong> it, Word still creates a recovery file ending in .ASD and named, for example: AutoRecovery save of Document2.asd. That file protects you against losing an unsaved document.</p>
+<p>We use a backup system, <a href="https://shop.securemyfirm.com/products/multishields-backup"><strong>MultiShields Backup</strong></a> that backs up versions of all files according to a schedule you specify. MultiShields Backup conserves disk space and backup time by using sophisticated change block tracking technology. MultiShields Backup only has to back up changes at the block level, not entire files with every backup. The result is that you can have backups of many versions of the same file, but all the backups together take up just a little more space than the largest version of the file.</p>
+<p>Since our system backs up to secure servers offsite, we are protected not just from human errors but also from the gamut of potential disasters.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

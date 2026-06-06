@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Tip: Matter List Filtered by Updated Date</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Advanced Tip: Matter List Filtered by Updated Date</h1>
+<p><strong>Date:</strong> Oct. 17, 2023
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/calendar/">
+        calendar
+      </a>, 
+    
+      <a href="/categories/lists/">
+        lists
+      </a>, 
+    
+      <a href="/categories/organizing/">
+        organizing
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/002734_A19.png" alt="002734_A19.png" class="img-blog">
+<p>Last month I explained how to use the Time Matters Inactivity Watch to spot Matters that may need attention. That involves checking the Alerts, Reminders and Watches screen. You may prefer a different approach to literally keep tabs on Matters that are going stale.</p>
+<p>Using advanced Time Matters features, you can create a Quick Tab on your Matters List to spot Matters that you may need to follow up on.</p>
+<h2>Before You Start</h2>
+<p>As this is an Advanced Tip, I won’t spell out all the steps in detail. They involve customizing fields and creating a Quick Tab. Check with your Time Matters expert, either an in-house person or your Time Matters consultant, before customizing the program.</p>
+<p>To create a Quick Tab showing Matters that may need attention:</p>
+<ol>
+<li>
+<p>In the Matter Form, customize a spare field as a Date field named Updated. Check the box, <strong>Set to Today’s Date when Changed.</strong></p>
+</li>
+<li>
+<p>Customize another spare field as a Calculated field. Choose the Result Format as Date.</p>
+</li>
+</ol>
+<p>1. In the formula's first row select your Updated date field.</p>
+<p>2. Second row, the plus sign.</p>
+<p>3. Third row, choose Number and enter 60 (or a different number of days with no updates to the Matter record)</p>
+<ol start="3">
+<li>
+<p>Create a Quick Tab in the Matters List.</p>
+</li>
+<li>
+<p>Use an Advanced Search, selecting the Calculated field</p>
+</li>
+<li>
+<p>Choose: Date In Range, All to Date.</p>
+</li>
+</ol>
+<p>The Quick Tab will now show all Matters whose Matter Forms have not been updated in the last 60 days. Adding 60 in the Calculated Field pushes the date value of more recently modified Matters beyond Today. That means they won't show in this Quick Tab.</p>
+<p>For this Quick Tab to work, you need to periodically open and re-save your Matter records as you work on them or review them.</p>
+<p>Do you have a favorite Time Matters tip? Please let me know. <a href="/send-us-an-email">Send me an email…</a> or call 952.922.1727. Thank you!</p>
+<p>Wells H. Anderson, J.D., CIC, CEO - Active Practice LLC</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

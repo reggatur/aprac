@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creating AutoEntry Forms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Creating AutoEntry Forms</h1>
+<p><strong>Date:</strong> Oct. 26, 2005
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/forms/">
+        forms
+      </a>, 
+    
+      <a href="/categories/templates/">
+        templates
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/ten01.png" alt="ten01.png" class="img-blog">
+<img src="/assets/img/blog/ten03.png" alt="ten03.png" class="imgctr">
+<img src="/assets/img/blog/ten02.png" alt="ten02.png" class="imgctr">
+<img src="/assets/img/blog/ten03.png" alt="ten03.png" class="imgctr">
+<img src="/assets/img/blog/ten04.png" alt="ten04.png" class="imgctr">
+<img src="/assets/img/blog/ten05.png" alt="ten05.png" class="imgctr">
+<img src="/assets/img/blog/ten06.png" alt="ten06.png" class="imgctr">
+<p>AutoEntry Forms can enter information for you into any of the Forms in Time Matters. They paste values or text into the fields of a Form. After you create an AutoEntry Form, you can use it by choosing it from a list or by setting it to apply automatically every time you choose a particular Classification Code while filling in a Form.</p>
+<p>For example, you may meet with colleagues for an hour on an irregular basis to discuss work that needs to be done. You can create an AutoEntry Form for the Event Form that fills in the duration of the meeting - one hour, the Classification Code - MTNG, the Description - Team meeting, and the Staff field - DTM, MBA, MCC. To use the AutoEntry Form, you open a new Event record, click the AutoEntry Form icon (or press Ctrl-A), and double-click the AutoEntry Form you want to use. It fills in all the preceding information.</p>
+<p>To create an AutoEntry Form:</p>
+<ol>
+<li>
+<p>On the Main Menu, go to <code>File | Setup | Templates | AutoEntry Form</code>.</p>
+</li>
+<li>
+<p>Select the tab for the Form where you will use the AutoEntry Form, for example, <code>Event</code>.</p>
+</li>
+<li>
+<p>Select <code>Program</code> to share the AutoEntry Form with others.</p>
+</li>
+<li>
+<p>Press the <code>Add</code> button.</p>
+</li>
+<li>
+<p>Fill in the fields that are predictable.</p>
+</li>
+</ol>
+<p>Note: The <code>Time</code> field automatically fills in with start and stop times of 12:00am and 1:00am if you leave the <code>Time</code> field blank and fill in a duration, such as 1 hour. You should fill in more appropriate times. Keep in mind that when you use the AutoEntry Form, these Start and Stop times will only be used if you have left the <code>Time</code> field blank before applying the AutoEntry Form.</p>
+<ol start="6">
+<li>Press: <code>Save &amp; Close</code>.</li>
+</ol>
+<p>To use the AutoEntry Form:</p>
+<ol>
+<li>
+<p>Add a new Event record. A quick way to do that is to double-click on the Calendar to open an Event Form and fill in the <code>Date</code> and <code>Time</code> automatically.</p>
+</li>
+<li>
+<p>Click the AutoEntry Form button (or press Ctrl-A).</p>
+</li>
+<li>
+<p>A list of AutoEntry Forms appears. Double-click the one you want, for example, <code>Team meeting</code>.</p>
+</li>
+<li>
+<p>You may see a message warning you that the AutoEntry Form will fill in the <code>Staff</code> field:</p>
+</li>
+</ol>
+<p>You may want to modify your AutoEntry Form so that it does not fill in the <code>Staff</code>. In our example, we want it to fill in the three people who will be at the meeting.</p>
+<ol start="5">
+<li>The first time you use an AutoEntry Form feature, you will see this warning:</li>
+</ol>
+<p>Read the warning and then uncheck the box.</p>
+<ol start="6">
+<li>In our example the Event Form is filled in by the AutoEntry Form like this:</li>
+</ol>
+<p>Invest some time in creating AutoEntry Forms for the kinds of records you create most often. Not only will you save time again and again, but you will have the satisfaction of watching Time Matters go to work for you.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

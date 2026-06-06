@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fix for TMSave in Word 2013</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Fix for TMSave in Word 2013</h1>
+<p><strong>Date:</strong> Jan. 31, 2016
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/ms-office/">
+        MS Office
+      </a>, 
+    
+      <a href="/categories/links/">
+        links
+      </a>
+    
+  
+</p>
+<p>A Microsoft Office update broke the Time Matters Integration in Microsoft Office 2013.</p>
+<p>LexisNexis Technical Support has created a work-around for this issue.</p>
+<ol>
+<li>Go to <a href="https://support.lexisnexis.com/timematters">support.lexisnexis.com/timematters</a></li>
+<li>In the Search box, enter: 81093 and press Go</li>
+<li>Follow the instructions for running a Microsoft Office update.</li>
+</ol>
+<p>Here are the steps that I recommend (taken from the LexisNexis article):</p>
+<ol>
+<li>Close Word, Excel, Outlook and Time Matters</li>
+<li>Select all of this text, including quotes (triple-click on it to select all)<br>
+<code>cd &quot;C:\Program Files\Microsoft Office 15\ClientX64&quot;</code></li>
+<li>Press Ctrl-C or right-click | Copy to copy it.</li>
+<li>In the Search box by the Start button, type: cmd</li>
+<li>Right-click on Command Prompt</li>
+<li>Choose: Run As Administrator</li>
+<li>Right-click just after the command prompt and choose Paste.</li>
+<li>Press Enter</li>
+<li>Select all of this text, including quotes (triple-click on it to select all)<br>
+<code>officec2rclient.exe /update user updatetoversion=15.0.4745.1002</code></li>
+<li>Press Ctrl-C or right-click | Copy to copy it.</li>
+<li>Right-click just after the command prompt and choose Paste.</li>
+<li>Press Enter</li>
+<li>Wait for the update to finish.</li>
+</ol>
+<p>Now your Time Matters links in Microsoft Office should work.</p>
+<p>Questions? Please call me at 800.575.0007 or <a href="/send-us-an-e-mail">Send me an e-mail...</a></p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

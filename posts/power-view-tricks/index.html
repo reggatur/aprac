@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Power View Tricks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Power View Tricks</h1>
+<p><strong>Date:</strong> May. 10, 2012
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/lists/">
+        lists
+      </a>
+    
+  
+</p>
+<h2>Power View Tricks</h2>
+<h3>Display a Photo for a Contact</h3>
+<p>Choose a field in the Contact Form where you will enter the filename of each Contact's photo. Find the Core Field Name by right-clicking on the field and choosing Customize Field. (Heads Up: Don't modify the Form unless you have permission and know that the change won't adversely affect Custom Form Styles you may have.)</p>
+<p>In this example, the Photo field is: <code>CON:CON1_03_08</code> Substitute your field's Core Field Name in the code, below.</p>
+<p>You also need a folder, typically in the Time Matters Shared Files Directory, where you will put copies of photos. In this example, the folder is: <code>m:\photos\</code> Substitute a photos folder you create for the one in the example.</p>
+<p>Find this line in the Contact Power View:<br>
+<code>&lt;h1&gt;{CON:FIRST_NAME} {CON:LAST_NAME}&lt;/h1&gt;</code></p>
+<p>Insert the following line:</p>
+<h2><code>&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;IMG SRC=&quot;m:\photos\{CON:CON1_03_08}&quot; BORDER=0 onerror=&quot;this.parentNode.removeChild(this)&quot; height=120&gt;</code></h2>
+<p>Just before <code>&lt;/body&gt;</code> at the very end of the Power View file, insert the following:</p>
+<!-- 
+    
+    
+    var imgs = document.getElementsByTagName('img')
+            for(var i=0,j=imgs.length;i<j;i++){
+                    imgs[i].onerror = function(e){
+                    this.parentNode.removeChild(this);
+            }
+    }
+    
+
+\-->  
+<hr>
+<p>Note: This page is formatted so that you can select the code in each of the boxes, above, and then copy and paste it into your Power View.</p>
+<p>Copy photos into your <strong>photos</strong> folder. Enter the name of a Contact's photo, e.g., Robert-Brown.jpg, in the field you have chosen in the Contact record. Now the Contact's photo (if any) should appear when you highlight a Contact in the Contact list.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>

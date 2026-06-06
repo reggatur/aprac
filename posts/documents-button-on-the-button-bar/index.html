@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Documents Button on the Button Bar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Documents Button on the Button Bar</h1>
+<p><strong>Date:</strong> Sep. 22, 2021
+  
+    &nbsp;&nbsp; <strong>Categories: </strong> 
+    
+      <a href="/categories/lists/">
+        lists
+      </a>, 
+    
+      <a href="/categories/document-management/">
+        document management
+      </a>
+    
+  
+</p>
+<img src="/assets/img/blog/document-button.png" alt="document-button.png" class="img-blog">
+<p>The Time Matters Button Bar tends to be neglected. You can add some useful, time-saving buttons with just a few clicks.</p>
+<p>One useful Time Matters button is the <strong>Documents Button</strong>. You can set it to show a list of frequently-used documents automatically, though it is up to you to code the Document records for your frequently-used list.</p>
+<p>First, add the Documents button to the Button Bar:</p>
+<ol>
+<li>
+<p>Right-click anywhere on the Main Toolbar (aka the Button Bar).</p>
+</li>
+<li>
+<p>Click <strong>Customize</strong>.</p>
+</li>
+<li>
+<p>Find <strong>Document List</strong> in the left panel and double-click it.</p>
+</li>
+<li>
+<p>Document List now appears at the bottom of the list of buttons in the right panel. Click on it.</p>
+</li>
+<li>
+<p>Click the <strong>Up</strong> button repeatedly to move the <strong>Document List</strong> button up the list. The higher it goes, the closer it will be to the left end of the Button Bar.</p>
+</li>
+</ol>
+<p>That may be as far as you want to go. You now can easily access a list of Document records in Time Matters and sort it by clicking the column labels.</p>
+<p><strong>You can stop right here!</strong> But if you are into heavy customization, there’s more.</p>
+<p>If you would like easy access to a list of frequently-used Documents, create a FREQ Classification Code, code some frequently-used Documents, and add an Advanced Search:</p>
+<ol>
+<li>
+<p>Go to <strong>Main Menu | File | Setup | Codes | Classification Codes</strong></p>
+</li>
+<li>
+<p>Select <strong>Document</strong> from the drop-down.</p>
+</li>
+<li>
+<p>Click the <strong>Add</strong> button (green plus) and type FREQ as the Code. Press OK | Close.</p>
+</li>
+<li>
+<p>Back in the Document List, find records for Documents you want to appear on the list when you click the Document button. Know that you can easily clear that filter and search for other documents as needed.</p>
+</li>
+<li>
+<p>Add the Classification Code, FREQ, in the <strong>Code</strong> field of the records for your frequently-used Documents.</p>
+</li>
+<li>
+<p>Still in the Document List, go to <strong>Main Menu | Search | Advanced Search</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Code</strong> in the <strong>Field</strong> column, <strong>Is Equal To</strong> in the <strong>Comparison</strong> column, and enter FREQ in the <strong>Compare To</strong> column.</p>
+</li>
+<li>
+<p>Press the <strong>Save</strong> button at the bottom of the window.</p>
+</li>
+<li>
+<p>Give this Advanced Search a name, such as FREQ. Press <strong>OK | OK</strong>.</p>
+</li>
+</ol>
+<p>Now you are ready to use the FREQ Advanced Search.</p>
+<ol>
+<li>
+<p>In the Main Menu, go to: <strong>Main Menu | File | Setup | General | User Level</strong></p>
+</li>
+<li>
+<p>Select Lists and choose <strong>Documents</strong> from the <strong>Select List Type</strong> drop-down.</p>
+</li>
+<li>
+<p>Click: <strong>Set List Options</strong><br>
+Just one more step!</p>
+</li>
+<li>
+<p>In the first field, <strong>Pre-Search Default Selection</strong> , choose your Advanced Search: FREQ (Adv).</p>
+</li>
+</ol>
+<p>As a Meyers-Briggs INTP, I received some personally relevant advice from a wise man named Barry Carden. A document with his advice holds the first place on my list of FREQ documents!</p>
+<p>Questions? Call me at 952.922.1727 or <a href="/send-us-an-email">send me an email…</a></p>
+<p>Wells H. Anderson, J.D., CIC</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>
