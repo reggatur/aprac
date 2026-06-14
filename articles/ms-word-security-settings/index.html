@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microsoft Word Security Settings</title>
+<meta name="description" content="Adjusting these settings specifically for Time Matters features support using Time Matters buttons protects against other threats.">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Font load 2026-04-25 -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="/" class="logo">
+      <img src="/assets/img/aplogo-blue-250.png" alt="Active Practice">
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+      <!-- <a href="/help/">Help</a> -->
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Microsoft Word Security Settings</h1>
+<p><strong>Date:</strong> Jan. 18, 2019
+  
+</p>
+<p>Security settings for MS Word 2010 are found on the <strong>File tab</strong> (upper left) under <strong>Options</strong>.</p>
+<p><strong>Update:</strong>
+For MS Word 2016:</p>
+<ol>
+<li>Go to:  **File **</li>
+<li>Click:** Options**</li>
+</ol>
+<p>Continue with the steps, below, using this path:
+*<em>C:\Program Files (x86)\Microsoft Office\root\Office16\STARTUP*</em>
+instead of C:\Program Files (x86)\Microsoft Office\Office14\STARTUP\</p>
+<p>Adjusting these settings specifically for Time Matters features will allow you to use the Time Matters buttons and still provide protection against other, unknown macros.</p>
+<h2>TM Save Button Security Settings</h2>
+<h2>Fix for Disabled Word Add-In</h2>
+<p>If the Time Matters tab still does not appear in MS Word 2010, you may need to enable a disabled Word Add-In.</p>
+<ol>
+<li>Go to: MS Word Menu | File | Options | Add-Ins</li>
+<li>At the bottom next to <strong>Manage</strong> select <strong>Disabled Items</strong> from the drop-down.</li>
+<li>Press: Go</li>
+<li>Scroll down to find <strong>WordAddIn</strong> in the <strong>Disabled Items</strong> window.</li>
+<li>If you find it, highlight it and press the <strong>Enable</strong> button.</li>
+<li>Exit out of the windows and close and reopen MS Word</li>
+</ol>
+<p>This screenshot shows the <strong>Disabled Items</strong> window and, in the background, the <strong>WordAddIn</strong> which has already been enabled.</p>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <p style="text-align: center;">&copy; <span id="year"></span> Active Practice LLC
+     | <a href="/privacy">Privacy Policy</a>
+     | <a href="/terms">Terms of Service</a>
+     | <a href="mailto:info@activepractice.com">info@activepractice.com</a> | 952-922-1120     
+    </p>
+  </div>
+</footer>
+
+<script>
+  // small JS to insert the current year (keeps templates static)
+  (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+</script>
+
+</body>
+</html>
