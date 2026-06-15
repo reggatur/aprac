@@ -14,8 +14,8 @@
 
   /* slightly darker than page bg */
   --light-block: #f3f0d9;
-  /* was 1536 */
-  --max-width: 960px;
+  /* was 1536 and now: */
+  --max-width: 1024px;
 
    --font-sans: ui-sans-serif, system-ui, -apple-system,
                "Segoe UI", Roboto, Helvetica, Arial;
