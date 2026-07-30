@@ -228,23 +228,8 @@ hr {
   margin: 2.5rem 0;
 }
 
-/* 2026-04-27 */
-
-<div class="two-block-row">
-  
-  <div class="block block--teal">
-    <h2>{{ left_title }}</h2>
-    <p>{{ left_text }}</p>
-  </div>
-
-  <div class="block block--light">
-    <h2>{{ right_title }}</h2>
-    <p>{{ right_text }}</p>
-  </div>
-
-</div>
-
-* ROW LAYOUT */
+/* 2026-07-09  --  2026-04-27 */
+/* ROW LAYOUT */
 .two-block-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -252,60 +237,60 @@ hr {
   margin: 1.5rem 0;
 }
 
-/* Alternate rows */
-.two-block-row:nth-of-type(even) {
-  direction: rtl; /* flips column order */
-}
-
-/* Fix text direction inside blocks */
-.two-block-row:nth-of-type(even) .block {
-  direction: ltr;
-}
-
 /* BLOCK BASE */
 .block {
-  flex: 1;
   padding: 1.25rem;
-  border-radius: 0; /* remove rounding if you want sharp edges */
+  border-radius: 0;
 }
 
-/* LEFT BLOCK */
-.block--teal {
+/* Odd rows: A = teal, B = light */
+.two-block-row:nth-of-type(odd) .block--a {
   background: var(--teal);
-  color: white; /* var(--teal-text); */
-  --accent: #fcd34d; /* light orange for links */
+  color: white;
+  --accent: #fcd34d;
 }
-
-.block--teal h1,
-.block--teal h2,
-.block--teal h3 {
-  color: #e6fffb; /* lighter teal */ 
+.two-block-row:nth-of-type(odd) .block--a h1,
+.two-block-row:nth-of-type(odd) .block--a h2,
+.two-block-row:nth-of-type(odd) .block--a h3 {
+  color: #e6fffb;
 }
-
-/* RIGHT BLOCK */
-.block--light {
+.two-block-row:nth-of-type(odd) .block--b {
   background: var(--light-block);
 }
-
-.block--light h1,
-.block--light h2,
-.block--light h3 {
+.two-block-row:nth-of-type(odd) .block--b h1,
+.two-block-row:nth-of-type(odd) .block--b h2,
+.two-block-row:nth-of-type(odd) .block--b h3 {
   color: var(--teal);
 }
 
-
-.two-block-row {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 1rem;
+/* Even rows: swap — A = light, B = teal */
+.two-block-row:nth-of-type(even) .block--a {
+  background: var(--light-block);
+}
+.two-block-row:nth-of-type(even) .block--a h1,
+.two-block-row:nth-of-type(even) .block--a h2,
+.two-block-row:nth-of-type(even) .block--a h3 {
+  color: var(--teal);
+}
+.two-block-row:nth-of-type(even) .block--b {
+  background: var(--teal);
+  color: white;
+  --accent: #fcd34d;
+}
+.two-block-row:nth-of-type(even) .block--b h1,
+.two-block-row:nth-of-type(even) .block--b h2,
+.two-block-row:nth-of-type(even) .block--b h3 {
+  color: #e6fffb;
 }
 
 /* RESPONSIVE: stack on small screens */
 @media (max-width: 800px) {
   .two-block-row {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 }
+/* End of block row code */
+
 
 /* Scale images. Use  imgsmj Espanso <img src="/assets/img/example.png" class="imgsm" alt="Example"> */
 .imgsm { max-height: 150px; }  
