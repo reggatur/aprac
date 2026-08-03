@@ -24,7 +24,7 @@
       <a href="/about/">About Us</a>
       <a href="/blog/">Blog</a>
       <a href="/contact/">Contact</a>
-      <!-- <a href="/help/">Help</a> -->
+      <a href="/time-matters-pricing/">Pricing</a>
     </nav>
   </header>
 
@@ -47,7 +47,7 @@
 <img src="/assets/img/blog/sendemailpv.png" alt="sendemailpv.png" class="img-blog">
 <p>You can start an E-mail directly from the Contact list or Matter list using an E-mail link in its Power View. For the Matter list you will need to peek under the hood of Time Matters and make a tweak, but you are rewarded by significant time savings.</p>
 <p>You can send e-mails from Time Matters whether your primary e-mail software is Time Matters, MS Outlook or another program. Doing so allows you to link the e-mails to Contacts and Matters automatically. That makes it easy to quickly see what e-mails have been sent on a Matter or regarding a particular Contact by clicking on the email tab of the corresponding record.</p>
-<p>Screenshot from Power View</p>
+<img src="/assets/img/blog/sendemailpv.png" alt="sendemailpv.png" class="img-blog">
 <p>E-mail links in Power Views let you start an e-mail and link it to a Contact or a Matter very quickly. Just find a Contact or Matter in its list and click on an e-mail link in the Power View. Up pops a new e-mail form already linked. Optionally, you can have the e-mail address filled in automatically, too.</p>
 <p>Adding these links requires that you use Windows Notepad (Start | Run | type: notepad | Enter) or another text editor. There are a number of steps, but no single step is hard. The Contact List already has an e-mail link in the Power View: Form View. Try clicking on an e-mail address in this view. (If your Contact Form has been customized this may not work, but you can change that using these instructions.)</p>
 <p>To add an e-mail link to the Matter Form Power View, I recommend that you make a backup copy of the Power View and then open the Power View in Notepad. You will need to know where your Power Views folder is. It is usually in a location like: F:\tmw9\data\files, where F: is the network drive where your Time Matters data folder is located. If you are using Time Matters Document Management, you can check your File Locations for the location. Go to: Main Menu | File | Utilities | File Locations. Double-click on TMW.CFG OR TMWE.CFG. The folder entered in the Files Directory field is where your template folder is located.</p>
@@ -63,15 +63,15 @@
 <p>1. Press Ctrl-F for Find. Type or paste: MAT:MAT1_04_01 and press Enter.<br>
 2. Press the down arrow key. You will see: <td>{MAT:MAT1_04_01}</td><br>
 3. Replace this line with:</p>
-<td><a class="jump" href="tm:ADD;TYPE=M;INHERIT={MAT:SYSID}" title="Send an E-mail">{MAT:MAT1_04_01}</a></td>  
-4\. Save and close this file.  
+<p>&lt;td&gt;&lt;a class=&quot;jump&quot; href=&quot;tm:ADD;TYPE=M;INHERIT={MAT:SYSID}&quot; title=&quot;Send an E-mail&quot;&gt;{MAT:MAT1_04_01}&lt;/a&gt;&lt;/td&gt;</p>
+<p>4. Save and close this file.</p>
 <p>That's it! Close and reopen the Matter List. When you have the Form View selected as the Power View, you can find an Matter and click on the e-mail link to send an e-mail. The an e-mail form will open with the Client and Matter already filled in.</p>
 <p>You have several options for filling in the e-mail address when you use one of these e-mail links. Select your option by going to: Main Menu | File | Setup | General | User Level | Communications | Advanced Options | Send tab. I recommend using the option:</p>
 <ul>
 <li>Prompt to Select email Field</li>
 </ul>
 <p>This option lets you either accept the existing e-mail address (the one entered in the Custom1 field in the example, above) or press Cancel and pick a different e-mail address using the Lookup button next to the To: field. In either case the e-mail links to the Client and Matter.</p>
-<p>I tip my hat to Jean of New York for inspiring this tip with her question on the <a href="https://pm.lexisnexis.com/support/servicecenter/forum/">CIC Solutions Forum</a> - Time Matters.</p>
+<p>I tip my hat to Jean of New York for inspiring this tip with her question on the CIC Solutions Forum - Time Matters.</p>
 
 
   </main>
