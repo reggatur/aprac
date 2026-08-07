@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Document Indexer Exclusions</title>
-<meta name="description" content="The Document Indexer gives you lighting fast searches through the full text of all your documents. To minimize clutter in your search...">
+<meta name="description" content="The Document Indexer for Time Matters gives you lighting fast searches through the full text of all your documents. Add these file...">
 <meta name="keywords" content="">
 <link rel="canonical" href="/posts/document-indexer-exclusions/">
 
@@ -25,6 +25,7 @@
       <a href="/about/">About Us</a>
       <a href="/blog/">Blog</a>
       <a href="/contact/">Contact</a>
+      <a href="/time-matters-help/">Help</a>
       <a href="/time-matters-pricing/">Pricing</a>
     </nav>
   </header>
@@ -48,7 +49,8 @@
 <p>When you upgrade Time Matters, be sure create or recreate one or more Document Indexes. Also, remove the Scheduled Task for the old version.</p>
 <p>The Document Index Manager window is used to set up the Document Index feature in Time Matters. When you add a Document Index, the Update Document Index window opens. Area 3 of the window contains a list of file extensions of files that the Indexer will ignore. These are files that you do not want to search since they contain no useful text.</p>
 <p>Here is our recommended list of excluded file extensions to add to the default list that ships with Time Matters. Each entry starts with the characters: semicolon asterisk period</p>
-<p>;<em>.;.7z;</em>.AVI;<em>.BAK;</em>.LDF;<em>.MDF;</em>.MP4;<em>.PNG;</em>.SV*;<em>.TPS;</em>.TFX;*.ZIP</p>
+<pre><code>;*.;.7z;*.AVI;*.BAK;*.LDF;*.MDF;*.MP4;*.PNG;*.SV*;*.TPS;*.TFX;*.ZIP
+</code></pre>
 <p>In order to make room to insert these extensions, <strong>delete</strong> the following from the existing list: ;DRVSPACE.*<br>
 That is a MS Windows file that you are very unlikely to have in your document folders.</p>
 <p>We suggest that you select the above line of extensions with the mouse, then use Ctrl-C to copy it to the Windows Clipboard. Switch to the New Document Index window (or Update Document Index window for an existing Document Indexer) in Time Matters and paste this line of file extensions into Area 3, Exclude These File Types.</p>

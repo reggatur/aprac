@@ -296,12 +296,14 @@ hr {
 .imgsm { max-height: 150px; }  
 .imgmd { max-height: 300px; }  
 .imglg { max-height: 500px; }  
-  
+
+/*
 .imgsm,  
 .imgmd,  
 .imglg {  
   width: auto;  
   height: auto;  
+*/
 }
 
 /* Stretch image from right margin to left margin */
