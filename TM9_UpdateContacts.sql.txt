@@ -1,0 +1,42 @@
+-- =============================================
+-- Author:        Wells H. Anderson - info@activepractice.com
+-- Create date:   2010-01-25
+-- Description:   Update Contact records to update synced records in MS Exchange.
+--                Delays are needed to allow complete updating.
+-- =============================================
+
+UPDATE    tm9user.contact
+SET       CON1_06_08 = '1'
+-- The 0 character is a zero, which sorts before A.
+-- It is used here to ensure all last names are included.
+WHERE     (last_name > '0') AND (last_name < 'C')
+WAITFOR DELAY '000:06:00'
+
+UPDATE    TimeMatters9.tm9user.contact
+SET       CON1_06_08 = '1'
+WHERE     (last_name > 'C') AND (last_name < 'G')
+WAITFOR DELAY '000:06:00'
+
+UPDATE    TimeMatters9.tm9user.contact
+SET       CON1_06_08 = '1'
+WHERE     (last_name > 'G') AND (last_name < 'J')
+WAITFOR DELAY '000:06:00'
+
+UPDATE    TimeMatters9.tm9user.contact
+SET       CON1_06_08 = '1'
+WHERE     (last_name > 'J') AND (last_name < 'M')
+WAITFOR DELAY '000:06:00'
+
+UPDATE    TimeMatters9.tm9user.contact
+SET       CON1_06_08 = '1'
+WHERE     (last_name > 'M') AND (last_name < 'R')
+WAITFOR DELAY '000:06:00'
+
+UPDATE    TimeMatters9.tm9user.contact
+SET       CON1_06_08 = '1'
+WHERE     (last_name > 'R') AND (last_name < 'T')
+WAITFOR DELAY '000:06:00'
+
+UPDATE    TimeMatters9.tm9user.contact
+SET       CON1_06_08 = '1'
+WHERE     (last_name > 'T')
