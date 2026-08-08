@@ -46,9 +46,7 @@
     
   
 </p>
-<img src="/assets/img/blog/note-power-view.PNG" alt="note-power-view.PNG" class="img-blog">
-<img src="/assets/img/blog/note-power-view-fix.PNG" alt="note-power-view-fix.PNG" class="imgctr">
-<p><strong>Update</strong> - Oct. 9, 2016 - See this <a href="/1234tips/time-matters-power-view-fix.html">added step</a> for fixing Power Views. <a href="/1234tips/time-matters-power-view-fix.html">More...</a></p>
+<p><strong>Update</strong> - Oct. 9, 2016 - See this <a href="/posts/time-matters-power-view-fix/">added step</a> for fixing Power Views.</p>
 <p>Time Matters has handy Power Views that display Note Records for a Matter or Contact.</p>
 <p>By selecting the Note Power View from the drop-down above the Contact or Matter List or the Summary View on the Note List, you can see the text of the Notes:</p>
 <p>In Time Matters 15.1.1, a bug causes the <strong>display of extraneous code</strong> and Note text at the end of each Note in the Power View.</p>
@@ -60,10 +58,11 @@
 <code>\\TimeMattersShare\template\powerview\Matter\Note View(M).htm</code></li>
 <li>Near the end of the file insert Javascript code just before the <code>/body</code> tag.</li>
 </ol>
-<p><script type="text/javascript"/>
-var find = /{\rtf.+\par.+}/gi;
-document.body.innerHTML = document.body.innerHTML.replace(find, '');
-</script></p>
+<pre><code>    &lt;script type=&quot;text/javascript&quot;/&gt;
+    var find = /\{\\rtf.+\\par.+\}/gi;
+    document.body.innerHTML = document.body.innerHTML.replace(find, '');
+    &lt;/script&gt;
+</code></pre>
 <p>To edit the Contact List Power View:</p>
 <ol>
 <li>In Notepad, open the file:<br>
