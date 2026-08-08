@@ -62,75 +62,89 @@
 <p>The query puts the number 1 into a field that normally is hidden behind the Memo field of the Contact record, User 18 or Custom 18 (CON1_06_08). That change causes the Contact records to be updated in MS Exchange and then copied to your smartphone.</p>
 <p><strong>Heads Up:</strong> If your Time Matters database makes some other use of this field, <em>do not run this query</em> , but rather modify it to update an unused field.</p>
 <p>The query, below, is for Time Matters 9 Enterprise. For Version 10, replace &quot;tm9user&quot; with &quot;lntmuser&quot; and replace &quot;TimeMatters9&quot; with &quot;TimeMatters10&quot;.</p>
-<p>Download as text file: <a href="http://www.activepractice.com/s/storage/downloads/TM9_UpdateContacts.sql">TM9_UpdateContacts.sql</a></p>
+<p>Download as text file: <a href="/articles/TM9_UpdateContacts.sql">TM9_UpdateContacts.sql</a></p>
 <h3>SQL Query: TM_UpdateContacts.sql</h3>
-<hr>
-<p>-- =============================================<br>
--- Author: Wells H. Anderson - info@activepractice.com<br>
--- Create date: 2010-01-25<br>
--- Description: Update Contact records to update synced records in MS Exchange.<br>
--- Delays are needed to allow complete updating.<br>
--- =============================================</p>
-<p>UPDATE tm9user.contact<br>
-SET CON1_06_08 = '1'<br>
-WHERE (last_name &gt; 'A') AND (last_name &lt; 'C')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters9.tm9user.contact<br>
-SET CON1_06_08 = '1'<br>
-WHERE (last_name &gt; 'C') AND (last_name &lt; 'G')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters9.tm9user.contact<br>
-SET CON1_06_08 = '1'<br>
-WHERE (last_name &gt; 'G') AND (last_name &lt; 'J')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters9.tm9user.contact<br>
-SET CON1_06_08 = '1'<br>
-WHERE (last_name &gt; 'J') AND (last_name &lt; 'M')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters9.tm9user.contact<br>
-SET CON1_06_08 = '1'<br>
-WHERE (last_name &gt; 'M') AND (last_name &lt; 'R')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters9.tm9user.contact<br>
-SET CON1_06_08 = '1'<br>
-WHERE (last_name &gt; 'R') AND (last_name &lt; 'T')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters9.tm9user.contact<br>
-SET CON1_06_08 = '1'<br>
-WHERE (last_name &gt; 'T')</p>
-<hr>
+<pre><code>
+\-- =============================================  
+\-- Author: Wells H. Anderson - info@activepractice.com  
+\-- Create date: 2010-01-25  
+\-- Description: Update Contact records to update synced records in MS Exchange.  
+\-- Delays are needed to allow complete updating.  
+\-- =============================================
+
+UPDATE tm9user.contact  
+SET CON1_06_08 = '1'  
+WHERE (last_name &gt; 'A') AND (last_name &lt; 'C')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters9.tm9user.contact  
+SET CON1_06_08 = '1'  
+WHERE (last_name &gt; 'C') AND (last_name &lt; 'G')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters9.tm9user.contact  
+SET CON1_06_08 = '1'  
+WHERE (last_name &gt; 'G') AND (last_name &lt; 'J')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters9.tm9user.contact  
+SET CON1_06_08 = '1'  
+WHERE (last_name &gt; 'J') AND (last_name &lt; 'M')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters9.tm9user.contact  
+SET CON1_06_08 = '1'  
+WHERE (last_name &gt; 'M') AND (last_name &lt; 'R')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters9.tm9user.contact  
+SET CON1_06_08 = '1'  
+WHERE (last_name &gt; 'R') AND (last_name &lt; 'T')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters9.tm9user.contact  
+SET CON1_06_08 = '1'  
+WHERE (last_name &gt; 'T')
+
+</code></pre>
 <p>You can copy and paste the above code into a New Query window in SQL Server Management Studio. Be sure to backup and to check the code using the Check icon before running this query.</p>
-<p>If you have any questions or suggestions, please let us know:<br>
-<a href="/send-us-an-e-mail">Click here to send us an e-mail...</a></p>
 <p><strong>Update</strong> on 2010-04-23 07:42 by Wells Anderson</p>
 <p>For Time Matters 10, use the following Stored Procedure to update all Contacts:</p>
-<p>UPDATE TimeMatters10.lntmuser.contact<br>
-SET CON1_06_08 = '0'<br>
-WHERE (last_name &gt; 'A') AND (last_name &lt; 'C')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters10.lntmuser.contact<br>
-SET CON1_06_08 = '0'<br>
-WHERE (last_name &gt; 'C') AND (last_name &lt; 'G')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters10.lntmuser.contact<br>
-SET CON1_06_08 = '0'<br>
-WHERE (last_name &gt; 'G') AND (last_name &lt; 'J')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters10.lntmuser.contact<br>
-SET CON1_06_08 = '0'<br>
-WHERE (last_name &gt; 'J') AND (last_name &lt; 'M')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters10.lntmuser.contact<br>
-SET CON1_06_08 = '0'<br>
-WHERE (last_name &gt; 'M') AND (last_name &lt; 'R')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters10.lntmuser.contact<br>
-SET CON1_06_08 = '0'<br>
-WHERE (last_name &gt; 'R') AND (last_name &lt; 'T')<br>
-WAITFOR DELAY '000:06:00'</p>
-<p>UPDATE TimeMatters10.lntmuser.contact<br>
-SET CON1_06_08 = '0'<br>
-WHERE (last_name &gt; 'T')</p>
+<pre><code>UPDATE TimeMatters10.lntmuser.contact  
+SET CON1_06_08 = '0'  
+WHERE (last_name &gt; 'A') AND (last_name &lt; 'C')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters10.lntmuser.contact  
+SET CON1_06_08 = '0'  
+WHERE (last_name &gt; 'C') AND (last_name &lt; 'G')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters10.lntmuser.contact  
+SET CON1_06_08 = '0'  
+WHERE (last_name &gt; 'G') AND (last_name &lt; 'J')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters10.lntmuser.contact  
+SET CON1_06_08 = '0'  
+WHERE (last_name &gt; 'J') AND (last_name &lt; 'M')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters10.lntmuser.contact  
+SET CON1_06_08 = '0'  
+WHERE (last_name &gt; 'M') AND (last_name &lt; 'R')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters10.lntmuser.contact  
+SET CON1_06_08 = '0'  
+WHERE (last_name &gt; 'R') AND (last_name &lt; 'T')  
+WAITFOR DELAY '000:06:00'  
+  
+UPDATE TimeMatters10.lntmuser.contact  
+SET CON1_06_08 = '0'  
+WHERE (last_name &gt; 'T')
+
+</code></pre>
 
 
   </main>
