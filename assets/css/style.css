@@ -360,3 +360,71 @@ img {
   width: 450px;
   height: auto;
 }
+
+/* ===== CONTACT FORM ===== */
+
+.contact-form {
+max-width: 800px;
+margin: 2rem 0;
+}
+
+.contact-form .form-row {
+display: grid;
+grid-template-columns: 100px minmax(0, 600px);
+gap: 1rem;
+align-items: start;
+margin-bottom: 1rem;
+}
+
+.contact-form label {
+padding-top: 0.35rem;
+font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+box-sizing: border-box;
+width: 100%;
+padding: 0.45rem 0.6rem;
+border: 1px solid #b9c8c5;
+border-radius: 5px;
+background: #fffef5;
+color: var(--text);
+font-family: var(--font-sans);
+font-size: 18px;
+line-height: 1.5;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+outline: 2px solid var(--accent);
+outline-offset: 1px;
+border-color: var(--accent);
+}
+
+.contact-form textarea {
+resize: vertical;
+}
+
+.contact-form .form-submit {
+margin-left: 116px;
+margin-top: 0.5rem;
+}
+
+/* Stack the form on small screens */
+@media (max-width: 600px) {
+.contact-form .form-row {
+display: block;
+margin-bottom: 1rem;
+}
+
+.contact-form label {
+display: block;
+margin-bottom: 0.25rem;
+}
+
+.contact-form .form-submit {
+margin-left: 0;
+}
+}
+
