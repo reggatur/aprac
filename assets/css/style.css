@@ -229,7 +229,14 @@ hr {
 }
 
 /* 2026-07-09  --  2026-04-27 */
-/* ROW LAYOUT */
+/* ===== ROW LAYOUT ===== */
+
+.row-width650 {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .two-block-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -336,7 +343,7 @@ img {
   max-width: 100% !important;  
 }
 
-/* Image sizes for blogs */
+/* ===== Image sizes for blogs ===== */
 /* <img src="path/to/image.jpg" alt="Description" class="small-image"> */
 
 .img-blog {  
