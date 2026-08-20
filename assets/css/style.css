@@ -1,41 +1,147 @@
+/* =========================================================
+   THEME VARIABLES
+   Default: DARK
+   ========================================================= */
+
 :root {
-  --bg: #fffdf0; /* #fffdf0 #fff8d6; 6c9 */
+  color-scheme: dark;
 
-  --text: #162b2a;
+  /* ===== PAGE ===== */
+  --bg: #121817;
+  --surface: #1b2422;
+  --surface-hover: #24302d;
 
-  --muted: #5f6f6a;
+  /* ===== TEXT ===== */
+  --text: #e7eeea;
+  --muted: #aab9b4;
 
-  --accent: #005F93; /* #146c5c; */
+  /* ===== LINKS / HEADINGS ===== */
+  --accent: #5bc0eb;
+  --heading: #72d6c9;
 
-  --heading: #0d9488; /* 338fbd 3aa6da #2a6f8f; */
-    
-  --teal: #0f766e; 
-  --teal-text: #e6fffb /* #ffffff; */
+  /* ===== BORDERS ===== */
+  --border: #34433f;
 
-  /* slightly darker than page bg */
-  --light-block: #f3f0d9;
-  /* was 1536 and now: */
+  /* ===== BLOCK COLORS ===== */
+  --teal: #0f766e;
+  --teal-text: #e6fffb;
+
+  --light-block: #263330;
+  --light-block-text: #e7eeea;
+
+  /* ===== HEADER ===== */
+  --header-bg: #17211f;
+  --header-border: #34433f;
+  --header-text: #e7eeea;
+  --header-hover: #72d6c9;
+
+  /* ===== CARDS ===== */
+  --card-bg: #1b2422;
+
+  /* ===== FORMS ===== */
+  --input-bg: #1b2422;
+  --input-border: #52635e;
+
+  /* ===== BUTTONS ===== */
+  --button-bg: #ff7a18;
+  --button-hover: #2c9bc4;
+
+  /* ===== MISCELLANEOUS ===== */
+  --hr: #34433f;
+
+  /* ===== LAYOUT ===== */
   --max-width: 1024px;
 
-   --font-sans: ui-sans-serif, system-ui, -apple-system,
-               "Segoe UI", Roboto, Helvetica, Arial;
+  /* ===== FONTS ===== */
+  --font-sans:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial;
 }
 
 
-/* ===== GLOBAL BACKGROUND ===== */
+/* =========================================================
+   LIGHT THEME
 
-html, body {
-  background-color: var(--bg);
+   Use the visitor's browser/operating-system preference.
+   ========================================================= */
+
+@media (prefers-color-scheme: light) {
+
+  :root {
+    color-scheme: light;
+
+    /* ===== PAGE ===== */
+    --bg: #fffdf0;
+    --surface: #fffef5;
+    --surface-hover: #f7f4e3;
+
+    /* ===== TEXT ===== */
+    --text: #162b2a;
+    --muted: #5f6f6a;
+
+    /* ===== LINKS / HEADINGS ===== */
+    --accent: #005f93;
+    --heading: #0d9488;
+
+    /* ===== BORDERS ===== */
+    --border: #e6e2c8;
+
+    /* ===== BLOCK COLORS ===== */
+    --teal: #0f766e;
+    --teal-text: #e6fffb;
+
+    --light-block: #f3f0d9;
+    --light-block-text: #162b2a;
+
+    /* ===== HEADER ===== */
+    --header-bg: #0b5e57;
+    --header-border: #0b5e57;
+    --header-text: #ffffff;
+    --header-hover: #fcd34d;
+
+    /* ===== CARDS ===== */
+    --card-bg: #fffef5;
+
+    /* ===== FORMS ===== */
+    --input-bg: #fffef5;
+    --input-border: #b9c8c5;
+
+    /* ===== BUTTONS ===== */
+    --button-bg: #ff6f00;
+    --button-hover: #095a86;
+
+    /* ===== MISCELLANEOUS ===== */
+    --hr: #e6e2c8;
+  }
+
+}
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html,
+body {
   margin: 0;
   min-height: 100%;
+
+  background-color: var(--bg);
   color: var(--text);
+
   font-family: var(--font-sans);
   font-size: 18px;
   line-height: 1.7;
 }
 
 
-/* ===== CONTAINER ===== */
+/* =========================================================
+   CONTAINER
+   ========================================================= */
 
 main {
   max-width: var(--max-width);
@@ -44,13 +150,19 @@ main {
 }
 
 
-/* ===== HEADINGS (FORCED CONSISTENCY) ===== */
+/* =========================================================
+   HEADINGS
+   ========================================================= */
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--heading);
+
   font-family: "Space Grotesk", system-ui, sans-serif;
   letter-spacing: -0.02em;
   line-height: 1.2;
+
   margin-top: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -72,97 +184,183 @@ h3 {
 }
 
 
-/* ===== PARAGRAPHS ===== */
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
 
 p {
   margin: 1.2rem 0;
 }
 
 
-/* ===== LINKS ===== */
+/* =========================================================
+   LINKS
+   ========================================================= */
 
 a {
   color: var(--accent);
-  /* WELLS REPLACED: text-decoration: none; */
   text-decoration: underline;
 }
 
 a:hover {
+  color: var(--button-bg);
   text-decoration: underline;
-  color: #ff6f00;
 }
 
 
-/* ===== HEADER ===== */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 header {
-  background: #0b5e57; /* darker teal */
-  color: white;
-  padding: 0.75rem 1rem;
-}
+  max-width: var(--max-width);
+  margin: 1.25rem auto 0;
+  padding: 0.75rem 1.25rem;
 
-/* Make sure all text inside is white */
-header a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Optional: spacing/layout */
-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+  gap: 1rem;
 
-header {
-  background: #0b5e57 !important;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+
+  font-weight: 600;
+  font-size: 1.6rem;
 }
 
 header a {
-  color: white !important;
+  color: var(--header-text);
+  font-weight: 600;
+  text-decoration: none;
 }
 
-/* Logo image sizing */
+header a:hover {
+  color: var(--accent);
+}
+
+
+/* ===== LOGO ===== */
+
 header .logo img {
-  height: 60px;   /* control size here */
-  width: auto;    /* keeps proportions */
-  display: block; /* removes inline spacing quirks */
+  height: 60px;
+  width: auto;
+  display: block;
 }
 
-/* ===== MUTED TEXT ===== */
+
+/* ===== NAVIGATION ===== */
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 1.25rem;
+  color: var(--header-text);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+nav a:hover {
+  color: var(--header-hover);
+}
+
+
+/* =========================================================
+   THEME TOGGLE
+   ========================================================= */
+
+.theme-toggle {
+  flex-shrink: 0;
+
+  padding: 0.4rem 0.7rem;
+
+  background: var(--surface);
+  color: var(--text);
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+}
+
+
+/* =========================================================
+   MUTED TEXT
+   ========================================================= */
 
 small {
   color: var(--muted);
 }
 
-/* ===== LISTS ===== */
+
+/* =========================================================
+   LISTS
+   ========================================================= */
 
 ul {
   padding-left: 1.25rem;
 }
 
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
 .button {
   display: inline-block;
-  background: #ff6f00; /* deeper than accent */
+
+  padding: 0.1rem 0.4rem;
+
+  background: var(--button-bg);
   color: #ffffff;
-  padding: 0.1rem 0.4rem; /* reduced padding */
+
   border-radius: 6px;
+
   font-size: 1.1rem;
   font-weight: 600;
+
   text-decoration: none;
+
   transition: all 0.15s ease;
 }
 
 .button:hover {
-  background: #095a86;
+  background: var(--button-hover);
+  color: #ffffff;
+
   transform: translateY(-1px);
 }
 
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
 .card {
   padding: 1.25rem;
+
+  background: var(--card-bg);
+
+  border: 1px solid var(--border);
   border-radius: 12px;
-  border: 1px solid #e6e2c8;
-  background: #fffef5;
+
   transition: all 0.15s ease;
 }
 
@@ -171,65 +369,48 @@ ul {
   transform: translateY(-2px);
 }
 
-header {
-  max-width: var(--max-width);
-  margin: 1.25rem auto 0;
-  padding: 0.75rem 1.25rem;
-    
-  font-weight: 600;
-  font-size: 1.6rem; 
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: #e9f3f8; /* light blue tint, not heavy */
-  border-bottom: 1px solid #d6e4ec;
-
-  border-radius: 0; /* removes rounded corners */
-}
-
-header a {
-  color: #1f5f7a; /* lighter than your body text, still readable */
-  font-weight: 600;
-}
-
-header a:hover {
-  color: var(--accent);
-}
-
-nav a {
-  margin-left: 1.25rem;
-  font-weight: 600;
-  font-size: 1.6rem; 
-  color: var(--muted);
-}
-
-nav a:hover {
-  color: var(--text);
-}
+/* =========================================================
+   SECTIONS
+   ========================================================= */
 
 section {
   margin: 3rem 0;
 }
 
+
+/* =========================================================
+   BLOCKQUOTES
+   ========================================================= */
+
 blockquote {
-  border-left: 4px solid var(--accent);
-  padding-left: 1rem;
   margin: 1.5rem 0;
+  padding-left: 1rem;
+
+  border-left: 4px solid var(--accent);
+
   color: var(--muted);
   font-style: italic;
 }
 
+
+/* =========================================================
+   HORIZONTAL RULE
+   ========================================================= */
+
 hr {
-  border: none;
   height: 1px;
-  background: #e6e2c8;
   margin: 2.5rem 0;
+
+  background: var(--hr);
+
+  border: none;
 }
 
-/* 2026-07-09  --  2026-04-27 */
-/* ===== ROW LAYOUT ===== */
+
+/* =========================================================
+   ROW LAYOUT
+   ========================================================= */
 
 .row-width650 {
   max-width: 650px;
@@ -240,117 +421,185 @@ hr {
 .two-block-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 1rem;
+
   margin: 1.5rem 0;
 }
 
-/* BLOCK BASE */
+
+/* ===== BLOCK BASE ===== */
+
 .block {
   padding: 1.25rem;
   border-radius: 0;
 }
 
-/* Odd rows: A = teal, B = light */
+
+/* =========================================================
+   ODD ROWS
+   A = TEAL
+   B = LIGHT/DARK COMPANION BLOCK
+   ========================================================= */
+
 .two-block-row:nth-of-type(odd) .block--a {
   background: var(--teal);
-  color: white;
+  color: var(--teal-text);
+
   --accent: #fcd34d;
 }
+
 .two-block-row:nth-of-type(odd) .block--a h1,
 .two-block-row:nth-of-type(odd) .block--a h2,
 .two-block-row:nth-of-type(odd) .block--a h3 {
-  color: #e6fffb;
+  color: var(--teal-text);
 }
+
 .two-block-row:nth-of-type(odd) .block--b {
   background: var(--light-block);
+  color: var(--light-block-text);
 }
+
 .two-block-row:nth-of-type(odd) .block--b h1,
 .two-block-row:nth-of-type(odd) .block--b h2,
 .two-block-row:nth-of-type(odd) .block--b h3 {
   color: var(--teal);
 }
 
-/* Even rows: swap — A = light, B = teal */
+
+/* =========================================================
+   EVEN ROWS
+   A = LIGHT/DARK COMPANION BLOCK
+   B = TEAL
+   ========================================================= */
+
 .two-block-row:nth-of-type(even) .block--a {
   background: var(--light-block);
+  color: var(--light-block-text);
 }
+
 .two-block-row:nth-of-type(even) .block--a h1,
 .two-block-row:nth-of-type(even) .block--a h2,
 .two-block-row:nth-of-type(even) .block--a h3 {
   color: var(--teal);
 }
+
 .two-block-row:nth-of-type(even) .block--b {
   background: var(--teal);
-  color: white;
+  color: var(--teal-text);
+
   --accent: #fcd34d;
 }
+
 .two-block-row:nth-of-type(even) .block--b h1,
 .two-block-row:nth-of-type(even) .block--b h2,
 .two-block-row:nth-of-type(even) .block--b h3 {
-  color: #e6fffb;
+  color: var(--teal-text);
 }
 
-/* RESPONSIVE: stack on small screens */
+
+/* ===== ROWS: RESPONSIVE ===== */
+
 @media (max-width: 800px) {
   .two-block-row {
     grid-template-columns: 1fr;
   }
 }
-/* End of block row code */
 
 
-/* Scale images. Use  imgsmj Espanso <img src="/assets/img/example.png" class="imgsm" alt="Example"> */
-.imgsm { max-height: 150px; }  
-.imgmd { max-height: 300px; }  
-.imglg { max-height: 500px; }  
+/* =========================================================
+   IMAGE SIZE CLASSES
+   ========================================================= */
 
 /*
-.imgsm,  
-.imgmd,  
-.imglg {  
-  width: auto;  
-  height: auto;  
+  Example:
+
+  <img
+    src="/assets/img/example.png"
+    class="imgsm"
+    alt="Example"
+  >
 */
+
+.imgsm {
+  max-height: 150px;
 }
 
-/* Stretch image from right margin to left margin */
+.imgmd {
+  max-height: 300px;
+}
+
+.imglg {
+  max-height: 500px;
+}
+
+
+/* =========================================================
+   FULL-WIDTH IMAGE
+   ========================================================= */
+
 .imgfullwide {
   display: block;
+
   width: 100vw;
   max-width: none;
+
   margin-left: calc(50% - 50vw);
+
   height: auto;
 }
 
-/* Align images Center Left or Right */
-.imgctr {  
-  display: block;  
-  margin: 0 auto;  
-}
 
-.imgleft {  
-  display: block;  
-  margin-right: auto;  
-}  
-  
-.imgright {  
-  display: block;  
-  margin-left: auto;  
-}
+/* =========================================================
+   IMAGE ALIGNMENT
+   ========================================================= */
 
-/* Prevent overflow on phones */
-img {  
-  max-width: 100% !important;  
-}
-
-/* ===== Image sizes for blogs ===== */
-/* <img src="path/to/image.jpg" alt="Description" class="small-image"> */
-
-.img-blog {  
-  display: block;  
+.imgctr {
+  display: block;
   margin: 0 auto;
+}
+
+.imgleft {
+  display: block;
+  margin-right: auto;
+}
+
+.imgright {
+  display: block;
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   PREVENT IMAGE OVERFLOW
+   ========================================================= */
+
+img {
+  max-width: 100% !important;
+}
+
+
+/* =========================================================
+   BLOG IMAGE SIZES
+   ========================================================= */
+
+/*
+  Example:
+
+  <img
+    src="path/to/image.jpg"
+    alt="Description"
+    class="small-image"
+  >
+*/
+
+.img-blog {
+  display: block;
+
   width: 450px;
   height: auto;
+
+  margin: 0 auto;
 }
 
 .img-sm {
@@ -368,70 +617,152 @@ img {
   height: auto;
 }
 
-/* ===== CONTACT FORM ===== */
+
+/* =========================================================
+   HEADER GRAPHIC
+   ========================================================= */
+
+.header-graphic {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition:
+    filter 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* Dim the graphic in Dark mode */
+
+html[data-theme="dark"] .header-graphic {
+  filter:
+    brightness(0.65)
+    saturate(0.8);
+}
+
+
+/* Normal graphic in Light mode */
+
+html[data-theme="light"] .header-graphic {
+  filter:
+    brightness(1)
+    saturate(1);
+}
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
 
 .contact-form {
-max-width: 800px;
-margin: 2rem 0;
+  max-width: 800px;
+  margin: 2rem 0;
 }
 
 .contact-form .form-row {
-display: grid;
-grid-template-columns: 100px minmax(0, 600px);
-gap: 1rem;
-align-items: start;
-margin-bottom: 1rem;
+  display: grid;
+
+  grid-template-columns: 100px minmax(0, 600px);
+
+  gap: 1rem;
+
+  align-items: start;
+
+  margin-bottom: 1rem;
 }
 
 .contact-form label {
-padding-top: 0.35rem;
-font-weight: 600;
+  padding-top: 0.35rem;
+
+  font-weight: 600;
 }
 
 .contact-form input,
 .contact-form textarea {
-box-sizing: border-box;
-width: 100%;
-padding: 0.45rem 0.6rem;
-border: 1px solid #b9c8c5;
-border-radius: 5px;
-background: #fffef5;
-color: var(--text);
-font-family: var(--font-sans);
-font-size: 18px;
-line-height: 1.5;
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: 0.45rem 0.6rem;
+
+  background: var(--input-bg);
+  color: var(--text);
+
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-outline: 2px solid var(--accent);
-outline-offset: 1px;
-border-color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+
+  border-color: var(--accent);
 }
 
 .contact-form textarea {
-resize: vertical;
+  resize: vertical;
 }
 
 .contact-form .form-submit {
-margin-left: 116px;
-margin-top: 0.5rem;
+  margin-top: 0.5rem;
+  margin-left: 116px;
 }
 
-/* Stack the form on small screens */
+
+/* =========================================================
+   CONTACT FORM: RESPONSIVE
+   ========================================================= */
+
 @media (max-width: 600px) {
-.contact-form .form-row {
-display: block;
-margin-bottom: 1rem;
+
+  .contact-form .form-row {
+    display: block;
+
+    margin-bottom: 1rem;
+  }
+
+  .contact-form label {
+    display: block;
+
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-form .form-submit {
+    margin-left: 0;
+  }
+
 }
 
-.contact-form label {
-display: block;
-margin-bottom: 0.25rem;
-}
 
-.contact-form .form-submit {
-margin-left: 0;
-}
-}
+/* =========================================================
+   HEADER: RESPONSIVE
+   ========================================================= */
 
+@media (max-width: 700px) {
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0 0.6rem;
+
+    font-size: 1.2rem;
+  }
+
+}
