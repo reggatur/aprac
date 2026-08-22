@@ -13,6 +13,72 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css?v=2">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://activepractice.com/#organization",
+      "name": "Active Practice LLC",
+      "url": "https://activepractice.com/",
+      "description": "Time Matters consulting and legal software services for small law firms.",
+      "logo": "https://activepractice.com/assets/img/aplogo-blue-250.png",
+      "telephone": "+1-952-922-1120",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Minneapolis",
+        "addressRegion": "MN",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://activepractice.com/#website",
+      "url": "https://activepractice.com/",
+      "name": "Active Practice",
+      "publisher": {
+        "@id": "https://activepractice.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://activepractice.com/#webpage",
+      "url": "https://activepractice.com/",
+      "name": "Active Practice LLC",
+      "description": "Time Matters consulting and legal software services for small law firms.",
+      "isPartOf": {
+        "@id": "https://activepractice.com/#website"
+      },
+      "about": {
+        "@id": "https://activepractice.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://activepractice.com/#service",
+      "name": "Time Matters Consulting and Legal Software Services",
+      "description": "Consulting and legal software services for small law firms, with a focus on Time Matters.",
+      "serviceType": [
+        "Time Matters consulting",
+        "Legal software consulting"
+      ],
+      "provider": {
+        "@id": "https://activepractice.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 
 <body>
@@ -91,7 +157,36 @@ You´ve come to the right place for <a href="https://pclawtimematters.com/produc
 Are you switching to another practice management service? We can help.</p>
   </div>
 </div>
-<h3 style="text-align: center;"> Call us at <a href="tel:952-922-1120">952-922-1120</a> or <a href="/contact/">Send us a message...</a></h3>
+<h3 style="align: center;"> Call us at <a href="tel:952-922-1120">952-922-1120</a> or Send us a message:</h3>
+<div style="text-align: center;">
+<form action="/contactform" method="post" class="contact-form">
+  <input type="text"
+         name="website"
+         autocomplete="off"
+         tabindex="-1"
+         style="display:none">
+  <div class="form-row">
+    <label for="name">Name:</label>
+    <input id="name" type="text" name="name" maxlength="50">
+  </div>
+  <div class="form-row">
+    <label for="email">Email:*</label>
+    <input id="email" type="email" name="email" maxlength="60" required>
+  </div>
+  <div class="form-row">
+    <label for="message">Message:*</label>
+    <textarea id="message"
+              name="message"
+              maxlength="3600"
+              rows="6"
+              required></textarea>
+  </div>
+    <div class="form-submit">
+    <button type="submit" class="button">Send</button>
+  </div>
+  <div><br />* Required. We never give your email address to others.</div>
+</form>
+</div>
 
   </main>
   <footer class="site-footer">
